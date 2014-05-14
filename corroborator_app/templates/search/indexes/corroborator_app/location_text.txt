@@ -1,0 +1,2 @@
+{{ object.name_en }}
+{{ object.description_en }}

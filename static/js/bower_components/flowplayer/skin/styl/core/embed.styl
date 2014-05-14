@@ -1,0 +1,97 @@
+
+.{root}
+   .fp-embed
+      absolute spacing spacing
+      block 25px 20px
+      bg 3px -237px
+
+      .is-rtl&
+         bg 22px -237px
+         left auto
+         right spacing
+
+   .fp-embed-code
+      position absolute
+      display none
+      top 10px
+      left 40px
+      bg #3
+      padding 3px 5px
+      border-radius 3px
+      box-shadow 0 0 3px #c
+      font-size 12px
+
+      &:before
+         content ''
+         width 0
+         height 0
+         position absolute
+         top 2px
+         left -10px
+         border 5px solid transparent
+         border-right-color #3
+
+      .is-rtl&
+         left auto
+         right 40px
+
+         &:before
+            left auto
+            right -10px
+            border-right-color transparent
+            border-left-color #3
+
+      textarea
+         width 400px
+         height 16px
+         font-family monaco, "courier new", verdana
+         color #7
+         white-space nowrap
+         resize none
+         overflow hidden
+         border 0
+         outline 0
+         background-color transparent
+         color #c
+
+      label
+         display block
+         color #9
+
+   &.is-embedding
+      .fp-embed, .fp-embed-code
+         display block
+         opacity 1
+
+
+   &.aside-time
+      .fp-embed
+         left full_time_width
+
+         .is-rtl&
+            left auto
+            right full_time_width
+
+      .fp-embed-code
+         left full_time_width + 30px
+
+         .is-rtl&
+            left auto
+            right full_time_width + 30px
+
+      &.is-embedding .fp-time
+         opacity 1
+
+   &.is-long.aside-time .fp-embed
+      left hour_time_width * 2
+
+      .is-rtl&
+         left auto
+         right hour_time_width * 2
+
+   &.no-time .fp-embed
+      left spacing !important
+
+      .is-rtl&
+         left auto
+         right spacing !important

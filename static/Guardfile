@@ -1,0 +1,7 @@
+# Guardfile
+# just compass for the now
+
+guard 'compass' do
+  watch %r{^sass/(.+\.s[ac]ss)$}
+end
+

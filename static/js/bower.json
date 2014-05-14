@@ -1,0 +1,35 @@
+{
+  "name": "corroborator",
+  "version": "0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "dist"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1",
+    "leaflet": "~0.6",
+    "require-handlebars-plugin": "~0.4",
+    "jquery": "~1.9",
+    "jquery.ui": "~1.10",
+    "jquery-timepicker-addon": "~1.3",
+    "jquery-form": "~3.37",
+    "handlebars": "~1.0",
+    "bacon": "~0.4",
+    "bacon-ui": "~0.1",
+    "backbone": "~1.0",
+    "q": "~0.9",
+    "moment": "~2.1",
+    "spinjs": "1.3.0",
+    "backbone.paginator": "~0.8.1",
+    "socket.io": "~0.9.15",
+    "nvd3": "~1.1.15-beta",
+    "d3": "~3.3.13"
+  },
+  "devDependencies": {
+    "sinonjs-built": "~1.7.3",
+    "modernizr": "~2.7.1",
+    "jasmine-jquery": "1.5.8"
+  }
+}

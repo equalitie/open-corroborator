@@ -1,0 +1,61 @@
+[
+{
+  "fields": {
+    "actors_role": [2], 
+      "assigned_user": 1, 
+      "confidence_score": 50, 
+      "crimes": [
+        ], 
+      "deleted": false, 
+      "incident_created": "2013-08-09T12:23:58Z", 
+      "incident_details_ar": "", 
+      "incident_details_en": "", 
+      "incident_modified": "2013-09-25T23:00:00Z", 
+      "labels": [
+        1
+        ], 
+      "locations": [
+        1
+        ], 
+      "ref_bulletins": [
+        1
+        ], 
+      "ref_incidents": [
+        2
+        ],
+      "times": [
+        ], 
+      "title_ar": "", 
+      "title_en": "a new incident  test test test test changed by unauthorized user"
+  }, 
+    "model": "corroborator_app.incident", 
+    "pk": 1
+}, 
+{
+  "fields": {
+    "actors_role": [3], 
+    "assigned_user": null, 
+    "confidence_score": 70, 
+    "crimes": [
+      ], 
+    "deleted": false, 
+    "incident_created": "2013-08-09T17:46:54Z", 
+    "incident_details_ar": "", 
+    "incident_details_en": "", 
+    "incident_modified": "2013-09-25T23:00:00Z", 
+    "labels": [
+      ], 
+    "locations": [
+      ], 
+    "ref_bulletins": [
+      ], 
+    "ref_incidents": [
+      ], 
+    "times": [], 
+    "title_ar": "", 
+    "title_en": "a new incident"
+  }, 
+  "model": "corroborator_app.incident", 
+  "pk": 2
+}
+]

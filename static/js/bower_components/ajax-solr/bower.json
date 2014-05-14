@@ -1,0 +1,9 @@
+{
+  "name": "ajax-solr",
+  "version": "0.0.0",
+  "commit": "866fcd1901d9867b678277a9c5cdaf93c6196246",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evolvingweb/ajax-solr.git"
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "_HEADER": {
+        "modified": "2013/10/10",
+        "author": "Bill Doran"
+    }, 
+    "actors_dir": "",
+    "bulletins_dir": "",
+    "scrapers": [
+      {
+        "label": "Violation Documentation Syria",
+        "site" : "vdc",
+        "enabled" : true
+      },
+      {
+        "label": "Centre for Statistics and research in Syria",
+        "site": "csrsy",
+        "enabled": false
+      },
+      {
+        "label": "Documents Syria",
+        "site": "documents-sy",
+        "enabled" : false
+      }
+    ]
+}
+

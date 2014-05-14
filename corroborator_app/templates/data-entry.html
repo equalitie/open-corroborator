@@ -1,0 +1,33 @@
+{% extends "new_base.html" %}
+{% load i18n %}
+
+{% block top_nav %}
+  {% include "nav/top_menu.html" %}
+{% endblock %}
+
+{% block script %}
+  {% include "includes/bootstrap.html" %}
+  {% include "includes/dev_data_entry_script.html" %}
+{% endblock %}
+
+{% block content%}
+<div class="modal-cover hidden"><p>{% trans Saving %}</p></div>
+<nav id="monitor-navigation">
+  {% include "nav/dataentry_tabs.html" %}
+</nav>
+
+<div id="data-entry-container" class="">
+
+  <div id="data-entry-messages" class="">
+  </div>
+  <div id="actor-form"></div>
+  <div id="bulletin-form"></div>
+  <!--
+  <div class="assigned-entities">
+    <div id="actor-list">
+    </div>
+    <table id="bulletin-list"></table>
+  </div>
+  -->
+</div>
+{% endblock %}

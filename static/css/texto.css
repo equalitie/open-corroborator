@@ -1,0 +1,233 @@
+html {
+  background: #f0f0f0;
+  padding: 0em;
+  margin: 0em;
+}
+
+body {
+  background: #ffffff;
+  color: #202020;
+  max-width: 50em;
+  box-shadow: 1px 1px 2px #e0e0e0;
+  -moz-box-shadow: 1px 1px 2px #e0e0e0;
+  -webkit-box-shadow: 1px 1px 2px #e0e0e0;
+  -o-box-shadow: 1px 1px 2px #e0e0e0;
+  -ms-box-shadow: 1px 1px 2px #e0e0e0;
+  font-size: 13px;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 6em;
+  margin: auto;
+}
+
+body > .title {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+}
+
+body > .title h1 {
+  font-size: 200%;
+  font-weight: bold;
+  margin: 0em;
+}
+
+body > .title h2 {
+  margin: 0em;
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.header {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.header * {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.header {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.header .number {
+  display: none;
+}
+
+pre {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 180%;
+  line-height: 1.25em;
+}
+
+h2 {
+  font-size: 140%;
+  line-height: 1.25em;
+}
+
+h3 {
+  font-size: 125%;
+  line-height: 1.25em;
+}
+
+h4 {
+  font-size: 114%;
+  line-height: 1.25em;
+}
+
+h5 {
+  font-size: 110%;
+  line-height: 1.25em;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul,
+ol,
+dl {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+ul dt,
+ol dt,
+dl dt {
+  font-weight: bold;
+}
+
+ul li,
+ol li,
+dl li,
+ul dd,
+ol dd,
+dl dd {
+  margin-bottom: 1.25em;
+  margin-top: 1.25em;
+}
+
+dl {
+  margin-left: 0em;
+  padding-left: 0em;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+pre {
+  background: #f0f0f0;
+  padding: 1em;
+  font-size: 90%;
+  overflow: auto;
+}
+
+code {
+  background: #f0f0f0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.0625em;
+  padding-bottom: 0.0625em;
+  font-size: 90%;
+}
+
+table.meta,
+.content table {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.meta caption,
+.content table caption {
+  font-weight: bold;
+  font-size: 120%;
+  padding-bottom: 10px;
+  border-bottom: 2px solid black;
+}
+
+table.meta tr,
+.content table tr {
+  border-top: 1px solid #202020;
+  border-bottom: 1px solid #202020;
+}
+
+table.meta tr th,
+.content table tr th,
+table.meta tr td,
+.content table tr td {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+table.meta tr th pre,
+.content table tr th pre,
+table.meta tr td pre,
+.content table tr td pre {
+  padding: 0.25em;
+}
+
+table.meta tr th,
+.content table tr th {
+  font-weight: bold;
+}
+
+table.meta {
+  border-collapse: collapse;
+  border: 0px solid #202020;
+}
+
+table.meta tr {
+  border-top: 0px solid #202020;
+  border-bottom: 0px solid #202020;
+}
+
+table.meta td {
+  font-size: 90%;
+  padding: 0em;
+}
+
+table.meta .name {
+  font-weight: bold;
+  padding-right: 1.5em;
+}
+
+.annNote .title {
+  display: inline;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.annNote .title:after {
+  content: ":";
+}
+
+.annNote .content {
+  display: inline;
+  font-style: italic;
+}

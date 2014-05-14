@@ -1,0 +1,105 @@
+// ===========================================================================
+// RESULTS HEADER STYLING
+// ===========================================================================
+
+/**
+### total elements selected display
+    also contains item selection dropdown
+*/
+.Selection {
+  height: $ACTION_BAR_HEIGHT;
+  background-color: $ACTION_BG_COLOR;
+  border-top: 1px solid $RESULT_LIST_BORDER;
+  border-left: 1px solid $RESULT_LIST_BORDER;
+  border-right: 1px solid $RESULT_LIST_BORDER;
+  border-bottom: 0px;
+  margin-bottom: -1px;
+  color: white;
+  .description {
+    padding: $PAD_UNIT/2;
+    margin-top: 0.25em + 1 * $PX;
+    float: left;
+    width: 12em;
+  }
+  .actions {
+    float: right;
+    .button.combo {
+      @include combo_large(
+        $bg_color: $ACTION_BG_COLOR,
+        $height: $ACTION_BAR_HEIGHT - 0.05,
+        $width: 10em,
+        $highlight_color: #d96859,
+        $border_color: #ca5b4d
+      );
+      text-align: center;
+      padding-right: 2em;
+    }
+    border-left: 1px solid #ca5b4d;
+  }
+}
+
+#number-selected {
+  color: white;
+}
+
+// ===========================================================================
+// RESULTS SORT STYLING
+// ===========================================================================
+
+table.sort-headers {
+  border-left: 1px solid $RESULT_LIST_BORDER;
+  border-right: 1px solid $RESULT_LIST_BORDER;
+  background-color: #5e5c5c;
+  width: 100%;
+  .is-preview {
+    min-width: 2.5em;
+  }
+  .is-status {
+    width: 7.3em;
+  }
+  .is-score {
+    width: 5em;
+  }
+  thead {
+    th {
+      padding-top: 1.25em;
+      padding-bottom: 0.25em;
+    }
+    th.is-status {
+      text-align: center;
+    }
+    a {
+      font-size: 90%;
+      &, &:active, &:visited, &:hover {
+        color: $HEADER_SELECTED_COLOR;
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      text-transform: uppercase;
+      @include open_sans;
+      margin-left: 1em;
+      &:first-child {
+        margin-left: 0em;
+      }
+      &.current {
+        @include open_sans_bold;
+      }
+      &.is-descending:after, &.is-ascending:after {
+        content:"D";
+        font-family: 'corroborator';
+        font-size: 80%;
+        padding-left: 0.25em;
+      }
+      &.is-ascending:after {
+        content:"U";
+      }
+
+    }
+  }
+  .actor.sort-status, .actor.sort-score {
+    display: none;
+  }
+}
+

@@ -1,0 +1,35 @@
+{{ object.fullname_en }}
+{{ object.fullname_ar }}
+{{ object.nickname_en }}
+{{ object.civilian_en }}
+{{ object.civilian_ar }}
+{{ object.occupation_en }}
+{{ object.occupation_ar }}
+{{ object.sex_en }}
+{{ object.sex_ar }}
+{{ object.age_en }}
+{{ object.ethinicity_en }}
+{{ object.ethinicity_ar }}
+{{ object.nationality_ar }}
+{{ object.nationality_en }}
+{{ object.position_en }}
+{{ object.position_ar }}
+{{ object.spoken_dialect_en }}
+{{ object.spoken_dialect_ar }}
+{{ object.religion_en }}
+{{ object.religion_ar }}
+{{ object.current_location.name_en }}
+{{ object.current_location.name_ar }}
+{{ object.pob.name_en }}
+{{ object.pob.name_ar }}
+{% for source in object.sources.all %}
+    {{ source.name_en }}
+    {{ source.name_ar }}
+    {{ source.source_type.source_type }}
+{% endfor %}
+{{ object.description_en }}
+{{ object.description_ar }}
+
+
+
+

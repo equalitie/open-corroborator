@@ -1,0 +1,10 @@
+source 'http://rubygems.org'
+# Compiling
+gem 'sass', '3.3.0.alpha.149'
+gem 'compass', '0.12.2'
+gem 'compass-sourcemaps', "~> 0.12.2.sourcemaps.57a186c"
+
+# Guard
+gem 'guard'
+gem 'guard-compass'
+gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i

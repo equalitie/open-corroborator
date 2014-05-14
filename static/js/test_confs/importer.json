@@ -1,0 +1,22 @@
+{
+    "_HEADER": {
+        "modified": "2013/10/10",
+        "author": "Bill Doran"
+    }, 
+    "actors_dir": "/root/data-tools/test_data/csv/actor/",
+    "bulletins_dir": "/root/data-tools/test_data/csv/bulletin/",
+    "media_params": {
+        "media_dir": "/tmp/media/",
+        "file_meta_type": ".yaml",
+        "file_types": {
+            "image": [
+                "jpg",
+                "png",
+                "gif"
+            ],
+            "video": [
+                "mp4"
+            ]
+        }
+    }  
+}

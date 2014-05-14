@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+  </head>
+
+
+  <body class="use-base">
+  
+  <div id="search-dialog-form" title="Save Search">
+  <p class="validateTips">Maximum length is 10 characters</p>
+ 
+  <form>
+  <fieldset>
+    <label for="name">search</label>
+    <input type="text" maxlength='10' name="name" id="name" class="text ui-widget-content ui-corner-all" />
+  </fieldset>
+  </form>
+</div>
+
+
+    <div id="Application" lang="en" class="Application">
+      <!-- top navigation area -->
+      <nav class="Header">
+        <h1 class="title text T">Corroborator</h1>
+        <ul class="user">
+          <li class="hover-expandable">
+            <a href="/home/" class="text T">admin</a>
+            <ul class="when-hover menu">
+              <li>
+                <a href="user-settings" class="text T">Settings</a>
+              </li>
+              <li>
+                <a href="/logout/" class="text T">Logout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sections list-h">
+          <li class="current">
+            <a href="/corroborator/" class="text T">Search</a>
+          </li>
+          <li>
+            <a href="/admin/" class="text T">Administration</a>
+          </li>
+          <li>
+            <a href="monitoring" class="text T">Monitoring</a>
+          </li>
+          <li>
+            <a href="monitoring" class="text T">Batch import</a>
+          </li>
+        </ul>
+        <div class="clearer">&nbsp;</div>
+      </nav>
+      <!-- end top navigation area -->
+
+      <div class="Content">
+      
+<nav id="search-navigation">
+  <div class="search">
+    <!--search text field -->
+    <input type="textfield" />
+    <button class="do-clear">
+      <span>&#x2713;</span>
+    </button>
+  </div>
+  <!--end search text field -->
+  <!-- info icon for more information about the search -->
+  <button class="info is-small">
+    <span aria-hidden="true" data-icon="i"></span>
+    <span class="screen-reader-text">Search help</span>
+  </button>
+
+  <!-- search activity indicator -->
+  <div class="searching"><img src="{{STATIC_URL}}images/loader.gif" alt="search in progress" /></div>
+
+  <!-- dropdown combo box -->
+  <div class='search-combo'>
+  </div>
+  <button class="home is-small">
+    <span aria-hidden="true" data-icon="h"></span>
+    <span class="screen-reader-text">Search help</span>
+  </button>
+    <!-- end dropdown combo box -->
+
+    <!-- save search -->
+    <span id="predefined-search" class="hidden predefined">
+      <input id="predfiend-search-name"class="w-30p"/>
+
+      <!-- save search buttons -->
+      <button id="save_current_search" class="do-search do-search-main is-default">
+        <span class="text T">Save</span>
+      </button>
+      <button id="cancel_current_search" class="do-search do-search-main is-default">
+        <span class="text T">Cancel</span>
+      </button>
+
+    </span>
+    <!-- end save search -->
+
+    <!-- search spinner -->
+    <span id="main_spinner" class="hidden">
+    </span>
+    <!-- end search spinner -->
+  <!-- end search area -->
+
+  <div class="tabs">
+    <ul>
+      <li class="is-incidents">
+        <a href="#tab/incident" id="incidents-tab">
+          <span class="text">
+            <span class="label T">Incidents</span>
+            <span class="incident-count count"></span>
+          </span>
+        </a>
+      </li>
+      <li class="is-bulletins">
+        <a id="bulletins-tab" href="#tab/bulletin">
+          <span class="text">
+            <span class="label T">Bulletins</span>
+            <span class="bulletin-count count"></span>
+          </span>
+        </a>
+      </li>
+
+      <li class="is-actors">
+        <a href="#tab/actor" id="actors-tab">
+         <span class="text">
+          <span class="label T">Actors</span>
+          <span class="actor-count count"></span>
+        </span>
+
+      </a>
+    </li>
+  </ul>
+  <div class="clearer">&nbsp;</div>
+</div>
+</nav>
+<div id="incident-content" class="columns as-2">
+  <!-- start first column -->
+  <div class="col first has-header">
+    <!-- header view appended here -->
+    <div class="header search-header">
+    </div>
+    <!-- search-results view appended here -->
+    <div class="body">
+    </div>
+  </div>
+  <!-- end first column -->
+
+
+  <div class="col last has-header">
+    <div class="right-filters"></div>
+  </div>
+  <div class="form_overlay"></div>
+
+      </div>
+
+
+    </div>
+    <!-- end Application -->
+
+    <!-- confirm_dialog used for jquery ui dialog i presume -->
+    <div id="confirm_dialog" title="">
+    </div>
+
+  </body>
+</html>
+

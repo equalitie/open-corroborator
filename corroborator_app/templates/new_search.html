@@ -1,0 +1,71 @@
+{% extends "new_base.html" %}
+{% load i18n %}
+
+{% block top_nav %}
+  {% include "nav/top_menu.html" with search=True %}
+{% endblock %}
+
+{% block script %}
+  {% include "includes/bootstrap.html" %}
+  {% include "includes/dev_script.html" %}
+{% endblock %}
+
+{% block content%}
+<nav id="search-navigation">
+  <div class="search">
+    <!--search text field -->
+    <input type="textfield" />
+    <button class="do-clear">
+      <span>&#x2713;</span>
+    </button>
+  </div>
+  <!--end search text field -->
+
+  <!-- info icon for more information about the search -->
+  <button class="info is-small">
+    <span aria-hidden="true" data-icon="i"></span>
+    <span class="screen-reader-text">{% trans "Search help" %}</span>
+  </button>
+
+  <!-- search activity indicator -->
+  <div class="searching"><img src="{{STATIC_URL}}images/loader.gif" alt={% trans "search in progress" %} /></div>
+
+  <!-- dropdown combo box -->
+  <div class='search-combo'>
+  </div>
+  <!-- end dropdown combo box -->
+
+  <!-- home button - show my assigned items -->
+  <button class="home is-small">
+    <span aria-hidden="true" data-icon="h"></span>
+    <span class="screen-reader-text">{% trans "My assigned items" %}</span>
+  </button>
+
+<!-- end search area -->
+
+{% include "nav/tabs.html" %}
+
+</nav>
+
+<div id="incident-content" class="columns as-2">
+
+  <!-- start first column -->
+  <div class="col first has-header">
+
+    <!-- header view appended here -->
+    <div class="header search-header"></div>
+
+    <!-- search-results view appended here -->
+    <div class="body results-container" ></div>
+
+  </div>
+  <!-- end first column -->
+
+  <!-- second column -->
+  <div class="col last has-header right-filters"></div>
+
+  <!-- overlay container -->
+  <div class="form_overlay"> </div>
+
+</div>
+{% endblock %}

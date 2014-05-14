@@ -1,0 +1,19 @@
+/* custom player skin */
+   .flowplayer { width: 80%; background-color: #222; background-size: cover; max-width: 800px; }
+   .flowplayer .fp-controls { background-color: rgba(0, 0, 0, 0.4)}
+   .flowplayer .fp-timeline { background-color: rgba(0, 0, 0, 0.5)}
+   .flowplayer .fp-progress { background-color: rgba(143, 137, 137, 1)}
+   .flowplayer .fp-buffer { background-color: rgba(249, 249, 249, 1)}
+
+.media-result .do-relate {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+img.media-image-thumbnail, img.media-video-thumbnail {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+

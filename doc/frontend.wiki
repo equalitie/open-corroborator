@@ -1,0 +1,271 @@
+==  Introduction ==
+
+These docs refer to the implementation of the user interface section of the 
+corroborator application. The application architecture is to be split into 
+modules using a combination of the Backbone Framework, and Bacon js. Bacon is a 
+functional reactive programming library. Each main module will process it's 
+internal events and via bacon map these into system wide events where 
+necessary. RequireJS is used to implement the structuring of js code into AMD 
+modules.
+
+
+Communication with the backend is handled via a REST api, documents for which 
+can be found at TODO - add api documentation link.
+
+
+Templating is handled with the handlebars templating library. It allows for 
+script precompilation via node. Handlebars escapes content by default which 
+helps in preventing XSS attacks.
+
+
+Unit testing is being implemented with busterJS. It allows for cross browser 
+testing and can be integrated more easily with Backbone and underscore than 
+theintern.io. Buster also includes sinon, a framework which includes mocking
+and spy frameworks.
+
+
+Styles are developed using sass and compass.
+
+== Regions ==
+
+The main regions are
+
+# Search/Navigation
+# Result display
+# Edit/Detail
+
+==  Module List ==
+
+=== Elements modules ===
+
+These describe modules that model functionality that repeats all around the application.
+
+
+;filename input.js
+: '''tests'''
+: elements/input-test.js
+: describes a textfield
+: '''internal events'''
+: responds to enter being pressed
+: '''external events'''
+: it also responds to an event to clear it's input
+: responds to send input event
+: '''triggered events'''
+: triggers an event when the user presses enter and in response to an event 
+: requesting the contents of the textfield
+
+
+; filename combo.js
+: '''tests'''
+: elements/combo-test.js
+: This models the drop down boxes. It can accept a collection of elements that will be menu items
+: It can also accept a default option which is the displayed element in the list.
+: It can also accept additional element which triggers the event specified by the element itself
+
+===  Navigation - Search bar and tabs ===
+
+The main module resides in lib/Navigation/main.js. This instantiates the different elements and parses events from these elements into event streams to be shared with other sections of the application.
+
+==== Main Search area ====
+
+This refers to the following visual components.
+
+[[Image:image00.png]]
+
+
+The user uses this to search for incidents, actors and bulletins depending on
+
+
+# The first text field is used to fill in the search requirements<br /> This is to be represented by a simple view that simply receives text and emits an event when the return key is pressed.<br/>
+# The Search Dropdown is used to store previous searches and to save current searches<br />The search dropdown requires a collection to store previous searches<br /> The view binds to the add event on the collection in order to update the contents of the search dropdown.<br /> The view must also update itself when we switch between incident, bulletin and actor. A different set of searches may be saved for each of these 3.<br/>
+# The last text field is hidden by default and shown when the user wishes to save a search,<br/>
+
+===== API integration points =====
+Searches are saved to the PredefinedSearch model
+The api is available at: api/v1/predefinedSearch
+===== Bootstrap =====
+The search collection is initially bootstrapped to Corroborator.bootstrap.PredefinedSearch
+
+
+===== Questions: =====
+* Why is step 3 necessary can we not just save the search?
+* Should we have functionality that allows users to delete the searches?
+
+
+====  Tabs ====
+The tabs provide high level navigation between Incidents, bulletins and Actors
+They have little or no functionality themselves, they are to be set up as links
+and clicking on them will be caught by the backbone router.
+
+=== Results Region ===
+The results region will react to searches instigated in the Main Search area
+It subscribes to events published from here.
+TODO: add documentation as implemention continues
+
+=== Edit/Detail Region ===
+This region is where we will see the individual bulletins/actors/incidents. The
+user will be able to edit all details here.
+TODO: add documentation as implemention continues
+
+
+==Testing==
+Testing is implemented using busterJS. This provides us with a node based 
+server that we can connect to from a browser. Running the tests will then run
+the tests against an actual browser. Both the assert and bdd libraries are 
+allowed.
+
+=== Running the tests ===
+From the project root go to static/js
+Run
+ buster-server
+You can then connect to the server from the browser that you want to test in at
+http://localhost:1111 by pressing the Capture Browser button on that page<br/>
+Then in a separate terminal window run: 
+ buster-test
+The tests will then be run and should give an output like the following
+ Chrome 27.0.1453.116, Mac OS X 10.8.4: ..............
+ 4 test cases, 14 tests, 16 assertions, 0 failures, 0 errors, 0 timeouts
+ Finished in 0.121s
+
+=== Running the tests from the CI===
+This currently will need to be done against PhantomJS, this is not an optimal
+solution bcs it's not a real browser!! We will keep an eye on buster and the 
+browserstack service to see when these can be integrated. Browserstack 
+integrated testing would give us coverage across pretty much all browsers.
+
+Buster should also be configured in the future to give us code coverage 
+reports
+
+== Styles ==
+
+
+=== Integrating existing styles ===
+Styles are implemented using SASS and compass. The scss syntax is used. The 
+styles provided by ffctn were in cleverCSS. cleverCSS is a python library that 
+uses indentation in a pythonic style to nest styles. It's syntax is 
+pretty much identical to .sass files, and could be converted relatively easily.
+
+
+=== Style file structure ===
+
+
+==== Provided styles ====
+This first group of styles are taken from the styles created for the project by
+ffctn.
+
+;_base.scss
+This is taken directly from the base.ccss file. It should be refactored where 
+possible into subfiles to be described hereafter
+
+;_corroborator.scss
+This file is also from the original ccss files delivered. It contains most of 
+the main styles for the application. Some styles have been moved into subfiles 
+and more should be moved as the front end integration continues.
+
+
+;_reset.scss
+Resets styles across the different browsers to create a baseline
+
+
+;_fountainG.scss
+This is again directly from code received, it implements the loading circles
+
+
+=== General elements ===
+
+This group of styles correlates with elements found across all parts of the 
+application
+
+;_forms.scss
+This contains styles that describe how standard form elements should look.
+
+;_hacks.scss
+All the horrible ugly dirty hacks, this is the place to put code if you have a
+deadline to meet and the only way to fix something is with an '!important'. 
+Styles specified in here should be deleted as soon as possible. This is the 
+only file where use of the !important modifier is permitted!!
+
+
+;_mixins.scss
+custom mixins that can be applied across many styles
+
+
+=== Specific regions ===
+
+These styles are applied to specific sections of the application
+
+;_navigation.scss
+describe the top section, including the search area, and the tabs
+
+;screen.scss
+This is the central file, it imports other scss files and compass elements. 
+No styles should be placed in this file directly.
+
+= Solr interaction =
+
+Currently, the [https://github.com/evolvingweb/ajax-solr ajax-solr] library is used to facilitate queries to the solr backend. Solr contains 5 document formats: Incident, Bulletin, Actor, Location and Media.
+
+All documents within Solr are treated as equivalent to distinguish between types we use the django type and id fields. The solr backend is hydrated by Django-Haystack via the
+
+search-index.py 
+
+module. The ajax-solr manager handles the creation of all ajax-solr widgets. Each widget is responsible for a separate form of search and/or filtering.
+
+ajax-solr wraps the Solr request queries and returns a set of Solr documents in JSON format. Solr request are made as get requests to the Solr instance include parameters for the query, facets and any filtering. This request can be arbitrarily complex and ajax-solr provides a handy interface for creating queries though it lacks some functionality, such as full geospatial search.
+
+Request format example:
+
+ var solrInstance = '<path_to_solr>/select?';
+ var q = 'q=django_ct:*location&fq={!geofilt}&sfield=location';
+ var pt = '&pt='+coords;
+ var d = '&d=300';
+ var fl = '&fl=name';
+ var wt = '&wt=json';
+
+Results format:
+    
+ Object { 
+  _version_ = 1437041415522615300 
+  actor_created = "2013-05-24T00:00:00Z"  
+  actor_created_exact = "2013-05-24T00:00:00Z"  
+  age_en  = "Adult" 
+  age_en_exact =  "Adult" 
+  civilian_en = "Non-Civilian"  
+  civilian_en_exact = "Non-Civilian"  
+  count_bulletins = ["0"] 0 
+  count_incidents = ["0"]   0
+  django_ct = "corroborator_app.actor"  
+  django_id = "1" 
+  fullname_en = "Mustafa Mohammed Shikhani"
+  id =  "corroborator_app.actor.1"
+  nationality_en =  "Syrian"
+  nationality_en_exact =  "Syrian"
+  occupation_en = "FSA"
+  pob = "Aleppo"
+  religion_en = "Sunni"
+  sex_en =  "Male"
+  sex_en_exact =  "Male"
+  spoken_dialect_en = "Arabic"
+  text =  "Mustafa Mohammed Shikhani\n\n"
+ }
+
+The above JSON shows an example result doc for an Incident request the existing Solr instance. Only fields that are present in the MySQL instaces of a given Incident are populated in the Solr index. The field naming schema matches that of the existing Django DB model. Deviations and additions occur for Faceted fields, which contain a trailing "_exact" as part of the name and META fields constructed from additional data. The META fields are used to reduce the number of queries required to obtain abstarct data such as the number of Bulletins or Incidents related to a given Entity. 
+
+The fields django_id and django_ct contain the entity's ID and object type name respectively. At present the django_ct field is used to differentiate between entities types; such as location, bulletin, actor, etc.
+
+== Main search ==
+
+The main search is handled by SearchWidget.js. This function is divided into two sections, pre and post ajax request. On initial page load the SearchWidget requests all documents of type Incident, Bulletin and Actor. it then populates the associated views via the afterRequest method. 
+
+The returned entries are formatted into the appropriate HTML based on the corroborator-util methods: template_bulletin_incident and template_actor. These methods take the returned solr document as a parameter and return HTML to be appended to the page. 
+
+== View embedded search ==
+
+== Filtering ==
+
+=== Date filtering ===
+
+=== Geographic filtering ===
+
+=== Facet filtering ===
+

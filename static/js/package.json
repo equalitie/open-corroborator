@@ -1,0 +1,47 @@
+{
+  "name": "hybrid-tests",
+  "version": "0.0.0",
+  "description": "Node test demo",
+  "main": "buster.js",
+  "scripts": {
+    "test": "./node_modules/buster/bin/buster-test --environment browser"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "buster": "~0.6.0",
+    "buster-amd": "~0.3.0"
+  },
+  "devDependencies": {
+    "growl": "~1.7.0",
+    "grunt": "~0.4.0",
+    "grunt-docco2": "~0.1.1",
+    "grunt-contrib-jshint": "~0.1.0",
+    "grunt-contrib-concat": "~0.1.1",
+    "grunt-contrib-uglify": "~0.1.0",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-handlebars": "~0.5.9",
+    "grunt-buster": "~0.2.1",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-plato": "~0.2.1",
+    "karma-script-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.3",
+    "karma-requirejs": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma": "~0.10.2",
+    "grunt-karma": "~0.6.2",
+    "yadda": "~0.4.7",
+    "karma-coverage": "~0.1.0",
+    "grunt-retire": "~0.1.12",
+    "generator-mocha": "~0.1.1",
+    "grunt-cli": "~0.1.10",
+    "bower": "~1.2.7",
+    "yo": "~1.0.4",
+    "generator-backbone-amd": "0.0.4"
+  }
+}

@@ -1,0 +1,35 @@
+{{ object.description_en }}
+{{ object.description_ar }}
+{{ object.title_en }}
+{{ object.title_ar }}
+{{ object.confisence_score }}
+{{ object.assigned_user }}
+{{ object.type }}
+{{ object.bulletin_created }}
+{% for location in object.locations.all %}
+    {{ location.name_en }}
+    {{ location.name_ar }}
+{% endfor %}
+
+{% for time in object.times.all %}
+    {{ time.time_from }}
+    {{ time.time_to }}
+{% endfor %}
+
+{% for label in object.labels.all %}
+    {{ label.name_en }}
+    {{ label.name_ar }}
+{% endfor %}
+{% for source in object.sources.all %}
+    {{ source.name_en }}
+    {{ source.name_ar }}
+    {{ source.source_type.source_type }}
+{% endfor %}
+{% for bc in object.bulletin_comments.all %}
+    {{ bc.comments_en }}
+    {{ bc.comments_ar }}
+    {{ bc.status.name_en }}
+    {{ bc.status.name_ar }}
+{% endfor %}
+
+

@@ -1,0 +1,111 @@
+#reporting-content {
+  .actor-filter, .bulletin-filter, .incident-filter {
+    top: 0px;
+  }
+  .graph-container {
+    width: 33.33333333%;
+    right: 0em;
+    position: fixed;
+    top: $TOP_DIST_COLS;
+    margin-right: 20px;
+  }
+  .graph-selector {
+    margin-left: 20px;
+    margin-top: 0.76923em;
+    background-color: #f9f0e8;
+    padding: 0.76923em;
+    border: 1px solid #bfbfba;
+  }
+  .graphs {
+    h2 {
+      text-align: center;
+      padding: 15px;
+      font-size: 15px;
+    }
+      height: 80%;
+    background-color: $FILTER_BG;
+    border: 1px solid #bfbfba;
+    width: 90%;
+    margin-left: 3%;
+    margin-top: .8em;
+    svg {
+      height: 90%;
+    }
+  }
+  .col.last.right-filters {
+    margin-top: -2.1em;
+    top: $TOP_DIST_COLS + 9;
+  }
+  .group.is-filters {
+    border: 1px solid #bfbfba;
+  }
+  .header {
+    display: none;
+  }
+
+}
+.nv-context {
+  /*margin-top: 20px;*/
+}
+
+.bar .nvtooltip {
+  margin-top: 100px;
+}
+.nvtooltip {
+  background-color: rgba(255,255,255,1);
+  padding: 10px;
+  border: 1px solid #ddd;
+  z-index: 10000;
+  margin: 0 0 0 0;
+
+  font-family: Arial;
+  font-size: 13px;
+
+  transition: opacity 500ms linear;
+  -moz-transition: opacity 500ms linear;
+  -webkit-transition: opacity 500ms linear;
+
+  transition-delay: 500ms;
+  -moz-transition-delay: 500ms;
+  -webkit-transition-delay: 500ms;
+
+  -moz-box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+  -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+  box-shadow: 4px 4px 8px rgba(0,0,0,.5);
+
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  pointer-events: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nvtooltip h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nvtooltip p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nvtooltip span {
+  display: inline-block;
+  margin: 2px 0;
+}
+
+.nvtooltip-pending-removal {
+  position: absolute;
+  pointer-events: none;
+}
+
+// END REPORTING SHIZZ

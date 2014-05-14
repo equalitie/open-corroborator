@@ -1,0 +1,40 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <title>{% trans "Corroborator" %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    {% include "includes/styles.html" %}
+    {% block styles %}
+    {% endblock %}
+
+    <script type="text/javascript"
+            charset="utf-8"
+            src="{{STATIC_URL}}js/bower_components/modernizr/modernizr.js"> </script>
+
+    {% block script %}
+    {% endblock %}
+
+
+  </head>
+
+
+  <body class="use-base">
+    <div id="Application" lang="{{locale}}" class="Application {%if rtl %}rtl{%endif %}">
+      <!-- top navigation area -->
+      {% block top_nav %}
+      {% endblock %}
+      <!-- end top navigation area -->
+
+      <div class="Content">
+      {% block content %}
+      {% endblock %}
+      </div>
+
+
+    </div>
+    <!-- end Application -->
+
+  </body>
+</html>

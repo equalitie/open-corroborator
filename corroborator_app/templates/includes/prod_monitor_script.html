@@ -1,0 +1,13 @@
+<script type="text/javascript"
+        charset="utf-8"
+        src="{{STATIC_URL}}js/components/requirejs/require.js"> </script>
+<script>
+  require.config({
+    paths: {
+        //Comment out this line to go back to loading
+        //the non-optimized main.js source file.
+        "main": "{{STATIC_URL}}js/dist/build-monitor"
+    }
+  });
+  require(["main"]);
+</script>

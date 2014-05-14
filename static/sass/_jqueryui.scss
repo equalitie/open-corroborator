@@ -1,0 +1,16 @@
+.score-editor {
+  $slider_handle_height: 15px;
+  a.ui-slider-handle {
+    
+    margin-top: -4px;
+    height: $slider_handle_height;
+    width: $slider_handle_height;
+    @include border-radius($slider_handle_height / 2);
+  }
+  div.ui-slider-horizontal {
+    height: 0px;
+  }
+  .score-editor .rail {
+    border: none;
+  }
+}

@@ -1,0 +1,1155 @@
+body {
+  background-color: #e1e0db;
+}
+
+
+.Application {
+  .editable {
+    .when-edit {
+      display: none;
+    }
+    &.is-edit {
+      .when-edit {
+        display: block;
+      }
+      .when-view {
+        display: none;
+      }
+    }
+  }
+  .menu {
+    position: absolute;
+    padding: $PAD_UNIT / 2;
+    z-index: $Z_MENU;
+    a {
+      display: block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    li {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      &:last-child, &.last {
+        margin-bottom: 0em;
+      }
+    }
+  }
+  .select {
+    text-transform: uppercase;
+    .option {
+      display: inline-block;
+      opacity: 0.75;
+      border-bottom: 2px solid transparent;
+      margin-right: 0.5em;
+      cursor: pointer;
+      .text {
+        font-size: 90%;
+      }
+      &.selected {
+        opacity: 1;
+        border-bottom: 2px solid $COLOR_OPTION_SELECTED_BD;
+      }
+      &:hover {
+        border-bottom: 2px solid $COLOR_OPTION_SELECTED_BD;
+      }
+    }
+  }
+  .field {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    > label, > .label {
+      display: block;
+      text-transform: uppercase;
+      font-size: 90%;
+    }
+  }
+  
+  .filter.is-map {
+    .field {
+      position: relative;
+      border: 1px solid $COLOR_INPUT_BD;
+      input {
+        width: 80%;
+        border: 0px solid transparent;
+      }
+      .do-clear {
+        position: absolute;
+        top: 7 * $PX;
+        left: auto;
+        right: 0.25em;
+      }
+    }
+    .map {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-color: $COLOR_PLACEHOLDER_BG;
+      .filter-map {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  .filter.is-labels {
+    input {
+      float: right;
+      font-size: 80%;
+    }
+    .tags {
+      margin-top: 1em;
+      line-height: 2.15em;
+    }
+  }
+  .filters {
+    .filter {
+      margin-bottom: $PAD_UNIT;
+      &:last-child, &.last {
+        margin-bottom: 0em;
+      }
+    }
+  }
+  .i18n {
+    position: relative;
+    .toggle {
+      visibility: hidden;
+      display: inline-block;
+      > span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        padding: 0.25em;
+        background-color: $COLOR_I18N_BG;
+        border: 1px solid $COLOR_I18N_BD;
+        text-transform: uppercase;
+        font-size: 70%;
+        line-height: 1.25em;
+        top: -0.15em;
+        font-weight: normal;
+        margin-right: -1px;
+      }
+    }
+    > *[lang=ar] {
+      text-align:right;
+      direction:rtl;
+      unicode-bidi: embed;
+    }
+    &:hover .toggle {
+      visibility: visible;
+    }
+  }
+  &[lang=en] .i18n, .i18n[lang=en] {
+    > div[lang=ar], > span[lang=ar] {
+      display: none;
+    }
+    > div[lang=en] {
+      display: block;
+    }
+    > span[lang=en] {
+      display: inline;
+    }
+    .toggle span[lang=en] {
+      background-color: $COLOR_I18N_SEL_BG;
+    }
+    .toggle span[lang=ar] {
+      background-color: $COLOR_I18N_BG;
+    }
+  }
+  &[lang=ar] .i18n, .i18n[lang=ar] {
+    > div[lang=en], > span[lang=en] {
+      display: none;
+    }
+    > div[lang=ar] {
+      display: block;
+    }
+    > span[lang=ar] {
+      display: inline;
+    }
+    .toggle span[lang=en] {
+      background-color: $COLOR_I18N_BG;
+    }
+    .toggle span[lang=ar] {
+      background-color: $COLOR_I18N_SEL_BG;
+    }
+  }
+}
+
+ul.elements {
+  li {
+    margin-bottom: -1px;
+  }
+}
+
+
+.score {
+  display: inline-block;
+  position: relative;
+  border: 1px solid $COLOR_TABLE_BD;
+  font-weight: bold;
+  min-width: 1.25em;
+  padding: 0.25em;
+  text-align: center;
+  margin-left: $PAD_UNIT / 2;
+  .score-editor {
+    display: none;
+    min-width: 150 * $PX;
+    right: -1px;
+    margin-top: 3 * $PX;
+  }
+  &:hover .score-editor {
+    display: block;
+  }
+}
+
+.score-editor {
+  border: 1px solid $COLOR_DRAWER_BD;
+  padding: $PAD_UNIT;
+  position: absolute;
+  background-color: $COLOR_DRAWER_BG;
+  .rail {
+    width: 100%;
+    height: 0em;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    position: relative;
+    margin-bottom: 1.25em;
+    .score {
+      position: absolute;
+      display: block;
+      border: 1px solid $COLOR_DRAWER_BD !important;
+      background-color: $COLOR_DRAWER_BG;
+      width: 1.5em;
+      height: 1.5em;
+      top: -2.5em;
+      margin: 0em;
+      left: -0.75em;
+      padding: 0em;
+      text-align: center;
+      .value {
+        display: block;
+        padding: 0.25em;
+      }
+    }
+    .cursor {
+      width: 1em;
+      height: 1em;
+      background-color: $COLOR_BUTTON_BG;
+      border:1px solid $COLOR_BUTTON_BD;
+      border-radius: 1em;
+      display: block;
+      position: absolute;
+      left: 80%;
+      top: -0.5em;
+      cursor: pointer;
+      background: #e8e8e8;
+      @include background-image(linear-gradient(top, #e8e8e8, #d4d4d4));
+    }
+    .axis {
+      position: absolute;
+      left: 0em;
+      right: 0em;
+      top: 0em;
+      > div {
+        position: absolute;
+        padding-top:0.5em;
+        border-left: 1px solid $COLOR_TABLE_BD;
+      }
+      .label {
+        position: absolute;
+        padding-left: 0.25em;
+        font-size: 80%;
+        width: 3em;
+        margin-left: -1.5em;
+        opacity: 0.5;
+      }
+      .start {
+        left: 0%;
+      }
+      .middle {
+        left: 50%;
+      }
+      .end {
+        left: 100%;
+      }
+    }
+  }
+}
+
+.age-editor {
+  background: $COLOR_AGE_BG;
+  border-bottom: 1px solid $COLOR_INPUT_BD;
+  width: 80%;
+  height: 1em;
+  position: relative;
+  .range {
+    background: $COLOR_AGE_SELECTED;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24%;
+    right: 36%;
+    .boundary {
+      position: absolute;
+      cursor: pointer;
+      background: $COLOR_AGE_BG;
+      color: $COLOR_AGE_SELECTED;
+      border-bottom: none;
+      text-align: center;
+      width: 2em;
+      bottom: 2em;
+      &.begin {
+        left: -1em;
+      }
+      &.end {
+        right: -1em;
+      }
+      .tip {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 1em solid $COLOR_AGE_BG;
+        border-left: 1em solid transparent;
+        border-right: 1em solid transparent;
+      }
+    }
+  }
+}
+
+.DatePicker {
+  position: absolute;
+  margin-top: 5 * $PX;
+  width: 7 * 28 * $PX;
+  border: 1px solid $COLOR_INPUT_BD;
+  box-shadow: 0.1em 0.1em 0.5em rgba(0,0,0,0.25);
+  background-color: white;
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 2 * $PX;
+    .month-year {
+      font-size: 80%;
+    }
+    .next,.previous {
+      cursor: pointer;
+    }
+  }
+  .body {
+    clear: both;
+    border-top: 1px solid $COLOR_INPUT_BD;
+    border-bottom: 1px solid $COLOR_INPUT_BD;
+    .day {
+      float: left;
+      width: 28 * $PX;
+      height: 28 * $PX;
+      line-height: 28 * $PX;
+      text-align: center;
+      cursor: pointer;
+      &.past,&.future {
+        opacity: 0.5;
+        background: $COLOR_BUTTON_BG;
+      }
+      &:hover {
+        background: $COLOR_OPTION_SELECTED_BD;
+      }
+    }
+  }
+  .footer {
+    padding: 2 * $PX;
+    .min {
+      margin-right: 3 * $PX;
+    }
+  }
+}
+
+.drop-target {
+  border: 1px dashed $COLOR_BUTTON_BD;
+  text-align: center;
+  color: $COLOR_BUTTON_BD;
+  padding: $PAD_UNIT;
+}
+
+ul.media {
+  @include clearfix;
+  margin-right: -$PAD_UNIT / 2;
+  li.medium {
+    display: block;
+    float: left;
+    border: 1px solid $COLOR_MEDIA_BD;
+    background-color: $COLOR_MEDIA_BG;
+    position: relative;
+    width: 100 * $PX;
+    height: 100 * $PX;
+    margin-right: $PAD_UNIT / 2;
+    margin-bottom: $PAD_UNIT / 2;
+    .type, .date {
+      position: absolute;
+      background-color: rgba(0,0,0,0.25);
+      color: white;
+      text-transform: uppercase;
+      padding: 0.25em;
+      font-size: 70%;
+    }
+    .type {
+      top: 0em;
+      left: 0em;
+    }
+    .date {
+      text-align: center;
+      bottom: 0em;
+      left: 0em;
+      right: 0em;
+    }
+    .do-remove {
+      position: absolute;
+      top: 0em;
+      right: 0em;
+      display: none;
+    }
+    &:hover {
+      .do-remove {
+        display: block;
+      }
+    }
+  }
+}
+
+.mediaFIXME {
+  width: 100%;
+  height: 15em;
+  background-color: $COLOR_MEDIA_BG;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  &.editor {
+    background-color: transparent;
+    height: auto;
+  }
+}
+
+.avatar, .thumbnail {
+  width: 80 * $PX;
+  height: 80 * $PX;
+  background-color: $COLOR_MEDIA_BG;
+}
+
+.tag, .sources.editor .source, .crime {
+ 
+  > span {
+    padding: 0.25em;
+    display: inline-block;
+  }
+  .value {
+    padding-left: 0.5em;
+    opacity: 0.75;
+  }
+  &.major {
+    border-width: 2px;
+  }
+  &.minor {
+    border-radius: 0.25em;
+    > span {
+      padding-top: 0.15em;
+      padding-bottom: 0.15em;
+    }
+  }
+  &.is-new {
+    input {
+      width: 8em;
+    }
+  }
+}
+
+.tags, .sources.editor, .crimes.editor {
+  line-height: 2em;
+}
+
+.sources.editor .source, .tags.editor .tag, .crimes.editor .crime {
+ 
+  margin-right: 0.5em;
+  .do-clear {
+    position: relative;
+    top: -1px;
+    margin-left: 0.5em;
+  }
+  &.is-new {
+    padding: 0em;
+    border-radius: 0em;
+    border: 0px solid transparent;
+    .new {
+      position: absolute;
+      border: 1px solid $COLOR_INPUT_BD;
+      padding: $PAD_UNIT / 2;
+      min-width: 100 * $PX;
+      margin-top: $PAD_UNIT / 2;
+      background: white;
+      .label {
+        padding-top: 0.6em;
+      }
+      .score {
+        float: right;
+        .value {
+          padding-left: 0;
+        }
+      }
+      .score-editor {
+        position: inherit;
+      }
+      .group {
+        margin-top: $PAD_UNIT / 2;
+      }
+      .message {
+        font-style: italic;
+        font-size: 80%;
+      }
+      .actions {
+        margin-top: $PAD_UNIT / 2;
+      }
+    }
+  }
+}
+
+.locations, .events, .comments {
+  .location, .event, .comment {
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    margin-top: 2 * $PX;
+    margin-bottom: 2 * $PX;
+    border-left: 0.25em solid $COLOR_LIST_BD;
+    padding-left: $PAD_UNIT / 2;
+    .content {
+      float: left;
+      position: relative;
+    }
+    .actions {
+      padding: 0em !important;
+      float: right;
+      visibility: hidden;
+    }
+    &:hover {
+      background-color: $COLOR_SELECTABLE_HOVER;
+      .actions {
+        visibility: visible;
+      }
+    }
+    &.is-new {
+      input {
+        width: 90%;
+        margin-right: $PAD_UNIT;
+      }
+      label, .label {
+        font-size: 70%;
+        text-transform: uppercase;
+      }
+      .label {
+        padding-top: 0.6em;
+      }
+      .score {
+        position: relative;
+        border: none;
+        .value {
+          line-height: auto;
+          font-size: 100%;
+          padding-left: 0;
+        }
+      }
+      .score-editor {
+        position: inherit;
+      }
+    }
+  }
+}
+
+.comments {
+  .comment {
+    .text {
+      font-style: italic;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.autocomplete {
+  position: absolute;
+  border-top: 1px solid $COLOR_BUTTON_BD;
+  border-bottom: 1px solid $COLOR_BUTTON_BD;
+  li {
+    background: white;
+    border-left: 1px solid $COLOR_BUTTON_BD;
+    border-right: 1px solid $COLOR_BUTTON_BD;
+    padding: 4 * $PX;
+    min-width: 100px;
+    &.when-hover,&:hover {
+      background: $COLOR_OPTION_SELECTED_BD;
+    }
+  }
+}
+
+.empty {
+  font-style: italic;
+}
+
+.meta-history {
+  font-size: 80%;
+  .date {
+    margin-right: 0.3em;
+  }
+  .who {
+    margin-left: 0.3em;
+  }
+}
+
+
+
+.Revision-editor {
+  .when-revision {
+    display: block !important;
+  }
+  .when-not-revision {
+    display: none !important;
+  }
+  .field {
+    margin: 0em;
+    margin-bottom: 1.25em;
+    &:last-child {
+      margin-bottom: 0em;
+    }
+  }
+  &.is-compact {
+    .is-changed {
+      display: none;
+    }
+    .col {
+      width: 100%;
+      & > .body {
+        padding-right: 0em;
+        padding-left: 0em;
+      }
+    }
+  }
+  .is-revision {
+    .number {
+      background-color: #f0f0f0;
+      text-align: center;
+      width: 1.25em;
+      display: inline-block;
+    }
+    .revision {
+      padding: 0.25em;
+      border: 1px solid #a0a0a0;
+      background-color: white;
+    }
+  }
+  .is-description {
+    textarea {
+      height: 9em;
+    }
+  }
+}
+
+
+.Bulletin.in-view, .Incident.in-view, .Actor.in-view {
+  > .header:before {
+
+    content: '«';
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    height: 0.5em;
+    z-index: 10;
+  }
+  > .header {
+    margin-top: 1em;
+    @include clearfix;
+  }
+  h3 {
+    margin-top: 1.25em;
+    margin-bottom: 0.75em;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  .id {
+    font-size: 80%;
+    opacity: 0.5;
+  }
+  .name {
+    font-weight: bold;
+  }
+  .tags {
+    margin-top: 0.75em;
+  }
+  .description {
+    margin-top: 0.75em;
+  }
+  .score, .status {
+    float: right;
+  }
+  
+  .details {
+    margin-top: 0.75em;
+  }
+}
+
+.Actor.in-view {
+  > .header {
+    margin-bottom: 2em;
+    .id {
+      margin-bottom: $PAD_UNIT / 2;
+    }
+    .avatar {
+      margin-right: $PAD_UNIT / 2;
+    }
+    .title {
+      margin-bottom: 0.25em;
+    }
+    .aka {
+      font-size: 120%;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+
+.Bulletin.is-edited,.Incident.is-edited,.Actor.is-edited {
+  .field {
+    margin-top: $PAD_UNIT;
+    margin-bottom: $PAD_UNIT;
+    > label, > .label {
+      margin-bottom: 0.5em;
+    }
+  }
+  .search {
+    //@include clearfix;
+    margin-bottom: 0.5em;
+    input {
+      width: 70%;
+    }
+    .do-search {
+      margin-left: 0.25em;
+    }
+  }
+  .group.details {
+    margin-top: -$PAD_UNIT;
+    label {
+      display: block;
+      font-size: 80%;
+      text-transform: uppercase;
+    }
+  }
+  .is-assigned-to {
+    input {
+      width: 100%;
+    }
+  }
+  .is-status {
+    margin-right: $PAD_UNIT / 2;
+  }
+  .is-media {
+    .drop-target {
+      margin-bottom: $PAD_UNIT / 2;
+      margin-top: $PAD_UNIT / 2;
+    }
+  }
+  .is-description {
+    textarea {
+      width: 100%;
+      min-height: 5 * 1.25em;
+    }
+  }
+  .is-actors {
+    .Actor {
+      position: relative;
+      .actions {
+        background-color: rgba(0,0,0,0.05);
+      }
+    }
+    .Actor:hover .when-related {
+      position: absolute;
+      display: block !important;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+    .drop-target {
+      margin-top: $PAD_UNIT / 2;
+    }
+  }
+  .is-bulletins {
+    .Bulletin {
+      position: relative;
+      .actions {
+        background-color: rgba(0,0,0,0.05);
+      }
+    }
+    .Bulletin .when-related {
+      display: none;
+    }
+    .Bulletin:hover .when-related {
+      position: absolute;
+      display: block !important;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+    .drop-target {
+      margin-top: $PAD_UNIT / 2;
+    }
+  }
+  .is-incidents {
+    .Incident {
+      position: relative;
+      .actions {
+        background-color: rgba(0,0,0,0.05);
+      }
+    }
+    .Incident .when-related {
+      display: none;
+    }
+    .Incident:hover .when-related {
+      position: absolute;
+      display: block !important;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+    .drop-target {
+      margin-top: $PAD_UNIT / 2;
+    }
+  }
+}
+
+.Incident.is-edited {
+  .is-comments {
+    > label {
+      margin-bottom: 0.5em;
+    }
+    .comments {
+      margin-top: 0.5em;
+      clear: left;
+    }
+  }
+}
+
+.Actor.is-edited {
+  .is-birthdate {
+    .button {
+      margin-right: $PAD_UNIT / 2;
+    }
+  }
+}
+
+.Bulletin.is-expanded,.Incident.is-expanded {
+  .col > .body {
+    padding: $PAD_UNIT;
+    padding-top: 0em;
+    padding-bottom: 0em;
+  }
+  h2 {
+    margin-top: $PAD_UNIT;
+    margin-bottom: $PAD_UNIT / 2;
+    .text {
+      font-size: 120%;
+      line-height: 1.25em;
+    }
+  }
+  h4 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: $PAD_UNIT / 2;
+  }
+  .group {
+    margin-bottom: $PAD_UNIT;
+  }
+  .details {
+    .score {
+      padding: $PAD_UNIT;
+      .value {
+        line-height: 100%;
+        font-size: 300%;
+      }
+    }
+  }
+  .is-media {
+    > .preview {
+      background-color: $COLOR_MEDIA_BG;
+      height: 250 * $PX;
+      margin-bottom: $PAD_UNIT / 2;
+    }
+  }
+  .is-actors {
+    margin-right: -$PAD_UNIT / 2;
+    li {
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      padding-right: $PAD_UNIT / 2;
+      padding-bottom: $PAD_UNIT / 2;
+    }
+  }
+  .is-status {
+    .status {
+      float: none;
+    }
+  }
+  .is-score {
+    text-align: right;
+    float: right;
+    .score {
+      float: none;
+    }
+  }
+  .is-locations {
+    .map {
+      background-color: $COLOR_PLACEHOLDER_BG;
+      height: 200 * $PX;
+      margin-bottom: $PAD_UNIT / 2;
+    }
+  }
+  .is-history {
+    .edit {
+      margin-bottom: $PAD_UNIT;
+    }
+    .status {
+      float: left;
+      margin-right: 1em;
+    }
+    .meta-history {
+      padding-top: 0.5em;
+    }
+    .message {
+      font-style: italic;
+      clear: both;
+      opacity: 0.5;
+      margin-top: 1em;
+    }
+    .view {
+      padding-top: 0.3em;
+    }
+  }
+}
+
+.is-events {
+  > label {
+    margin-bottom: 0.5em;
+  }
+  .date-duration {
+    &:after {
+      //content:"\"\"\"\"";
+      clear: both;
+      height: 0px;
+    }
+    .date {
+      display: block;
+      float: left;
+    }
+    .duration {
+      display: block;
+      float:right;
+    }
+  }
+  .date, .duration {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 120%;
+    margin-bottom: 0.5em;
+  }
+  .do-editTime {
+    float: right;
+  }
+  .events {
+    margin-top: 0.5em;
+    clear: left;
+  }
+}
+
+
+.Incident.in-list,.Bulletin.in-list {
+  .title {
+    font-size: 100%;
+    margin-right: 8em;
+    font-weight: bold;
+  }
+  .meta {
+    float: right;
+    .score {
+      display: block;
+      float: right;
+    }
+    .status {
+      display: block;
+      float: right;
+    }
+  }
+ 
+}
+
+
+.when-empty {
+  display: none;
+}
+
+.is-empty {
+  .when-empty {
+    display: block;
+  }
+  .when-not-empty {
+    display: none;
+  }
+}
+
+
+.Notification {
+  position: absolute;
+  top: 27 * $PX;
+  left: 25%;
+  right: 25%;
+  color: $COLOR_NOTIFICATION_TXT;
+  background-color: $COLOR_NOTIFICATION_BG;
+  button {
+    &, &:hover {
+      border: 0px solid transparent;
+      background: none;
+      text-shadow: none;
+    }
+  }
+  .do-close {
+    position: absolute;
+    right: $PAD_UNIT / 2;
+    top: $PAD_UNIT / 4;
+    > span {
+      font-size: 140%;
+    }
+  }
+  .message {
+    padding: $PAD_UNIT / 4;
+    padding-left: $PAD_UNIT;
+    padding-right: $PAD_UNIT;
+    text-align: center;
+    button {
+      span {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.DatePicker {
+  display: none;
+}
+
+.with-date {
+  .DatePicker {
+    display: block;
+  }
+}
+
+.FF-Selector {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 80%;
+  padding: $PAD_UNIT / 2;
+  z-index: $Z_SELECTOR;
+  > .body {
+    transition-property:height;
+    transition-duration:0.5s;
+    height:0em;
+    overflow: hidden;
+  }
+  &:hover > .body {
+    height: auto;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+  ul {
+    li {
+      font-weight: bold;
+      &.is-page {
+        display: none;
+      }
+    }
+    li[data-wireframe] {
+      cursor: pointer;
+      font-weight: normal;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    li li {
+      padding-left: $PAD_UNIT;
+    }
+    li.current {
+      font-weight: bold;
+      color: #7cdde6;
+    }
+  }
+  &.is-bulletins {
+    li.is-page.bulletins {
+      display: inherit;
+    }
+  }
+  &.is-incidents {
+    li.is-page.incidents {
+      display: inherit;
+    }
+  }
+  &.is-actors {
+    li.is-page.actors {
+      display: inherit;
+    }
+  }
+}
+
+// ========================================================================
+// WIDGETS PAGE
+// ========================================================================
+.WidgetPage {
+  padding: 40px;
+  .body {
+    max-width: 600px;
+  }
+  h1 {
+    border-bottom: 1px solid black;
+    font-size: 140%;
+    margin-top: 20px;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  .group {
+    margin-top: 30px;
+  }
+  .is-score {
+    .body {
+      padding-left: 150px;
+      .score {
+        float: none;
+      }
+    }
+  }
+  .is-events.with-date {
+    margin-bottom: 200px;
+  }
+  .is-age {
+    margin-top: 80px;
+  }
+  .is-autocomplete {
+    margin-bottom: 100px;
+  }
+  .is-tags {
+    margin-bottom: 240px;
+  }
+  .is-sources {
+    margin-bottom: 340px;
+  }
+  .is-crimes {
+    margin-bottom: 270px;
+  }
+}
+
+// EOF
+

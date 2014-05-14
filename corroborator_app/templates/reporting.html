@@ -1,0 +1,29 @@
+{% extends "new_base.html" %}
+
+{% load i18n %}
+
+{% block top_nav %}
+  {% include "nav/top_menu.html" with reporting=True %}
+{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{{STATIC_URL}}js/bower_components/nvd3/nv.d3.min.css">
+{% endblock %}
+{% block script %}
+  {% include "includes/bootstrap.html" %}
+  {% include "includes/dev_reporting_script.html" %}
+{% endblock %}
+
+{% block content%}
+<nav id="monitor-navigation">
+  {% include "nav/reporting_tabs.html" %}
+</nav>
+
+<div id="reporting-content" class="columns as-2">
+  <div class="col first"></div>
+  <div class="graph-container">
+    <div class="graph-selector"></div>
+  </div>
+  <div class="col last right-filters"> </div>
+</div>
+{% endblock %}

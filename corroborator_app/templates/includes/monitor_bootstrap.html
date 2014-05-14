@@ -1,0 +1,20 @@
+
+  <script type="text/javascript">
+    var Bootstrap = (function() {
+      var importer_stats = {{ importer_stats_data|safe }};
+      var importer_conf = {{ importer_conf_data|safe }};
+      var scraper_conf = {{ scraper_conf_data|safe }};
+   
+      //consolidate our init data under one variable
+      return {
+          scraper_conf: scraper_conf,
+          importer_conf: importer_conf,
+          importer_stats: importer_stats,
+          username: '{{username}}',
+          userResource: '/api/v1/user/{{userid}}/',
+          apiKey: '{{api_key}}',
+          gl_userid: '{{userid}}',
+          locale: '{{locale}}'
+      }
+    }());
+  </script>

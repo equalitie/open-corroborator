@@ -1,0 +1,76 @@
+{% load i18n %}
+<nav class="Header">
+  <h1 class="title text T">Corroborator</h1>
+  <ul class="user">
+    <li class="hover-expandable">
+      <a href="/" class="text T">{{username}}</a>
+      <ul class="when-hover menu">
+        <li>
+          <a href="/logout/" class="text T">{% trans "Logout" %}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <ul class="sections list-h">
+    {% if is_senior_analyst or is_chief_analyst %}
+    <li
+      {% if search == True %}
+        class="current"
+        >{% trans "Main" %}
+      {% else %}
+        >
+      <a href="/corroborator/" class="text T">{% trans "Main" %}</a>
+      {% endif %}
+    </li>
+    {% endif %}
+    {% if is_chief_analyst %}
+    <li 
+      {% if reporting == True %}
+        class="current"
+        >{% trans "Reporting" %}
+      {% else %}
+        >
+        <a href="/corroborator/reporting/" class="text T">{% trans "Reporting" %}</a>
+      {% endif %}
+    </li>
+    {% endif %}
+
+    {% if is_senior_analyst or is_chief_analyst %}
+    <li>
+      <a href="/admin/" class="text T">{% trans "Administration" %}</a>
+    </li>
+    {% endif %}
+    {% if is_chief_analyst %}
+    <li
+      {% if monitoring == True %}
+        class="current"
+        >{% trans "Monitoring" %}
+      {% else %}
+        >
+        <a href="/corroborator/monitoring" class="text T">{% trans "Monitoring" %}</a>
+      {% endif %}
+    </li>
+    {% endif %}
+
+
+    <li>
+      <form action="{% url 'set_language' %}" method="post">
+      {% csrf_token %}
+      <input name="next" type="hidden" value="{{ redirect_to }}" />
+      <select name="language">
+      <option value="ar"{% if LANGUAGE_CODE == 'ar' %} selected="selected"{% endif %}>
+                   العربيّة (ar)                             
+          </option>
+      <option value="en"{% if LANGUAGE_CODE == 'en' %} selected="selected"{% endif %}>
+          English(en)
+          </option>
+
+
+
+          </select>
+          <input type="submit" value="Go" />
+          </form>
+    </li>
+  </ul>
+  <div class="clearer">&nbsp;</div>
+</nav>

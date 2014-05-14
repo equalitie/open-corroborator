@@ -1,0 +1,66 @@
+$FILTER_BG:#f9f0e8;
+$FILTER_HEADER_COLOR:#bab4ac;
+$FILTER_GROUP_BORDER_COLOR: #bfbfba;
+$FILTER_TEXT_COLOR: #8c8b8a;
+$SELECTED_FILTER_BG: #f4a77c;
+
+
+.group.is-filters {
+  margin-top: $PAD_UNIT / 2;
+  background-color: $FILTER_BG;
+  padding: $PAD_UNIT/2;
+  border-left: 1px solid $FILTER_GROUP_BORDER_COLOR;
+  border-right: 1px solid $FILTER_GROUP_BORDER_COLOR;
+}
+.map-filter .map {
+  width: 350px;
+  height: 250px;
+}
+.map-filter {
+  margin-bottom: 15px;
+}
+
+.filter, .filter-drop-down, .map-filter-container {
+  color: $FILTER_TEXT_COLOR;
+  
+    label {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 90%;
+      color: $FILTER_HEADER_COLOR;
+      margin-bottom: 3px;
+    }
+    margin-bottom: $PAD_UNIT / 2;
+    &:last-child {
+      margin-bottom: 0em;
+    }
+    li.option {
+      background-color:white;
+      padding: 2px; 
+      padding-left: 5px;
+      padding-right: 5px;
+      margin-bottom:3px;
+    }
+}
+@mixin selected_filter(
+  $bgcolor: $SELECTED_FILTER_BG,
+  $text_color: white
+) {
+  cursor: pointer;
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: $SELECTED_FILTER_BG;
+    color: white;
+    line-height: 1em;
+    .do-clear {
+      background: none;
+    }
+}
+.selected-actor-filters,
+.selected-bulletin-filters,
+.selected-incident-filters {
+  li.tag {
+    @include selected_filter;
+  }
+}
+

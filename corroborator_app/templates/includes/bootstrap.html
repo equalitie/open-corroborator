@@ -1,0 +1,230 @@
+<script type="text/javascript">
+  var Bootstrap = (function() {
+    var locale = '{{locale}}',
+        ages = [],
+        sexes = [],
+        civilian = [],
+        gl_s3_aws_media_url = '{{ MEDIA_URL }}',
+        gl_ac_role_list = [],
+        user_list = [],
+        gl_ac_relation_list = [],
+        gl_ac_crimes_list = [],
+        special_global_ac_sources_list = [],
+        gl_ac_loc_set = [],
+        gl_ac_labels_list = [],
+        gl_ac_loc_ac_set = [],
+        conditions = [],
+        gl_ac_users_list = [],
+        solr_url = '{{ solr_url }}',
+        comment_statuses = [],
+        all_statuses = [],
+        predefined_list = [],
+        can_update_to_finalized = '{{ can_update_to_finalized }}' === 'True'
+        ? true
+        : false;
+        can_assign_users = '{{ can_assign_users }}' === 'True'
+        ? true
+        : false;
+        can_delete_entities = '{{ can_delete_entities }}' === 'True'
+        ? true
+        : false;
+        can_edit_entities = '{{ can_edit_entities }}' === 'True'
+        ? true
+        : false;
+        can_edit_assigned_entities = '{{ can_edit_assigned_entities }}' === 'True'
+        ? true
+        : false;
+    {% for condition in conditions %}
+        conditions.push({
+          id            : {{condition.id}},
+          resource_uri  : "/api/v1/actorCondition/{{condition.id}}/",
+          name_en       : '{{condition.name_en}}',
+          name          : '{{condition.name}}',
+          name_ar       : '{{condition.name_ar}}',
+          key           : '{{condition.key}}',
+          description_en: '{{condition.description_en}}',
+          description_ar: '{{condition.description_ar}}',
+        });
+    {% endfor %}
+    {% for pds in predefined_search_set %}
+      {% if "[{" not in pds.actor_filters %} 
+               // skipped {{pds.search_title}}
+      {% else %}
+        predefined_list.push({
+            search_title:     "{{pds.search_title}}",
+            search_string:    '{{pds.search_string}}',
+            {% autoescape off %}
+            actor_filters:    {{pds.actor_filters}},
+            bulletin_filters: {{pds.bulletin_filters}},
+            incident_filters: {{pds.incident_filters}},
+            {% endautoescape %}
+            resource_uri:     '/api/v1/predefinedSearch/{{pds.id}}/',
+            id:               '{{pds.id}}',
+            // some stuff just for frontend purposes
+            name_en:          "{{pds.search_title}}",
+            name:          "{{pds.search_title}}",
+            search_request:   "predefined_search",
+            type:             "predefined_search"
+        });
+      {% endif %}
+    {% endfor %}
+    {%for sex in sexes_set %}
+      sexes.push({ 
+        key:"{{sex.key}}",
+        value: "{{sex.value}}"
+      });
+    {% endfor %}
+
+    {%for age in age_set %}
+      ages.push({ 
+        key:"{{age.key}}",
+        value: "{{age.value}}"
+      });
+    {% endfor %}
+
+    {%for civ in civilian %}
+      civilian.push({ 
+        key:"{{civ.key}}",
+        value: "{{civ.value}}"
+      });
+    {% endfor %}
+
+    {%for relation in relation_status_set %}
+      gl_ac_relation_list.push({ 
+        key:"{{relation.key}}",
+        value: "{{relation.value}}"
+      });
+    {% endfor %}
+
+    {%for role in role_status_set %}
+      gl_ac_role_list.push({ 
+        key:"{{role.key}}",
+        value: "{{role.value}}"
+      });
+    {% endfor %}
+
+
+    {%for comment_status in all_status_set %}
+      all_statuses.push({
+        comment_status:"{{comment_status.comment_status}}",
+        name:"{{comment_status.name}}",
+        key:"{{comment_status.key}}",
+        id:{{comment_status.id}},
+        resource_uri:"/api/v1/statusUpdate/{{comment_status.id}}/"
+      });
+    {% endfor %}
+    {%for comment_status in status_set %}
+      comment_statuses.push({
+        comment_status:"{{comment_status.comment_status}}",
+        name:"{{comment_status.name}}",
+        key:"{{comment_status.key}}",
+        id:{{comment_status.id}},
+        resource_uri:"/api/v1/statusUpdate/{{comment_status.id}}/"
+      });
+    {% endfor %}
+    var create_status = {
+        comment_status:"{{create_status.comment_status}}",
+        name:"{{comment_status.name}}",
+        key:"{{comment_status.key}}",
+        id:"{{create_status.id}}",
+        resource_uri:"/api/v1/statusUpdate/{{create_status.id}}/"
+      };
+
+    {%for label in labels_set.all %}
+      gl_ac_labels_list.push({
+        name:"{{label.name}}",
+        label:"{{label.name}}",
+        id:"{{label.id}}",
+        resource_uri:"/api/v1/label/{{label.id}}/"
+      });
+    {% endfor %}
+
+    {%for user in users_set.all %}
+      gl_ac_users_list.push({
+        label:"{{user.username}}",
+        id:"/api/v1/user/{{user.id}}/",
+        resource_uri:"/api/v1/user/{{user.id}}/"
+      });
+    {% endfor %}
+
+    {%for crime in crimes_set.all %}
+      gl_ac_crimes_list.push({
+        name:"{{crime.name}}",
+        label:"{{crime.name}}",
+        id:"{{crime.id}}",
+        resource_uri:"/api/v1/crimeCategory/{{crime.id}}/"
+      });
+    {% endfor %}
+
+    {%for source in sources_set.all %}
+      special_global_ac_sources_list.push({
+        name:"{{source.name}}",
+        label:"{{source.name}}",
+        id:"{{source.id}}",
+        resource_uri:"/api/v1/source/{{source.id}}/"
+      });
+    {% endfor %}
+
+    {%for loc in loc_set.all %}
+      gl_ac_loc_set.push({
+        name_en:"{{loc.name_en}}",
+        name_ar:"{{loc.name_ar}}",
+        {% autoescape off %}
+        name:"{{loc.name}}",
+        label: "{{loc.label}}",
+        {% endautoescape %}
+        latitude:"{{loc.latitude}}",
+        longitude: "{{loc.longitude}}",
+        loc_type: "{{loc.loc_type}}",
+        parent_text: "{{parent_text}}",
+        description: "{{description}}",
+        parent_location: "{{parent_location}}",
+        resource_uri: "/api/v1/location/{{loc.id}}/"
+      });
+    {% endfor %}
+
+    {%for user in users_set.all %}
+      user_list.push({
+        label:"{{user.username}}",
+        name:"{{user.username}}",
+        id:"{{user.id}}",
+        resource_uri:"/api/v1/user/{{user.id}}/"
+      });
+    {% endfor %}
+
+    //consolidate our init data under one variable
+    return {
+        locale: locale,
+        perms: {
+          can_assign_users: can_assign_users,
+          can_update_to_finalized: can_update_to_finalized,
+          can_delete_entities: can_delete_entities,
+          can_edit_entities: can_edit_entities,
+          can_edit_assigned_entities: can_edit_assigned_entities
+        },
+        ages: ages,
+        sexes:sexes,
+        civilian: civilian,
+        user_list: user_list,
+        predefined_list: predefined_list,
+        gl_s3_aws_media_url: '{{ MEDIA_URL }}',
+        username: '{{username}}',
+        userResource: '/api/v1/user/{{userid}}/',
+        apiKey: '{{api_key}}',
+        gl_userid: '{{userid}}',
+        gl_ac_role_list: gl_ac_role_list,
+        gl_ac_relation_list: gl_ac_relation_list,
+        crimes: gl_ac_crimes_list,
+        sources: special_global_ac_sources_list,
+        labels: gl_ac_labels_list,
+        locations: gl_ac_loc_set,
+        gl_ac_users_list: gl_ac_users_list,
+        comment_statuses: comment_statuses,
+        create_status: create_status,
+        all_statuses: all_statuses,
+        conditions: conditions,
+        solr_url: solr_url
+    };
+
+  }());
+</script>

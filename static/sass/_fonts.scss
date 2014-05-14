@@ -1,0 +1,101 @@
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+@include font-face(
+  "corroborator", 
+  font-files(
+    "/static/fonts/corroborator/corroborator.ttf",
+    "/static/fonts/corroborator/corroborator.woff",
+    "/static/fonts/corroborator/corroborator.otf"
+    ), "/static/fonts/corroborator/corroborator.eot"
+  );
+
+@include font-face(
+  "IconicFill", 
+  font-files(
+    "/static/fonts/iconic-fill/iconic_fill.ttf",
+    "/static/fonts/iconic-fill/iconic_fill.woff",
+    "/static/fonts/iconic-fill/iconic_fill.otf"
+    ),
+    "/static/fonts/iconic-fill/iconic_fill.eot"
+  );
+
+@include font-face(
+  "Open Sans", 
+  font-files(
+    "/static/fonts/opensans/OpenSans-Regular.ttf")
+  );
+ 
+@include font-face(
+  "Open Sans Semi Bold", 
+  font-files(
+    "/static/fonts/opensans/OpenSans-Semibold.ttf")
+  );
+ 
+@include font-face(
+  "Open Sans Bold", 
+  font-files(
+    "/static/fonts/opensans/OpenSans-Bold.ttf")
+  );
+@mixin corrob_icon_attach {
+    font-family: "corroborator";
+    text-transform: none;
+    content: attr(data-icon);
+    speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+@mixin corrob_icon_attach_before($font_size:13px) {
+  [data-icon]:before {
+    @include corrob_icon_attach;
+    font-size: $font_size;
+  }
+}
+@mixin open_sans {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin open_sans_semi_bold {
+  font-family: 'Open Sans Semi Bold', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin open_sans_bold {
+  font-family: 'Open Sans Bold', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin iconic_fill {
+  font-family: IconicFill, sans-serif;
+}
+
+@mixin helvetica {
+  font-family: Helvetica, sans-serif;
+}
+
+em {
+  font-style: normal;
+  @include open_sans_bold;
+};
+
+@mixin large_header {
+  @include open_sans_bold;
+  color: $DISPLAY_TEXT_DARK;
+  font-size: 27px;
+  line-height: 27px;
+}
+
+@mixin medium_header {
+  @include open_sans_bold;
+  color: $DISPLAY_TEXT_DARK;
+  font-size: 16px;
+}
+
+@mixin small_header {
+  @include open_sans;
+  color: $DISPLAY_TEXT_MID;
+  text-transform: uppercase;
+  font-size: 14px;
+}

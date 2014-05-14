@@ -1,0 +1,197 @@
+// ======================================================================
+// PREVIEW AND EXPANDED VIEW
+// ======================================================================
+
+
+.incident-view .body,
+.actor-view .body,
+.bulletin-view .body {
+  bottom: 40px;
+  background-color: #f9f0e8;
+}
+
+// display the expanded view second column correctly
+.Incident.is-edited.is-expanded .span-33p,
+.Actor.is-edited.is-expanded .span-33p,
+.Bulletin.is-edited.is-expanded .span-33p {
+  width: 29%;
+  padding-left: 2*$PAD_UNIT;
+}
+
+
+
+@mixin display_outline($header_color) {
+  border-left: solid 1px $DISPLAY_BORDER;
+  border-top: 5px solid $header_color;
+}
+
+// HEADER COLORS
+.incident-view {
+  @include display_outline($SELECTED_INCIDENT_BORDER);
+}
+
+.bulletin-view {
+  @include display_outline($SELECTED_BULLETIN_BORDER);
+}
+
+.actor-view {
+  @include display_outline($SELECTED_ACTOR_BORDER);
+}
+
+// INTER DISPLAY ELEMENT SPACING
+.detail {
+  margin-top: $PAD_UNIT;
+  clear: left;
+}
+
+h2.title {
+  @include large_header;
+}
+
+h3.title {
+  @include small_header;
+}
+
+// PREVIEW STYLES
+// SPECIFIC FIELDS
+.assigned-to {
+  @include open_sans_semi_bold;
+  text-transform: uppercase;
+  float: left;
+  clear: left;
+  color: $DISPLAY_TEXT_LIGHT;
+  font-size: 14px;
+}
+
+.score {
+  color: $DISPLAY_TEXT_MID;
+  font-size: 15px;
+  @include open_sans_bold;
+  span {
+    min-height: 15px;
+  }
+}
+
+.tags.group .tag {
+  @include tag_style;
+}
+.field {
+  clear: left;
+}
+
+.date-location {
+  clear: both;
+}
+
+.description {
+  color: $DISPLAY_TEXT_MID;
+}
+
+// RELATED ENTITIES
+
+.in-list {
+  color: $DISPLAY_TEXT_MID;
+  border: 1px solid $DISPLAY_BORDER;
+  .name {
+    margin-top: 0.5em;
+    @include medium_header;
+  }
+  .L1, .L2 {
+    @include open_sans;
+    font-size: 14px;
+  }
+  .L2 {
+    margin-bottom: $PAD_UNIT /2;
+  }
+  .L3 {
+    margin-bottom: $PAD_UNIT /2;
+    font-weight: normal;
+    font-size: 12px;
+    @include helvetica;
+    span {
+      font-size: 12px;
+    }
+  }
+  .involved {
+    font-weight: bold;
+  }
+  .title {
+    @include medium_header;
+  }
+}
+
+.Actor.in-list.search-results {
+  border: none;
+}
+
+// ========================================
+// BOTTOM BUTTONS
+// ========================================
+.overlay .footer {
+  border-bottom: 0px solid $COLOR_TABLE_BD;
+  bottom: 0em;
+  position: absolute;
+  left: 0em;
+  right: $PAD_UNIT;
+  height: 2 * $PAD_UNIT;
+}
+
+.when-overlay-not_expanded,
+.when-overlay-expanded {
+  width: 20%;
+  height: 100%;
+  float: left;
+  button.do-expand { 
+    text-transform: uppercase;
+    @include bottom_button(100%, none);
+  }
+  button.do-collapse {
+    text-transform: uppercase;
+    @include bottom_button(100%, none);
+  }
+}
+
+button.do-select {
+  text-transform: uppercase;
+  @include bottom_button(
+    60%, 1px solid $FOOTER_BUTTON_HOVER_COLOR)
+}
+
+button.do-edit {
+  @include bottom_button(20%, none)
+}
+
+
+// select checkbox
+div.selection {
+  height: 6px;
+  width: 6px;
+  @include corrob_icon_attach_before;
+  padding-right: 5px;
+  display: inline-block;
+}
+@mixin media_thumb_icon {
+  display: inline-block;
+    @include corrob_icon_attach_before(
+      $font_size: 6em
+    );
+  .media-document-thumbnail, .media-video-thumbnail {
+    color: lighten(#2b2b2a, 40%);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    display: inline-block;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+}
+li.medium {
+  @include media_thumb_icon;
+}
+.media-result {
+  div {
+    @include media_thumb_icon;
+  }
+}
+
+

@@ -1,0 +1,289 @@
+@mixin clear_button($bg_color:#404040, $fg_color:#FFF) {
+    text-shadow: none;
+    border: 0px solid transparent;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: -7 * $PX;
+    background: $bg_color;
+    width: 12 * $PX;
+    height: 12 * $PX;
+    line-height: 0em;
+    border-radius: 6 * $PX;
+    > span {
+      color: $fg_color;
+      @include iconic_fill;
+      position: relative;
+      left: 0 * $PX;
+      line-height: 12 * $PX / 0.7;
+      font-size: 65%;
+    }
+}
+
+@mixin rtl_clear_button {
+  @include clear_button;
+}
+
+@mixin button (
+  $background_color: $COLOR_INPUT_BD,
+  $hover_color: false,
+  $border: none,
+  $height: $INPUT_HEIGHT,
+  $text_color: white
+) {
+  @include open_sans_semi_bold;
+  text-transform: uppercase;
+  background-color: $background_color;
+  color: $text_color;
+  height: $height;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: none;
+  margin: 0px;
+  @if $hover_color == false {
+    $hover_color: darken($background_color, 10%);
+  }
+  &:hover {
+    background-color: $hover_color;
+  }
+
+
+}
+
+@mixin create_button ($bg_color:black) {
+  @include button(
+    $background_color: $bg_color,
+    $text_color: #fff,
+    $height: $ACTION_BAR_HEIGHT
+  );
+  text-transform:uppercase;
+  @include corrob_icon_attach_before;
+  width: 100%;
+}
+
+@mixin combo_small(
+  $bg_color: white,
+  $color: black,
+  $hover_color: grey,
+  $hover_text: black,
+  $border_color: false,
+  $width: 8em,
+  $height: 1.2em
+){
+  $padding_left: 0.75em;
+  @include button(
+    $background_color: $bg_color,
+    $text_color: $color,
+    $height: $height
+  );
+  width: $width;
+   padding-top: 5px;
+   padding-bottom: 5px;
+    position: relative;
+    display: inline-block;
+    padding-left: $padding_left;
+    @include corrob_icon_attach_before;
+    [data-icon]:before {
+      display: block;
+      width: 3em;
+      float: right;
+      right: 0em;
+      text-align: right;
+    }
+    .options {
+      text-transform: none;
+      width: 100%;
+      right: 0em;
+      display: none;
+      position: absolute;
+      margin-top: 5px;
+      border-top: 0px solid transparent;
+      z-index: $Z_MENU;
+      text-align: left;
+      li {
+        padding-left: $padding_left;
+        width: 100%;
+        background-color: $bg_color;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        &:hover {
+          color: $hover_text;
+          background-color: darken($bg_color, 30%);
+        }
+      }
+    };
+    &:hover .options {
+      display: block;
+    }
+  }
+
+@mixin combo_large(
+  $bg_color: #d4d4d4,
+  $height: 2.25em,
+  $width: 7em,
+  $highlight_color: #d4d4d4,
+  $border_color: #b4b4b4,
+  $border_bottom: false
+){
+    position: relative;
+    display: inline-block;
+    min-width: $width;
+    height: $height;
+    line-height: $height;
+    background-color: $bg_color;
+    text-transform: uppercase;
+    > span:after {
+      position: absolute;
+      z-index: 3;
+      display: block;
+      top: 0em;
+      bottom: 0em;
+      right: 0em;
+      width: 1.75em;
+      line-height: $height;
+      text-align: center;
+      content: '\2193';
+      font-family: "IconicFill";
+      border-left: 1px solid $border_color;
+    }
+    .options {
+      display: none;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      background-color: $bg_color;
+      @if $border_bottom {
+        border-top: 1px solid $border_bottom;
+      }
+      z-index: $Z_MENU;
+      text-align: left;
+      li {
+        margin:none;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        &:hover {
+          background-color:$highlight_color;
+        }
+      };
+    };
+    &:hover .options {
+      display: block;
+      height: auto;
+    }
+}
+
+.field {
+  button.combo, .button.combo {
+    @include combo_small(
+    $bg_color: $COLOR_INPUT_BD,
+    $color: black,
+    $width: 80%
+    );
+    text-transform: none;
+  }
+  &.span-33p {
+    clear: none;
+    float: left;
+  }
+}
+
+
+
+
+// ======================================================================
+// BIG RED FOOTER BUTTONS
+// ======================================================================
+
+@mixin bottom_button ($width, $border) {
+    @include button(
+      $background_color: $FOOTER_BUTTON_COLOR,
+      $hover_color: #d96859,
+      $text_color: white
+    );
+    height: 100%;
+    border: none;
+    border-left: $border;
+    border-right: $border;
+    width: $width;
+    float: left;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+// ======================================================================
+// CREATE BUTTONS
+// ======================================================================
+button.create.do-create-incident {
+  @include create_button($bg_color:$SELECTED_INCIDENT_BORDER);
+}
+button.create.do-create-actor {
+  @include create_button($bg_color:$SELECTED_ACTOR_BORDER);
+}
+button.create.do-create-bulletin {
+  @include create_button(
+    $bg_color:$SELECTED_BULLETIN_BORDER
+  );
+}
+
+
+button, a.button {
+  @include button;
+}
+a.button.download {
+  width: 50%;
+  display: block;
+  text-align: center;
+  padding-top: 11px;
+  margin-top: 10px;
+}
+
+button.do-clear {
+  @include clear_button;
+}
+.rtl button.do-clear {
+  @include rtl_clear_button;
+}
+
+.info, .home {
+  @include button(
+    $background_color: transparent,
+    $hover_color: transparent
+  );
+  margin-top: 1em;
+  margin-left: 0.5em;
+  float: left;
+  @include corrob_icon_attach_before;
+}
+
+.home {
+  margin-left: 1.5em;
+}
+
+.do-hide {
+  height: 15px;
+  padding-left: 8px;
+  @include button(
+    $background_color: transparent,
+    $hover_color: transparent,
+    $text_color: black
+  );
+  display: inline-block;
+  @include corrob_icon_attach_before;
+}
+.drop-down-handle {
+  height: 15px;
+  @include button(
+    $background_color: $COLOR_INPUT_BD,
+    $hover_color: $COLOR_INPUT_BD,
+    $text_color: white
+  );
+  margin-bottom: -1px;
+  margin-left: -5px;
+  display: inline-block;
+  @include corrob_icon_attach_before;
+}
+
+.Header input[type=submit] {
+  line-height: .75em;
+}

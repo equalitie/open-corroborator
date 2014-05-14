@@ -1,0 +1,134 @@
+[
+    {
+        "fields": {
+            "actor": 3, 
+            "comments_ar": null, 
+            "comments_en": null, 
+            "relation_status": null, 
+            "role_ar": null, 
+            "role_en": "Tortured", 
+            "role_status": "T"
+        }, 
+        "model": "corroborator_app.actorrole", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "actor": 3, 
+            "comments_ar": "", 
+            "comments_en": "", 
+            "relation_status": null, 
+            "role_ar": null, 
+            "role_en": "Wounded", 
+            "role_status": "W"
+        }, 
+        "model": "corroborator_app.actorrole", 
+        "pk": 2
+    }, 
+    {
+        "fields": {
+            "actor": 2, 
+            "comments_ar": null, 
+            "comments_en": null, 
+            "relation_status": null, 
+            "role_ar": null, 
+            "role_en": "Killed", 
+            "role_status": "K"
+        }, 
+        "model": "corroborator_app.actorrole", 
+        "pk": 3
+    }, 
+
+    {
+        "fields": {
+            "DOB": null, 
+            "POB": null, 
+            "actors_role": [
+              2
+            ], 
+            "current_location": null, 
+            "deleted": false, 
+            "ethnicity_ar": "", 
+            "ethnicity_en": "", 
+            "fullname_ar": "", 
+            "fullname_en": "Nameless", 
+            "media": null, 
+            "nationality_ar": "", 
+            "nationality_en": "", 
+            "nickname_ar": "", 
+            "nickname_en": "nickname", 
+            "occupation_ar": "", 
+            "occupation_en": "plumber", 
+            "position_ar": "", 
+            "position_en": "", 
+            "religion_ar": "", 
+            "religion_en": "", 
+            "spoken_dialect_ar": "", 
+            "spoken_dialect_en": "",
+            "actor_created": "2013-11-18 19:36:18.523736",
+            "actor_modified": "2013-11-18 19:36:18.523736"
+        }, 
+        "model": "corroborator_app.actor", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "DOB": null, 
+            "POB": null, 
+            "actors_role": [], 
+            "current_location": null, 
+            "deleted": false, 
+            "ethnicity_ar": "", 
+            "ethnicity_en": "", 
+            "fullname_ar": "", 
+            "fullname_en": "Just some guy", 
+            "media": null, 
+            "nationality_ar": "", 
+            "nationality_en": "", 
+            "nickname_ar": "", 
+            "nickname_en": "nickname", 
+            "occupation_ar": "", 
+            "occupation_en": "", 
+            "position_ar": "", 
+            "position_en": "", 
+            "religion_ar": "", 
+            "religion_en": "", 
+            "spoken_dialect_ar": "", 
+            "spoken_dialect_en": "",
+            "actor_created": "2013-11-18 19:36:18.523736",
+            "actor_modified": "2013-11-18 19:36:18.523736"
+        }, 
+        "model": "corroborator_app.actor", 
+        "pk": 2
+    }, 
+    {
+        "fields": {
+            "DOB": null, 
+            "POB": null, 
+            "actors_role": [], 
+            "current_location": null, 
+            "deleted": false, 
+            "ethnicity_ar": "", 
+            "ethnicity_en": "", 
+            "fullname_ar": "", 
+            "fullname_en": "Bob", 
+            "media": null, 
+            "nationality_ar": "", 
+            "nationality_en": "", 
+            "nickname_ar": "", 
+            "nickname_en": "", 
+            "occupation_ar": "", 
+            "occupation_en": "", 
+            "position_ar": "", 
+            "position_en": "", 
+            "religion_ar": "", 
+            "religion_en": "", 
+            "spoken_dialect_ar": "", 
+            "spoken_dialect_en": "",
+            "actor_created": "2013-11-18 19:36:18.523736",
+            "actor_modified": "2013-11-18 19:36:18.523736"
+        }, 
+        "model": "corroborator_app.actor", 
+        "pk": 3
+    }
+]

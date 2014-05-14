@@ -1,0 +1,12 @@
+{
+    "total": 2000,
+    "done": 200,
+    "current_type": "csv",
+    "errors": [
+    "Error: failed to import test1.csv",
+    "Error: failed to import test40.csv"
+    ],
+    "dumb_percent": 10,
+    "timestart": 1386270544.977599,
+    "timetaken": 11.2903800011
+}

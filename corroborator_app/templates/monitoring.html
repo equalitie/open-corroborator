@@ -1,0 +1,24 @@
+{% extends "new_base.html" %}
+
+{% load i18n %}
+
+{% block top_nav %}
+  {% include "nav/top_menu.html" with monitoring=True%}
+{% endblock %}
+
+{% block script %}
+  {% include "includes/monitor_bootstrap.html" %}
+  {% include "includes/dev_monitor_script.html" %}
+{% endblock %}
+
+{% block content%}
+<nav id="monitor-navigation">
+
+{% include "nav/monitoring_tabs.html" %}
+
+</nav>
+
+<div id="monitor-content" class="columns as-2">
+
+</div>
+{% endblock %}

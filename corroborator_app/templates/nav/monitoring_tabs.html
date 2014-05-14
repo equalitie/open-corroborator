@@ -1,0 +1,29 @@
+{% load i18n %}
+  <div class="tabs">
+    <ul>
+      <li class="is-monitor">
+        <a href="#tab/monitor" id="monitor-tab">
+          <span class="text">
+            <span class="label T">{% trans "Monitor" %}</span>
+          </span>
+        </a>
+      </li>
+      <li class="is-importer-config">
+        <a id="importer-config-tab" href="#tab/importer-config">
+          <span class="text">
+            <span class="label T">{% trans "Importer config" %}</span>
+          </span>
+        </a>
+      </li>
+
+      <li class="is-scraper-config">
+        <a href="#tab/scraper-config" id="scraper-config-tab">
+         <span class="text">
+          <span class="label T">{% trans "Scraper config" %}</span>
+        </span>
+
+      </a>
+    </li>
+  </ul>
+  <div class="clearer">&nbsp;</div>
+</div>

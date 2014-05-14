@@ -1,0 +1,73 @@
+
+spacing           = 10px
+volume_height     = 8px
+timeline_height   = 10px
+full_time_width   = 100px
+
+@import "core/index"
+
+.{root}
+
+   .fp-controls
+      background-color #1
+
+   .fp-timeline
+      bg #5
+
+   .fp-buffer
+      bg #e
+
+   .fp-progress
+      background-color #4da5d8
+
+   &.is-touch.is-mouseover .fp-progress:before
+      background-color #4da5d8
+
+   .fp-volumelevel
+      bg #f
+
+   .fp-volumeslider
+      bg #5
+
+   // border
+   .fp-timeline, .fp-volumeslider
+      border 1px inset
+      border-color rgba(#0, 0.2) rgba(#1, 0.05)
+
+   // gradient
+   .fp-controls, .fp-progress
+      gradient rgba(#f, 0.4) rgba(#f, 0.01)
+
+   // radius
+   .fp-timeline, .fp-buffer, .fp-progress, .fp-volumeslider, .fp-volumelevel
+      border-radius 10px
+
+   // light
+   &.color-light
+      .fp-controls
+         background-color #e
+         gradient rgba(#0, 0.01) rgba(#0, 0.3)
+
+      .fp-timeline, .fp-volumeslider
+         border-color #e #c
+
+      .fp-timeline, .fp-volumeslider
+         bg #c
+         font-size 10px
+
+   &.color-alt
+      .fp-progress
+         gradient #9 #1
+
+      &.is-touch.is-mouseover .fp-progress:before
+         gradient #9 #1
+
+      .fp-timeline, .fp-volumeslider
+         bg #1
+
+   &.color-alt2
+      .fp-progress
+         background-color #900
+
+      &.is-touch.is-mouseover .fp-progress:before
+         background-color #900

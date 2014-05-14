@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-13 12:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: models.py:646 views/context.py:126
+msgid "adult"
+msgstr "بالغ"
+
+#: models.py:647 views/context.py:130
+msgid "child"
+msgstr "طفل"
+
+#: models.py:650 views/context.py:117
+msgid "female"
+msgstr "إنثى"
+
+#: models.py:651 views/context.py:113
+msgid "male"
+msgstr "ذكر"
+
+#: models.py:654 views/context.py:96
+msgid "Civilian"
+msgstr "مدني"
+
+#: models.py:655 views/context.py:100
+msgid "Non-civilian"
+msgstr "غير مدني"
+
+#: models.py:656 views/context.py:104
+msgid "Police"
+msgstr ""
+
+#: reporting/user_reporting.py:21
+msgid "Total login time by User"
+msgstr "الوقت الكلي الذي أمضاه المستخدم"
+
+#: reporting/user_reporting.py:38
+msgid "Total user login time per day"
+msgstr "الوقت الذي أمضاه المستخدم يوميا"
+
+#: reporting/user_reporting.py:75
+msgid "Average user updates per hour"
+msgstr "وسطي التحديثات التي قام بها المستخدم في الساعة الواحدة"
+
+#: reporting/user_reporting.py:117
+msgid "User assigned items by status"
+msgstr "عدد العناصر المفرزة للأشخاص - وفق الحالة"
+
+#: reporting/user_reporting.py:178
+#, python-format
+msgid "Total %(type)s items by User"
+msgstr "العدد الكلي للعناصر %(type)s بحسب المستخدم"
+
+#: reporting/user_reporting.py:193
+msgid "Deleted, created and edited items by date"
+msgstr "عدد العناصر المنشأة والمعدلة والمحذوفة بحسب التاريخ"
+
+#: reporting/user_reporting.py:198
+msgid "Deleted items by date"
+msgstr "عدد العناصر المحذوفة بحسب التاريخ"
+
+#: reporting/user_reporting.py:202
+msgid "Created items by date"
+msgstr "عدد العناصر المنشأة بحسب التاريخ"
+
+#: reporting/user_reporting.py:206
+msgid "Edited items by date"
+msgstr "عدد العناصر المعدلة بحسب التاريخ"
+
+#: templates/auth.html:8
+msgid "Corroborator | Log in"
+msgstr "دخول | نظام التوثيق"
+
+#: templates/auth.html:21 templates/base.html:5 templates/new_base.html:5
+msgid "Corroborator"
+msgstr "نظام التوثيق"
+
+#: templates/auth.html:29
+msgid "username:"
+msgstr "اسم المستخدم"
+
+#: templates/auth.html:35
+msgid "password:"
+msgstr "كلمة المرور"
+
+#: templates/auth.html:41
+msgid "Log In"
+msgstr "دخول"
+
+#: templates/new_search.html:27
+msgid "Search help"
+msgstr "المساعدة - البحث"
+
+#: templates/new_search.html:31
+msgid "search in progress"
+msgstr "البحث مستمر"
+
+#: templates/new_search.html:41
+msgid "My assigned items"
+msgstr "العناصر المفرزة لي"
+
+#: templates/nav/dataentry_tabs.html:7 templates/nav/reporting_tabs.html:15
+#: templates/nav/tabs.html:15
+msgid "Bulletins"
+msgstr "مواد"
+
+#: templates/nav/dataentry_tabs.html:14 templates/nav/reporting_tabs.html:23
+#: templates/nav/tabs.html:24
+msgid "Actors"
+msgstr "أشخاص"
+
+#: templates/nav/monitoring_tabs.html:7
+msgid "Monitor"
+msgstr "المراقبة"
+
+#: templates/nav/monitoring_tabs.html:14
+msgid "Importer config"
+msgstr "iإعدادات المستورد"
+
+#: templates/nav/monitoring_tabs.html:22
+msgid "Scraper config"
+msgstr "إعدادات الماسح"
+
+#: templates/nav/reporting_tabs.html:7 templates/nav/tabs.html:7
+msgid "Incidents"
+msgstr "ملفات"
+
+#: templates/nav/reporting_tabs.html:31
+msgid "Users"
+msgstr "المستخدمون"
+
+#: templates/nav/top_menu.html:9
+msgid "Logout"
+msgstr "خروج"
+
+#: templates/nav/top_menu.html:19 templates/nav/top_menu.html.py:22
+msgid "Main"
+msgstr "الرئيسية"
+
+#: templates/nav/top_menu.html:30 templates/nav/top_menu.html.py:33
+msgid "Reporting"
+msgstr "التقارير"
+
+#: templates/nav/top_menu.html:40
+msgid "Administration"
+msgstr "الإدارة"
+
+#: templates/nav/top_menu.html:47 templates/nav/top_menu.html.py:50
+msgid "Monitoring"
+msgstr "الرصد"
+
+#: views/context.py:153
+msgid "Victim"
+msgstr ""
+
+#: views/context.py:154
+msgid "Witness"
+msgstr "شاهد"
+
+#: views/context.py:155
+msgid "Perpetrator"
+msgstr ""
+
+#: views/context.py:156
+msgid "Appeared"
+msgstr ""
+
+#: views/context.py:157
+msgid "Other"
+msgstr ""
+
+#: views/context.py:176
+msgid "Parent"
+msgstr "أب/أم"
+
+#: views/context.py:177
+msgid "Sibling"
+msgstr "أخ/أخت"
+
+#: views/context.py:178
+msgid "Family member"
+msgstr "أحد أفراد العائلة"
+
+#: views/context.py:179
+msgid "Superior officer"
+msgstr "الضابط الرئيس"
+
+#: views/context.py:180
+msgid "Subordinate officer"
+msgstr "الضابط المرؤس"
+
+#~ msgid "Killed"
+#~ msgstr "مقتول"
+
+#~ msgid "Tortured"
+#~ msgstr "تعرض للتعذيب"
+
+#~ msgid "Wounded"
+#~ msgstr "جريح"
+
+#~ msgid "Kidnapped"
+#~ msgstr "مخطوف"
+
+#~ msgid "Arrested"
+#~ msgstr "تعرض للاعتقال"
+
+#~ msgid "Martyr"
+#~ msgstr "شهيد"
+
+#~ msgid "Missing"
+#~ msgstr "مفقود"
+
+#~ msgid "Injured"
+#~ msgstr "مصاب"
+
+#, fuzzy
+#~ msgid "parent"
+#~ msgstr "أب/أم"
+
+#, fuzzy
+#~ msgid "sibling"
+#~ msgstr "أخ/أخت"
+
+#, fuzzy
+#~ msgid "family member"
+#~ msgstr "أحد أفراد العائلة"
+
+#, fuzzy
+#~ msgid "superior officer"
+#~ msgstr "الضابط الرئيس"
+
+#, fuzzy
+#~ msgid "subordinate officer"
+#~ msgstr "الضابط المرؤس"
+
+#, fuzzy
+#~ msgid "civilian"
+#~ msgstr "مدني"

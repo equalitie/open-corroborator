@@ -1,0 +1,120 @@
+/*global $PAD_UNIT */
+//Search area
+$FILTER_BG:#f9f0e8;
+#search-navigation .search {
+  float: left;
+  margin-bottom: -2px;
+  margin-left: 3.07692307692em;
+  input {
+    font-size: 120%;
+    min-width: 20em;
+  }
+}
+
+.do-search {
+}
+.incidents-list, .bulletins-list{
+  .in-list {
+    border: 1px solid #a0a0a0;
+    padding: $PAD_UNIT/2;
+  }
+}
+
+// COLUMNS
+.columns.as-2 {
+  width: 100%;
+}
+
+.col.first {
+  position: fixed;
+  top: $TOP_DIST_COLS;
+  left: 0em;
+  bottom: 0em;
+  overflow: hidden;
+  width: 66.66666%;
+}
+
+// ACTIONS BAR
+.col.first .header {
+  position: absolute;
+  right: $PAD_UNIT;
+  left: 2*$PAD_UNIT;
+  top: 0em;
+}
+
+
+
+// LAST COLUMN
+
+.col.last {
+  width: 33.333333%;
+  right: 0em;
+  position: fixed;
+  bottom: 0em;
+  top: $TOP_DIST_COLS;
+  overflow: hidden;
+}
+.actor-filter, .bulletin-filter, .incident-filter {
+  top: 62px;
+}
+
+// REPORTING SHIZZ
+
+
+
+
+
+.right-filters .header {
+  left: $PAD_UNIT;
+  right: 0em;
+  position: absolute;
+  top:0em;
+}
+
+.right-filters .body {
+  left: $PAD_UNIT;
+  right: 0em;
+  overflow: auto;
+  bottom: 0em;
+  position: absolute;
+}
+
+.is-filters.filters {
+  margin-bottom: $PAD_UNIT;
+}
+
+// VIEW - EXPANDED
+.Bulletin.is-expanded .span-66p .body, 
+.Incident.is-expanded .span-66p .body{
+  padding-right: 2 * $PAD_UNIT;
+}
+
+
+// RELATED ACTORS
+.Actor.in-list {
+  min-height: 130px;
+}
+
+// FORMS
+.Incident.in-view .map, 
+.Bulletin.in-view .map,
+.Actor.in-view .map,
+.Actor.is-edited .map, 
+.Incident.is-edited .map, 
+.incident-container .map, 
+.Bulletin.is-edited .map {
+  width: 100%;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+
+.is-preview .body .span-66p {
+  width: 100%;
+  margin-right: $PAD_UNIT;
+  float: none;
+}
+// leaflet hacks
+// stop things popping up over other things
+.leaflet-top, .leaflet-bottom {
+  z-index: 7;
+}

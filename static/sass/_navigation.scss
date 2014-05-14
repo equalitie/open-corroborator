@@ -1,0 +1,165 @@
+// top menu links
+.Header {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  z-index: $Z_HEADER;
+  &, .menu {
+    background: $HEADER_MENU_BG;
+    color: $HEADER_UNSELECTED_COLOR;
+  }
+  a{
+    color: $HEADER_UNSELECTED_COLOR;
+    text-decoration: none;
+  }
+  .title, .user, .sections {
+    display: block;
+    padding: $PAD_UNIT * 2;
+    padding-top: $PAD_UNIT / 4;
+    padding-bottom: $PAD_UNIT / 4;
+    color: $HEADER_SELECTED_COLOR;
+  }
+  .text {
+    font-size: 90%;
+  }
+  .title {
+    font-size: 15px;
+    @include open_sans_bold;
+    float: left;
+  }
+  ul.sections {
+    float: right;
+    li {
+      padding-top: $PAD_UNIT / 4;
+      padding-bottom: $PAD_UNIT / 4;
+      opacity: 0.75;
+      margin-right: $PAD_UNIT;
+      &:hover {
+        opacity: 1;
+      }
+      &.current {
+        opacity: 1;
+        text-decoration: underline;
+        a {
+          color: $HEADER_SELECTED_COLOR;
+        }
+      }
+    }
+  }
+  ul.user {
+    float: right;
+    border-left: 1px solid $COLOR_HEADER_BD;
+    padding-left: $PAD_UNIT;
+    margin-left: $PAD_UNIT;
+    position: relative;
+    .menu {
+      left: 0em;
+      right: 0em;
+      padding-left: $PAD_UNIT;
+    }
+  }
+}
+// ========================================================================
+// SEARCH
+// ========================================================================
+.Content {
+  //background-color: $TAB_AREA_BG;
+  //padding-top: 3*$PAD_UNIT;
+}
+nav#monitor-navigation {
+  margin-top:$HEADER_HEIGHT;
+  background-color: $TAB_AREA_BG;
+}
+// search input box
+nav#search-navigation {
+  background-color: $TAB_AREA_BG;
+  margin-top:$HEADER_HEIGHT;
+  .search {
+    padding-top: 1.5em;
+    float: left;
+    margin-top: -$PAD_UNIT /2;
+    margin-bottom: 0em;
+    margin-left: $PAD_UNIT * 2;
+    input {
+      @include open_sans;
+      background-color: $TAB_AREA_BG;
+      border: 1px solid $BORDER_GREY;
+      color: white;
+      font-size: 12px;
+      height: 30px;
+      min-width: 23em;
+      padding-right: 2em;
+      margin-right: -1.5em;
+    }
+    // clear button
+    button.do-clear{
+      @include clear_button($bg_color:$BORDER_GREY, $fg_color:#000); 
+    }
+  }
+}
+
+.search-combo {
+  float: left;
+  margin-top: 1.35em;
+  width: 14em;
+  position: relative;
+  .button.do-search {
+    top: -$PAD_UNIT /4;
+    position: absolute;
+  }
+}
+
+.tabs {
+  ul {
+    float: right;
+    margin-right: $PAD_UNIT * 2;
+  }
+  li {
+    padding-top: 1em;
+    float: left;
+    height: $TAB_HEIGHT;
+    display: block;
+    border-bottom: 4px solid $BORDER_GREY;
+    min-width: 70 * $PX;
+    text-align: center;
+    margin-left: 3px;
+    position: relative;
+    z-index: 1;
+    a {
+      display: block;
+    }
+    .text {
+      color: white;
+      display: block;
+      padding-bottom: 5px;
+      padding-top: $PAD_UNIT / 4 / 1.1;
+      padding-left: $PAD_UNIT / 1.1;
+      padding-right: $PAD_UNIT / 1.1;
+      font-size: 110%;
+    }
+    .count {
+      padding-left: 0.25em;
+      opacity: 0.5;
+    }
+    &:first-child {
+      margin-left: 0em;
+    }
+    &:hover, &.current {
+      background-color: $SELECTED_TAB_BG;
+    }
+  }
+  li.current.is-incidents {
+    border-bottom: 4px solid $SELECTED_INCIDENT_BORDER;
+  }
+  li.current.is-actors {
+    border-bottom: 4px solid $SELECTED_ACTOR_BORDER;
+  }
+  li.current.is-bulletins {
+    border-bottom: 4px solid $SELECTED_BULLETIN_BORDER;
+  }
+  li.current.is-users {
+    border-bottom: 4px solid $SELECTED_USER_BORDER;
+  }
+}
+

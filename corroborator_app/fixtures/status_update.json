@@ -1,0 +1,68 @@
+[
+    {
+        "fields": {
+            "description_ar": "",
+            "description_en": "Resulted from Batch import or ETL process",
+            "key": "m_created",
+            "status_ar": "",
+            "status_en": "Machine Created"
+        },
+        "model": "corroborator_app.statusupdate",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "description_ar": "",
+            "description_en": "The status when a user adds the content",
+            "key": "h_created",
+            "status_ar": "",
+            "status_en": "Human Created"
+        },
+        "model": "corroborator_app.statusupdate",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "description_ar": "",
+            "description_en": "The status when the content is edited/updated",
+            "key": "updated",
+            "status_ar": "",
+            "status_en": "Updated"
+        },
+        "model": "corroborator_app.statusupdate",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "description_ar": "",
+            "description_en": "The status when an authorized user reviews the content",
+            "key": "reviewed",
+            "status_ar": "",
+            "status_en": "Reviewed"
+        },
+        "model": "corroborator_app.statusupdate",
+        "pk": 4
+    },
+    {
+        "fields": {
+            "description_ar": "",
+            "description_en": "A status given for complete and reviewed content",
+            "key": "finalized",
+            "status_ar": "",
+            "status_en": "Finalized"
+        },
+        "model": "corroborator_app.statusupdate",
+        "pk": 5
+    },
+    {
+        "fields": {
+            "description_ar": "",
+            "description_en": "A custom status",
+            "key": "custom",
+            "status_ar": "",
+            "status_en": "Custom"
+        },
+        "model": "corroborator_app.statusupdate",
+        "pk": 6
+    }
+]

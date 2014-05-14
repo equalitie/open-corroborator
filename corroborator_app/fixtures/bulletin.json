@@ -1,0 +1,60 @@
+[
+  {
+    "fields": {
+      "actors_role": [], 
+      "assigned_user": null, 
+      "bulletin_comments": [], 
+      "bulletin_created": "2013-09-09T14:02:18.050Z", 
+      "bulletin_modified": "2013-09-25T23:00:00Z", 
+      "confidence_score": 89, 
+      "deleted": false, 
+      "description_ar": "", 
+      "description_en": null, 
+      "labels": [], 
+      "locations": [], 
+      "medias": [], 
+      "ref_bulletins": [], 
+      "sources": [], 
+      "times": [], 
+      "title_ar": "", 
+      "title_en": "This is a foolish title", 
+      "type": "Video", 
+      "uri": null
+    }, 
+    "model": "corroborator_app.bulletin", 
+    "pk": 1
+  }, 
+  {
+    "fields": {
+      "actors_role": [], 
+      "assigned_user": 1, 
+      "bulletin_comments": [
+        ], 
+      "bulletin_created": "2013-05-24T23:05:31Z", 
+      "bulletin_modified": "2013-09-25T23:00:00Z", 
+      "confidence_score": 50, 
+      "deleted": false, 
+      "description_ar": "", 
+      "description_en": "", 
+      "labels": [
+        ], 
+      "locations": [
+        1
+        ], 
+      "medias": [
+        ], 
+      "ref_bulletins": [
+        ], 
+      "sources": [
+        ], 
+      "times": [
+        ], 
+      "title_ar": "", 
+      "title_en": "This is another title", 
+      "type": "Video", 
+      "uri": null
+    }, 
+    "model": "corroborator_app.bulletin", 
+    "pk": 2
+  }
+]
