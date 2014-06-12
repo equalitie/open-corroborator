@@ -123,7 +123,7 @@ define (
         // set the map options
         mapElement  = this.$el.children('.map').children().get(0);
         zoom_level  = 5;
-        tileLayerUrl = 'http://{s}.tile.cloudmade.com/' + api_key + '/997/256/{z}/{x}/{y}.png';
+        tileLayerUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
 
         // create the map
         map = L.map(mapElement, {
@@ -133,6 +133,7 @@ define (
                   
         // add the tile layer that will hold our markers
         L.tileLayer(tileLayerUrl, {
+           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
             maxZoom: 18
         }).addTo(map);
 
