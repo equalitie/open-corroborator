@@ -14,7 +14,7 @@ To install virtualenv
 
 Other packages are required for modules and other build dependencies:
 ```
-[sudo] apt-get install libmysqlclient-dev python-dev mysql-client libxslt-dev libgeos-c1 ffmpeg git
+[sudo] apt-get install libmysqlclient-dev python-dev mysql-client libxslt-dev libgeos-c1 ffmpeg git libjpeg-dev
 ```
 
 #### Install local python environment
