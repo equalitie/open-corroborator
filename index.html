@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Corroborator : Data analysis and fact corroboration" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Corroborator</title>
+    <meta charset="UTF-8">
+    <title>Corroborator by equalitie</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Corroborator</h1>
+      <h2 class="project-tagline">Data analysis and fact corroboration</h2>
+      <a href="https://github.com/equalitie/open-corroborator" class="btn">View on GitHub</a>
+      <a href="https://github.com/equalitie/open-corroborator/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/equalitie/open-corroborator/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/equalitie/open-corroborator">View on GitHub</a>
-
-          <h1 id="project_title">Corroborator</h1>
-          <h2 id="project_tagline">Data analysis and fact corroboration</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/equalitie/open-corroborator/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/equalitie/open-corroborator/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <p><strong>Corroborator is designed to process massive amounts of metadata related to particular events and people. The system analyst can easily navigate thousands of records and create a corroborated narrative of an event</strong></p>
+    <section class="main-content">
+      <p><strong>Corroborator is designed to process massive amounts of metadata related to particular events and people. The system analyst can easily navigate thousands of records and create a corroborated narrative of an event</strong></p>
 
 <pre><code>$ equalitie/open-corroborator
 </code></pre>
 
 <h2>
-<a name="demo" class="anchor" href="#demo"><span class="octicon octicon-link"></span></a>Demo</h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
 
 <p>Take the system for a spin.</p>
 
@@ -55,9 +43,9 @@ chronology of events and a compilation of media information, including Video, Im
 <p>The end goal of the system is better facilitate data traversal and to give greater insight into vast amounts of data - helping the user to organise, evaluate and structure the data into useable information that can ultimately be used to build evidence based reports. </p>
 
 <h3>
-<a name="data-model" class="anchor" href="#data-model"><span class="octicon octicon-link"></span></a>Data model</h3>
+<a id="data-model" class="anchor" href="#data-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data model</h3>
 
-<p><img src="https://equalit.ie/sites/default/files/corroborator_schema_simple_0.png" alt="Simple Schemda"></p>
+<p><img src="https://equalit.ie/wp-content/uploads/2012/05/corroborator_schema_simple.png" alt="Simple Schemda"></p>
 
 <p>The corroborator data system is designed to help users create an abstract representation of the data that they are investigating. There are 3 key entities: Actors, Bulletins and Incidents. Actors capture individuals or groups who play some part in the events under scrutiny. It is possible through this system to build Roles for Actors that highlights specifically what parts they play. Through Roles, Actors can be associated with other Actors as family members, elements of a structured institution - such as military or governmental bodies - or stakeholders. The relationship between an Actor and a Bulletin is built in a similar way but in that circumstance an Actor is portrayed in the Role of perpetrator, victim, kidnapped, detainee etc.</p>
 
@@ -67,19 +55,16 @@ chronology of events and a compilation of media information, including Video, Im
 
 <p>The complete schema shown below attempts to capture, in abstract a way as possible, detailed information about a given investigation. Through the use of the faceted search system users can quickly group entities based on time, labelling and detail similarity so grouping multiple entities within an Incident is intuitive and straightforward.</p>
 
-<p><img src="https://noun.equalit.ie/sites/default/files/corroborator_schema_0.png" alt="Data Model complete"></p>
-      </section>
-    </div>
+<p><img src="https://equalit.ie/wp-content/uploads/2015/10/corroborator_schema.png" alt="Data Model complete"></p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Corroborator maintained by <a href="https://github.com/equalitie">equalitie</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/equalitie/open-corroborator">Corroborator</a> is maintained by <a href="https://github.com/equalitie">equalitie</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-    
+    </section>
 
+  
   </body>
 </html>
