@@ -15,6 +15,8 @@ INSTALLED_APPS += (
     'autofixture',
 )
 
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'  #note: didn't help avoid S3: tests still want S3
+
 #Haystack backend configuration
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 

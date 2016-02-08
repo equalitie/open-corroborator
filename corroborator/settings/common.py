@@ -3,7 +3,7 @@ Django settings for corroborator project.
 """
 import djcelery
 djcelery.setup_loader()
-ALLOWED_HOST = [<insert_name_of_allowed_host>]
+ALLOWED_HOST = ['insert_name_of_allowed_host']
 DEBUG = False
 
 SOLR_URL = '<solr_url>'
