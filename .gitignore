@@ -1,0 +1,5 @@
+*.pyc
+*.wpu
+*.wpr
+env/
+static/js/node_modules/
