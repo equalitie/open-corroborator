@@ -1,6 +1,7 @@
 from dev import *
 
 DEBUG_TOOLBAR_PATCH_SETTINGS = False 
+DEBUG_TOOLBAR_CONFIG = {}
 
 DATABASES['default']['NAME'] = 'corroborator_vm'
 
