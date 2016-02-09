@@ -1,3 +1,3 @@
 from dev import *
 
-DATABASES['default']['NAME'] = 'corroborator_dev'
+DATABASES['default']['NAME'] = 'corroborator_vm'
