@@ -20,7 +20,7 @@ django-queued-storage==0.6
 django-reversion==1.7.1
 django-socketio==0.3.0
 django-storages==1.1.8
-django-tastypie==0.9.15
+django-tastypie==0.9.12
 gevent-socketio==0.3.5-rc2
 gevent-websocket==0.3.6
 gevent==0.13.8
@@ -38,4 +38,3 @@ sphinx-me==0.1.2
 wsgiref==0.1.2
 django-kombu
 kombu-sqlalchemy
-gunicorn==19.4.5
