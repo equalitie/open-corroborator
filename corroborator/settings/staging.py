@@ -1,4 +1,4 @@
-from settings.common import *
+from common import *
 
 SOLR_CORE = 'corrob_staging'
 

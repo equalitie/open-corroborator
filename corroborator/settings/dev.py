@@ -2,7 +2,7 @@
 Author: Cormac McGuire
 Dev settings
 """
-from settings.common import *
+from common import *
 import os.path
 
 SESSION_COOKIE_AGE = 400 * 60
