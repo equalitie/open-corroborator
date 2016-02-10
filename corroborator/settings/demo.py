@@ -1,9 +1,9 @@
 from common import *
 import os.path
 
-SOLR_CORE = 'corrob_demo'  #todo use (default collection1)
+SOLR_CORE = 'collection1'  #todo change
 
-DEBUG = True  #temp
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['*']  #todo fix
@@ -58,13 +58,13 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    ('stylesheets', 'static/stylesheets'),
-    ('js', 'static/js'),
-    ('images', 'static/images'),
-    ('fonts', 'static/fonts'),
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    ('stylesheets', os.path.join(CHECKOUT_ROOT, 'static/stylesheets')),
+    ('js', os.path.join(CHECKOUT_ROOT, 'static/js')),
+    ('images', os.path.join(CHECKOUT_ROOT, 'static/images')),
+    ('fonts', os.path.join(CHECKOUT_ROOT, 'static/fonts')),
+    ('css', os.path.join(CHECKOUT_ROOT, 'static/css')),
+    
+    ('admin', os.path.join(CHECKOUT_ROOT, 'static/admin')),
 )
 
 TEMPLATE_DIRS = (
@@ -75,6 +75,6 @@ TEMPLATE_DIRS = (
 
 #todo review:
 TIME_ZONE = 'Europe/Dublin'
-IMPORTER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer.json')
-SCRAPER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/scraper.json')
-MONITOR_JOB_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer_stats.json')
+IMPORTER_CONF_FILE = os.path.join(CHECKOUT_ROOT, 'static/js/test_confs/importer.json')
+SCRAPER_CONF_FILE = os.path.join(CHECKOUT_ROOT, 'static/js/test_confs/scraper.json')
+MONITOR_JOB_FILE = os.path.join(CHECKOUT_ROOT, 'static/js/test_confs/importer_stats.json')
