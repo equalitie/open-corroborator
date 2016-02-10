@@ -4,5 +4,6 @@ define({
     'Search': 'Search',
     'Save_current_search': 'Save current search'
   },
-  'ar': true
+  'ar': true,
+  'ru': true
 });

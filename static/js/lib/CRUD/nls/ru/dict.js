@@ -135,7 +135,7 @@ define(
         "Comment": "Комментарий",
         "comments": "Комментарии",
         "Remove": "Удалить",
-        "by": "by",
+        "by": "по",
         "Select_Status": "Выбрать статус",
         "Status": "Статус",
         "Save_comment": "Сохранить комментарий"

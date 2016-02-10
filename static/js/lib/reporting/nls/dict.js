@@ -71,5 +71,6 @@ define({
 
     }
   },
-  'ar': true
+  'ar': true,
+  'ru': true
 });

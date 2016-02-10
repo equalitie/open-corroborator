@@ -30,6 +30,7 @@ define({
       'config_saved'            : 'Config Updated'
     }
   },
-  'ar': true
+  'ar': true,
+  'ru': true
 });
 

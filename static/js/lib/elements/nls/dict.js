@@ -6,5 +6,6 @@ define({
       'to': 'To'
     }
   },
-  'ar': true
+  'ar': true,
+  'ru': true
 });

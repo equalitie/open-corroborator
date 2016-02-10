@@ -109,5 +109,6 @@ define({
       'Length_error': 'Length of saved search name must be between <%=min %> and <%=max %> characters.'
     }
   },
-  'ar': true
+  'ar': true,
+  'ru': true
 });
