@@ -18,3 +18,8 @@ STATICFILES_DIRS = (
     ('admin', os.path.join(CHECKOUT_ROOT, 'static/admin')),
 )
 
+TEMPLATE_DIRS = (
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(CHECKOUT_ROOT, 'corroborator_app/templates'),
+)
