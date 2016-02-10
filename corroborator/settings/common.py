@@ -21,6 +21,7 @@ AWS_STORAGE_BUCKET_NAME = '<AWS_STORAGE_BUCKET_NAME>'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 MEDIA_DIRECTORY = '<AWS_MEDIA_DIRECTORY>'
 S3_PROXY_URL = '/corroborator/aws/'
+S3_URL = S3_PROXY_URL  #todo find out if this should be different? (used for Solr index building)
 
 CORROBORATOR_LOGIN_TIMEOUT = 60 * 60 * 4
 #SESSION_COOKIE_AGE = 10
