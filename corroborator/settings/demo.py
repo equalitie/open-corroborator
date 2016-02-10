@@ -19,6 +19,8 @@ MEDIA_DIRECTORY = '<AWS_MEDIA_DIRECTORY>'
 
 ROOT_PATH = os.path.abspath(os.path.dirname(__name__))
 
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -48,8 +50,8 @@ HAYSTACK_CONNECTIONS = {
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/var/local/sites/open-corroborator-vm.stage.isotoma.com/var/static/'
-
+STATIC_ROOT = '/var/local/sites/equalitie.sandbox.isotoma.uk0.bigv.io/var/static/'
+CHECKOUT_ROOT = '/var/local/checkouts/equalitie.sandbox.isotoma.uk0.bigv.io/'
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
@@ -63,6 +65,12 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+)
+
+TEMPLATE_DIRS = (
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(CHECKOUT_ROOT, 'corroborator_app/templates'),
 )
 
 #todo review:

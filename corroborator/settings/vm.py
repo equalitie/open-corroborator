@@ -5,6 +5,8 @@ DEBUG_TOOLBAR_CONFIG = {}
 
 DATABASES['default']['NAME'] = 'corroborator_vm'
 
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
 STATIC_ROOT = '/var/local/sites/open-corroborator-vm.stage.isotoma.com/var/static/'
 
 CHECKOUT_ROOT = '/var/local/checkouts/open-corroborator-vm.stage.isotoma.com/'
