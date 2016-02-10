@@ -171,5 +171,6 @@ define({
     'incident_label': 'Incident',
     'Entity_not_found': '<%=word %> not found'
   },
-  'ar': true
+  'ar': true,
+  'ru': true
 });
