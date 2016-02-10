@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-08 14:10+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: models.py:654 views/context.py:126
+msgid "adult"
+msgstr ""
+
+#: models.py:655 views/context.py:130
+msgid "child"
+msgstr ""
+
+#: models.py:658 views/context.py:117
+msgid "female"
+msgstr ""
+
+#: models.py:659 views/context.py:113
+msgid "male"
+msgstr ""
+
+#: models.py:662 views/context.py:96
+msgid "Civilian"
+msgstr ""
+
+#: models.py:663 views/context.py:100
+msgid "Non-civilian"
+msgstr ""
+
+#: models.py:664 views/context.py:104
+msgid "Police"
+msgstr ""
+
+#: reporting/user_reporting.py:21
+msgid "Total login time by User"
+msgstr ""
+
+#: reporting/user_reporting.py:38
+msgid "Total user login time per day"
+msgstr ""
+
+#: reporting/user_reporting.py:78
+msgid "Average user updates per hour"
+msgstr ""
+
+#: reporting/user_reporting.py:120
+msgid "User assigned items by status"
+msgstr ""
+
+#: reporting/user_reporting.py:181
+#, python-format
+msgid "Total %(type)s items by User"
+msgstr ""
+
+#: reporting/user_reporting.py:196
+msgid "Deleted, created and edited items by date"
+msgstr ""
+
+#: reporting/user_reporting.py:201
+msgid "Deleted items by date"
+msgstr ""
+
+#: reporting/user_reporting.py:205
+msgid "Created items by date"
+msgstr ""
+
+#: reporting/user_reporting.py:209
+msgid "Edited items by date"
+msgstr ""
+
+#: templates/auth.html:8
+msgid "Corroborator | Log in"
+msgstr ""
+
+#: templates/auth.html:21 templates/base.html:5 templates/new_base.html:5
+msgid "Corroborator"
+msgstr ""
+
+#: templates/auth.html:29
+msgid "username:"
+msgstr ""
+
+#: templates/auth.html:35
+msgid "password:"
+msgstr ""
+
+#: templates/auth.html:41
+msgid "Log In"
+msgstr ""
+
+#: templates/new_search.html:27
+msgid "Search help"
+msgstr ""
+
+#: templates/new_search.html:31
+msgid "search in progress"
+msgstr ""
+
+#: templates/new_search.html:41
+msgid "My assigned items"
+msgstr ""
+
+#: templates/nav/dataentry_tabs.html:7 templates/nav/reporting_tabs.html:15
+#: templates/nav/tabs.html:15
+msgid "Bulletins"
+msgstr ""
+
+#: templates/nav/dataentry_tabs.html:14 templates/nav/reporting_tabs.html:23
+#: templates/nav/tabs.html:24
+msgid "Actors"
+msgstr ""
+
+#: templates/nav/monitoring_tabs.html:7
+msgid "Monitor"
+msgstr ""
+
+#: templates/nav/monitoring_tabs.html:14
+msgid "Importer config"
+msgstr ""
+
+#: templates/nav/monitoring_tabs.html:22
+msgid "Scraper config"
+msgstr ""
+
+#: templates/nav/reporting_tabs.html:7 templates/nav/tabs.html:7
+msgid "Incidents"
+msgstr ""
+
+#: templates/nav/reporting_tabs.html:31
+msgid "Users"
+msgstr ""
+
+#: templates/nav/top_menu.html:9
+msgid "Logout"
+msgstr ""
+
+#: templates/nav/top_menu.html:19 templates/nav/top_menu.html.py:22
+msgid "Main"
+msgstr ""
+
+#: templates/nav/top_menu.html:30 templates/nav/top_menu.html.py:33
+msgid "Reporting"
+msgstr ""
+
+#: templates/nav/top_menu.html:40
+msgid "Administration"
+msgstr ""
+
+#: templates/nav/top_menu.html:47 templates/nav/top_menu.html.py:50
+msgid "Monitoring"
+msgstr ""
+
+#: views/context.py:153
+msgid "Victim"
+msgstr ""
+
+#: views/context.py:154
+msgid "Witness"
+msgstr ""
+
+#: views/context.py:155
+msgid "Perpetrator"
+msgstr ""
+
+#: views/context.py:156
+msgid "Appeared"
+msgstr ""
+
+#: views/context.py:157
+msgid "Other"
+msgstr ""
+
+#: views/context.py:176
+msgid "Parent"
+msgstr ""
+
+#: views/context.py:177
+msgid "Sibling"
+msgstr ""
+
+#: views/context.py:178
+msgid "Family member"
+msgstr ""
+
+#: views/context.py:179
+msgid "Superior officer"
+msgstr ""
+
+#: views/context.py:180
+msgid "Subordinate officer"
+msgstr ""

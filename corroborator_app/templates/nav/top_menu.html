@@ -58,11 +58,14 @@
       {% csrf_token %}
       <input name="next" type="hidden" value="{{ redirect_to }}" />
       <select name="language">
+      <option value="ru"{% if LANGUAGE_CODE == 'ru' %} selected="selected"{% endif %}>
+                   русский (ru)                             
+          </option>
       <option value="ar"{% if LANGUAGE_CODE == 'ar' %} selected="selected"{% endif %}>
                    العربيّة (ar)                             
           </option>
       <option value="en"{% if LANGUAGE_CODE == 'en' %} selected="selected"{% endif %}>
-          English(en)
+          English (en)
           </option>
 
 
