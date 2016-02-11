@@ -1,11 +1,17 @@
 from dev import *
 
+AWS_ACCESS_KEY_ID = 'todo'
+AWS_SECRET_ACCESS_KEY = 'todo'
+AWS_STORAGE_BUCKET_NAME = 'equalitie'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+MEDIA_DIRECTORY = 'corroborator-media/test'
+
 DEBUG_TOOLBAR_PATCH_SETTINGS = False 
 DEBUG_TOOLBAR_CONFIG = {}
 
 DATABASES['default']['NAME'] = 'corroborator_vm'
 
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+#DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 STATIC_ROOT = '/var/local/sites/open-corroborator-vm.stage.isotoma.com/var/static/'
 
