@@ -71,7 +71,7 @@
     },
     config: {
       i18n: {
-        locale: Bootstrap.locale || 'en'
+        locale: 'en'
       }
     }
   });

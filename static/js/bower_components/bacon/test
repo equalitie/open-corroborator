@@ -1,2 +1,0 @@
-export test=$1
-npm install&&npm test

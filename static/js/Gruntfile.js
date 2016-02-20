@@ -51,19 +51,6 @@ module.exports = function(grunt) {
         jshintrc: './.jshintrc'
       }
     },
-    karma: { // test standard script
-      unit: {
-        configFile: 'karma.conf.js',
-        singleRun: true
-      },
-      ci: {
-        configFile: 'karma.conf.js',
-        singleRun: true,
-        runnerPort: 9999,
-        browsers: ['PhantomJS'],
-        reporters: 'junit'
-      }
-    },
     retire: {
       js: [
         'components/*',
@@ -85,53 +72,6 @@ module.exports = function(grunt) {
       }
     },
 
-    plato: {
-      dev: {
-        options: {
-          exclude: /\.tpl\.js/
-        },
-        files: {
-          'reports': [
-            'lib/*.js',
-            'lib/**/*.js',
-            'lib/**/**/*.js',
-            'lib/**/**/**/*.js',
-            'lib/**/**/**/**/*.js'
-          ]
-        }
-      },
-      olddev: {
-        options: {
-          exclude: /\.tpl\.js/
-        },
-        files: {
-         'oldreports': [
-          'trash/ajax-manager.js',
-          'trash/corroborator-hash-link-reader.js',
-          'trash/corroborator-util.js',
-          'trash/widgets/*.js'
-         ]
-        }
-      }
-    },
-
-    docco: {
-      docs: {
-        src: [
-          'lib/*.js',
-          'lib/Data/*.js',
-          'lib/elements/tests/*.js',
-          'lib/elements/*.js',
-          'lib/Navigation/*.js',
-          'lib/Navigation/tests/TabRouter-test.js',
-          'lib/SolrSearch/*.js',
-          'lib/SolrSearch/tests/*.js',
-          'lib/SolrSearch/views/*.js',
-          'lib/SolrSearch/widgets/manager.js'
-        ],
-        dest: 'docs/annotated-source'
-      }
-    },
 
     // Tasks being executed with 'grunt watch'
     watch: { 
@@ -158,11 +98,8 @@ module.exports = function(grunt) {
   // Load the plugins that provide the tasks we specified in package.json.
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-docco2');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-plato');
   grunt.loadNpmTasks('grunt-retire');
 
 
@@ -171,16 +108,16 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'default', 
     [
-      'jshint',
-      'karma:ci',
+      //'jshint',
+      //'karma:ci',
       'requirejs'
     ]
   );
   grunt.registerTask(
     'build',
     [
-      'jshint',
-      'karma:ci',
+      //'jshint',
+      //'karma:ci',
       'requirejs'
     ]
   );
@@ -188,7 +125,7 @@ module.exports = function(grunt) {
     'test',
     [
       'jshint',
-      'karma:ci'
+      //'karma:ci'
     ]
   );
 
