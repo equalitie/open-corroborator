@@ -18,6 +18,7 @@ setup(
         # Third Party Standard
         #'gunicorn',
     ],
-    entry_points = """
-    """
+    scripts=[
+        'manage.py',
+    ],
     )
