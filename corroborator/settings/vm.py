@@ -6,6 +6,8 @@ AWS_STORAGE_BUCKET_NAME = 'equalitie'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 MEDIA_DIRECTORY = 'corroborator-media/test'
 
+DEBUG = False
+
 DEBUG_TOOLBAR_PATCH_SETTINGS = False 
 DEBUG_TOOLBAR_CONFIG = {}
 
