@@ -1,4 +1,5 @@
 recursive-include corroborator *
+recursive-include corroborator_app *
 include *
 global-exclude *.pyc
 
