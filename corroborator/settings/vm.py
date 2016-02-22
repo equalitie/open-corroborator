@@ -13,9 +13,12 @@ DATABASES['default']['NAME'] = 'corroborator_vm'
 
 #DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
-STATIC_ROOT = '/var/local/sites/open-corroborator-vm.stage.isotoma.com/var/static/'
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+CHECKOUT_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT, '..'))
+MEDIA_ROOT = os.path.join(CHECKOUT_ROOT, 'var', 'media')
+STATIC_ROOT = os.path.join(CHECKOUT_ROOT, 'var', 'static')
 
-CHECKOUT_ROOT = '/var/local/checkouts/open-corroborator-vm.stage.isotoma.com/'
+
 STATICFILES_DIRS = (
     ('stylesheets', os.path.join(CHECKOUT_ROOT, 'static/stylesheets')),
     ('js', os.path.join(CHECKOUT_ROOT, 'static/js')),
