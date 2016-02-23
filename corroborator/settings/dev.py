@@ -5,12 +5,14 @@ Dev settings
 from common import *
 import os.path
 
+SOLR_CORE = 'corroborator-search'
+
 SESSION_COOKIE_AGE = 400 * 60
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['*']
 
-SOLR_URL = 'http://localhost:8983/solr/collection1/select'
+SOLR_URL = 'http://localhost:8983/solr/' + SOLR_CORE + '/select'
 #SOLR_PROXY_URL = '/corroborator/search/'
 SOLR_PROXY_URL = '/corroborator/solrproxy/'
 
