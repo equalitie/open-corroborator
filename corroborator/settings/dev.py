@@ -5,46 +5,12 @@ Dev settings
 from common import *
 import os.path
 
-SOLR_CORE = 'corroborator-search'
-
 SESSION_COOKIE_AGE = 400 * 60
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['*']
 
-SOLR_URL = 'http://localhost:8983/solr/' + SOLR_CORE + '/select'
-#SOLR_PROXY_URL = '/corroborator/search/'
-SOLR_PROXY_URL = '/corroborator/solrproxy/'
-
-AWS_ACCESS_KEY_ID = '<AWS_ACCESS_KEY_ID>'
-AWS_SECRET_ACCESS_KEY = '<AWS_SECRET_ACCESS_KEY>'
-AWS_STORAGE_BUCKET_NAME = '<AWS_STORAGE_BUCKET_NAME>'
-MEDIA_DIRECTORY = '<AWS_MEDIA_DIRECTORY>'
-
-#ROOT_PATH = '<root_path_for_code_base>'
-ROOT_PATH = os.path.abspath(os.path.dirname(__name__))
-#DATABASES = {
-    #'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': ROOT_PATH + '../db/corroborator-latest.sql',
-        #'USER': '',
-        #'PASSWORD': '',
-        #'HOST': '',
-        #'PORT': '',
-    #}
-#}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'corroborator_dev',
-        'USER': 'django',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
-
+DATABASES['default']['NAME'] = 'corroborator_dev'
 
 INSTALLED_APPS += (
     #'model_report',
@@ -68,18 +34,6 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.logging.LoggingPanel',
     'debug_toolbar.panels.redirects.RedirectsPanel',
 ]
-#todo remove: old
-#(
-    #'debug_toolbar.panels.version.VersionDebugPanel',
-    #'debug_toolbar.panels.timer.TimerDebugPanel',
-    #'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
-    #'debug_toolbar.panels.headers.HeaderDebugPanel',
-    #'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
-    #'debug_toolbar.panels.template.TemplateDebugPanel',
-    #'debug_toolbar.panels.sql.SQLDebugPanel',
-    #'debug_toolbar.panels.signals.SignalDebugPanel',
-    #'debug_toolbar.panels.logger.LoggingPanel',
-#)
 
 DEBUG_TOOLBAR_CONFIG = {
     #'INTERCEPT_REDIRECTS': False
@@ -89,19 +43,6 @@ MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
-#Haystack backend configuration
-HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
-
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://127.0.0.1:8983/solr/' + SOLR_CORE,
-    },
-}
-
-STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(ROOT_PATH, 'static/')
 
 #todo copied from staging.py - remove the need for this!
 # Additional locations of static files
@@ -118,6 +59,3 @@ STATICFILES_DIRS = (
 
 TIME_ZONE = 'Europe/Dublin'
 
-IMPORTER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer.json')
-SCRAPER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/scraper.json')
-MONITOR_JOB_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer_stats.json')

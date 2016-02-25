@@ -1,3 +1,5 @@
+#todo replace with ones based on vm settings
+
 from common import *
 
 DATABASES = {

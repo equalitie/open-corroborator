@@ -1,30 +1,44 @@
 """
 Django settings for corroborator project.
 """
+import os.path
 import djcelery
 djcelery.setup_loader()
+
+ROOT_PATH = os.path.abspath(os.path.dirname(__name__))
 
 BROKER_URL = 'amqp://guest:guest@localhost:5672/'
 
 ALLOWED_HOST = ['insert_name_of_allowed_host']
 DEBUG = False
 
-SOLR_URL = '<solr_url>'
-SOLR_PROXY_URL = '<solr_proxy_url>'
-#Solr update refresh window in minutes
-SOLR_REFRESH_WINDOW = 100
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'corroborator',
+        'USER': 'django',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
-IMPORTER_CONF_FILE = '/tmp/test_confs/importer.json'
-SCRAPER_CONF_FILE = '/tmp/test_confs/scraper.json'
-MONITOR_JOB_FILE = '/tmp/test_confs/importer_stats.json'
+SOLR_CORE = 'corroborator-search'
+SOLR_URL = 'http://localhost:8983/solr/' + SOLR_CORE + '/select'
+SOLR_PROXY_URL = '/corroborator/solrproxy/'
+SOLR_REFRESH_WINDOW = 100  #Solr update refresh window in minutes
 
-AWS_ACCESS_KEY_ID = '<AWS_ACCESS_KEY_ID>'
-AWS_SECRET_ACCESS_KEY = '<AWS_SECRET_ACCESS_KEY>'
-AWS_STORAGE_BUCKET_NAME = '<AWS_STORAGE_BUCKET_NAME>'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-MEDIA_DIRECTORY = '<AWS_MEDIA_DIRECTORY>'
-S3_PROXY_URL = '/corroborator/aws/'
-S3_URL = S3_PROXY_URL  #todo find out if this should be different? (used for Solr index building)
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+#Haystack backend configuration
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+#todo test for staging HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+        'URL': 'http://127.0.0.1:8983/solr/' + SOLR_CORE,
+    },
+}
 
 CORROBORATOR_LOGIN_TIMEOUT = 60 * 60 * 4
 #SESSION_COOKIE_AGE = 10
@@ -66,12 +80,15 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/tmp/corrobdev'
+MEDIA_ROOT = '/tmp/corroborator'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = '/corroborator/aws/'  #todo replace storage-specific 'aws' with just 'media'?
 
+
+STATIC_ROOT = os.path.join(ROOT_PATH, 'static/')
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -99,12 +116,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
     #'django.template.loaders.eggs.Loader',
 )
-"""
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.i18n',
-)
-"""
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -129,6 +141,9 @@ TEMPLATE_DIRS = (
     '/var/www/corroborator/corroborator/templates',
 )
 
+IMPORTER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer.json')
+SCRAPER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/scraper.json')
+MONITOR_JOB_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer_stats.json')
 
 INSTALLED_APPS = (
     'django.contrib.auth',
