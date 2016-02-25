@@ -3,6 +3,9 @@ Django settings for corroborator project.
 """
 import djcelery
 djcelery.setup_loader()
+
+BROKER_URL = 'amqp://guest:guest@localhost:5672/'
+
 ALLOWED_HOST = ['insert_name_of_allowed_host']
 DEBUG = False
 
