@@ -14,7 +14,7 @@ DATABASES['default']['NAME'] = 'corroborator_vm'
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 CHECKOUT_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT, '..'))
-MEDIA_ROOT = os.path.join(CHECKOUT_ROOT, 'var', 'media')
+MEDIA_ROOT = '/var/local/sites/corroborator/var/media'
 
 STATIC_ROOT = '/var/local/sites/corroborator/static'
 STATICFILES_DIRS = ('/var/local/checkouts/corroborator/static',)
