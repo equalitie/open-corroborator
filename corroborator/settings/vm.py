@@ -1,7 +1,5 @@
 from common import *
 
-from queued_storage.backends import QueuedStorage
-
 ALLOWED_HOSTS = ['*']
 
 DATABASES['default']['NAME'] = 'corroborator_vm'
@@ -9,12 +7,8 @@ DATABASES['default']['NAME'] = 'corroborator_vm'
 AWS_ACCESS_KEY_ID = 'todo'
 AWS_SECRET_ACCESS_KEY = 'todo'
 AWS_STORAGE_BUCKET_NAME = 'equalitie'
-#Setup Boto AWS storage access system
-DEFAULT_FILE_STORAGE = QueuedStorage(
-    'django.core.files.storage.FileSystemStorage',  #note: local (temporary while on queue)
-    'storages.backends.s3boto.S3BotoStorage'        #note: remote
-)
-#todo next: DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+QUEUED_STORAGE = True  #i.e. local (temporarily) then queue to S3
+#todo next: QUEUED_STORAGE=False
 
 SITE_ROOT = os.path.abspath(os.path.join(ROOT_PATH, '..', '..'))
 

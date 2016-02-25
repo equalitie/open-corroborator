@@ -31,6 +31,9 @@ from haystack.utils.geo import Point
 
 from reversion.models import Revision
 
+from django.core.files.storage import default_storage
+from queued_storage.backends import QueuedStorage
+
 #from corroborator_app.index_meta_prep.actorPrepIndex import(
     #ActorBootstrapManager
 #)
@@ -549,6 +552,14 @@ class Media(models.Model):
     The Media object captures represents and individual piece of
     media evidence that can be related to Bulletins.
     """
+    if settings.QUEUED_STORAGE:
+        #Setup Boto AWS storage access system
+        fstorage = QueuedStorage(
+            'django.core.files.storage.FileSystemStorage',  #note: local (temporary while on queue)
+            'storages.backends.s3boto.S3BotoStorage'        #note: remote
+        )
+    else:
+        fstorage = default_storage
 
     TYPE = (
         ('Video', 'video'),
@@ -557,8 +568,8 @@ class Media(models.Model):
     )
     name_en = models.CharField(max_length=255, blank=True, null=True)
     name_ar = models.CharField(max_length=255, blank=True, null=True)
-    media_file = models.FileField(upload_to='media')
-    media_thumb_file = models.FileField(upload_to='media', null=True)
+    media_file = models.FileField(upload_to='media', storage=fstorage)
+    media_thumb_file = models.FileField(upload_to='media', storage=fstorage, null=True)
     media_type = models.CharField('type', max_length=25, choices=TYPE)
     media_created = models.DateTimeField(auto_now_add=True)
     media_file_type = models.CharField(max_length=255, blank=True, null=True)

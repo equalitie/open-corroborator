@@ -29,6 +29,7 @@ SOLR_PROXY_URL = '/corroborator/solrproxy/'
 SOLR_REFRESH_WINDOW = 100  #Solr update refresh window in minutes
 
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+QUEUED_STORAGE = False  #if false, uses default storage
 
 #Haystack backend configuration
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
