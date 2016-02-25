@@ -85,7 +85,7 @@ MEDIA_ROOT = '/tmp/corroborator'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/corroborator/aws/'  #todo replace storage-specific 'aws' with just 'media'?
+MEDIA_URL = '/corroborator/aws/'  #todo replace storage-specific 'aws' with just 'media'? (would need to modify url too)
 
 
 STATIC_ROOT = os.path.join(ROOT_PATH, 'static/')

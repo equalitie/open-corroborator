@@ -46,7 +46,7 @@ class MediaIndex(CelerySearchIndex, indexes.Indexable):
 
         if (object.media_file.name != ''
                 and object.media_file.name is not None):
-            return settings.S3_URL + '/' + object.media_file.name
+            return settings.MEDIA_URL + '/' + object.media_file.name
         else:
             ''
 
@@ -54,7 +54,7 @@ class MediaIndex(CelerySearchIndex, indexes.Indexable):
         #return object.get_thumb_uri()
         if (object.media_thumb_file.name != ''
                 and object.media_thumb_file.name is not None):
-            return settings.S3_URL + '/' + object.media_thumb_file.name
+            return settings.MEDIA_URL + '/' + object.media_thumb_file.name
         else:
             ''
 

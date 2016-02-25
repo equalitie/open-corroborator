@@ -29,8 +29,6 @@ from django.utils import timezone
 from datetime import datetime
 from haystack.utils.geo import Point
 
-from queued_storage.backends import QueuedStorage
-
 from reversion.models import Revision
 
 #from corroborator_app.index_meta_prep.actorPrepIndex import(
@@ -551,10 +549,6 @@ class Media(models.Model):
     The Media object captures represents and individual piece of
     media evidence that can be related to Bulletins.
     """
-    #Setup Boto AWS storage access system
-    queued_s3storage = QueuedStorage(
-        'django.core.files.storage.FileSystemStorage',
-        'storages.backends.s3boto.S3BotoStorage')
 
     TYPE = (
         ('Video', 'video'),
@@ -563,12 +557,8 @@ class Media(models.Model):
     )
     name_en = models.CharField(max_length=255, blank=True, null=True)
     name_ar = models.CharField(max_length=255, blank=True, null=True)
-    media_file = models.FileField(upload_to='media', storage=queued_s3storage)
-    media_thumb_file = models.FileField(
-        upload_to='media',
-        #storage=queued_s3storage,
-        null=True
-    )
+    media_file = models.FileField(upload_to='media')
+    media_thumb_file = models.FileField(upload_to='media', null=True)
     media_type = models.CharField('type', max_length=25, choices=TYPE)
     media_created = models.DateTimeField(auto_now_add=True)
     media_file_type = models.CharField(max_length=255, blank=True, null=True)

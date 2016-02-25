@@ -66,9 +66,9 @@ class MediaResource(MultipartResource, ModelResource):
         '''
         try:
             bundle.data['media_file'] = \
-                settings.S3_PROXY_URL + '' + bundle.obj.media_file.name
+                settings.MEDIA_URL + '' + bundle.obj.media_file.name
             bundle.data['media_thumb_file'] = \
-                settings.S3_PROXY_URL + '' + bundle.obj.media_thumb_file.name
+                settings.MEDIA_URL + '' + bundle.obj.media_thumb_file.name
         except:
             pass
         return bundle
