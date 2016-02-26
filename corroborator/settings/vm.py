@@ -18,7 +18,7 @@ SITE_ROOT = sys.prefix
 MEDIA_ROOT = os.path.join(SITE_ROOT, 'var' ,'media')
 
 STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
-#todo remove? STATICFILES_DIRS = ('/var/local/checkouts/corroborator/static',)
+STATICFILES_DIRS = ('/var/local/checkouts/corroborator/static',)
 
 TIME_ZONE = 'Europe/London'
 
