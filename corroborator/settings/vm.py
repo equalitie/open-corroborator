@@ -7,8 +7,9 @@ DATABASES['default']['NAME'] = 'corroborator_vm'
 AWS_ACCESS_KEY_ID = 'todo'
 AWS_SECRET_ACCESS_KEY = 'todo'
 AWS_STORAGE_BUCKET_NAME = 'equalitie'
-QUEUED_STORAGE = True  #i.e. local (temporarily) then queue to S3
+QUEUED_STORAGE = True  #i.e. local then queue to S3
 #todo next: QUEUED_STORAGE=False
+SENDFILE_BACKEND = 'sendfile.backends.xsendfile'
 
 SITE_ROOT = os.path.abspath(os.path.join(ROOT_PATH, '..', '..'))
 

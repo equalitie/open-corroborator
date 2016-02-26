@@ -555,8 +555,9 @@ class Media(models.Model):
     if settings.QUEUED_STORAGE:
         #Setup Boto AWS storage access system
         fstorage = QueuedStorage(
-            'django.core.files.storage.FileSystemStorage',  #note: local (temporary while on queue)
-            'storages.backends.s3boto.S3BotoStorage'        #note: remote
+            'django.core.files.storage.FileSystemStorage',  #note: local 
+            'storages.backends.s3boto.S3BotoStorage',       #note: remote
+            task='queued_storage.tasks.Transfer',           #note: TransferAndDelete would remove the local copy
         )
     else:
         fstorage = default_storage

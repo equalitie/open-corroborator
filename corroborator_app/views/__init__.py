@@ -7,6 +7,7 @@ module
 2013/02/10
 """
 import json
+import os
 from datetime import datetime, timedelta
 from django.utils import translation
 from django.shortcuts import render_to_response, render, redirect
@@ -41,6 +42,8 @@ from corroborator_app.authproxy.awsAuthProxy import AWSAuthProxy
 from corroborator_app.authproxy.solrAuthProxy import SolrAuthProxy
 
 from corroborator_app.views.view_utils import is_in_group
+
+from sendfile import sendfile
 
 ###############################################################################
 # MAIN VIEW METHODS -
@@ -290,7 +293,10 @@ def aws_proxy(request, media_name):
     On failure return 404 else redirect to AWS file.
     """
     if request.user.is_authenticated:
-        return AWSAuthProxy().get(media_name)
+        if not settings.QUEUED_STORAGE and settings.DEFAULT_FILE_STORAGE == 'django.core.files.storage.FileSystemStorage':
+            return sendfile(request, os.path.join(settings.MEDIA_ROOT, media_name))
+        else:
+            return AWSAuthProxy().get(media_name)
     else:
         raise Http404
 
