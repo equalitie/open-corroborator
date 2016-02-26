@@ -7,7 +7,6 @@ from common import *
 SESSION_COOKIE_AGE = 400 * 60
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = ['*']
 
 DATABASES['default']['NAME'] = 'corroborator_dev'
 
