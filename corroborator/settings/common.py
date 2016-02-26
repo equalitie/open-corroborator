@@ -11,6 +11,7 @@ BROKER_URL = 'amqp://guest:guest@localhost:5672/'
 
 ALLOWED_HOST = ['insert_name_of_allowed_host']
 DEBUG = False
+TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
     'default': {
@@ -23,14 +24,14 @@ DATABASES = {
     }
 }
 
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+QUEUED_STORAGE = False  #if True, stores locally then copies to S3; if False, uses DEFAULT_FILE_STORAGE
+SENDFILE_BACKEND = 'sendfile.backends.development'
+
 SOLR_CORE = 'corroborator-search'
 SOLR_URL = 'http://localhost:8983/solr/' + SOLR_CORE + '/select'
 SOLR_PROXY_URL = '/corroborator/solrproxy/'
 SOLR_REFRESH_WINDOW = 100  #Solr update refresh window in minutes
-
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
-QUEUED_STORAGE = False  #if True, stores locally then copies to S3; if False, uses default storage
-SENDFILE_BACKEND = 'sendfile.backends.development'
 
 #Haystack backend configuration
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
@@ -45,8 +46,6 @@ HAYSTACK_CONNECTIONS = {
 CORROBORATOR_LOGIN_TIMEOUT = 60 * 60 * 4
 #SESSION_COOKIE_AGE = 10
 #SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -137,12 +136,6 @@ ROOT_URLCONF = 'corroborator.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'corroborator.wsgi.application'
 
-TEMPLATE_DIRS = (
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    '/var/www/corroborator/corroborator/templates',
-)
-
 IMPORTER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer.json')
 SCRAPER_CONF_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/scraper.json')
 MONITOR_JOB_FILE = os.path.join(ROOT_PATH, 'static/js/test_confs/importer_stats.json')
@@ -178,15 +171,9 @@ INSTALLED_APPS = (
 # locking config
 LOCKING = {'time_until_expiration': 120, 'time_until_warning': 60}
 
-
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
+    'disable_existing_loggers': True,
     'formatters': {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(name)s %(process)d %(message)s',
@@ -211,23 +198,17 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },
-        'log_file': {
-            'level': 'DEBUG',
-            'class': 'logging.handlers.WatchedFileHandler',
-            'filename': '/var/log/corroborator/django.log',
-            'formatter': 'verbose',
-        },
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
+            'handlers': ['console'],
+            'level': 'WARNING',
+            'propagate': False,
         },
-        '': {       #todo name
-            'handlers': ['log_file'],
+        'django': {
+            'handlers': ['console'],
             'level': 'DEBUG',
-            'propagate': True,
+            'propagate': False,
         },
 
     }
