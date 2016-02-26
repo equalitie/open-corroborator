@@ -5,10 +5,8 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES['default']['NAME'] = 'corroborator_vm'
 
-SECRET_KEY = '<DJANGO_SECRET_KEY>'
-
-AWS_ACCESS_KEY_ID = 'todo'
-AWS_SECRET_ACCESS_KEY = 'todo'
+AWS_ACCESS_KEY_ID = 'TODO'
+AWS_SECRET_ACCESS_KEY = 'TODO'
 AWS_STORAGE_BUCKET_NAME = 'equalitie'
 QUEUED_STORAGE = True  #i.e. local then queue to S3
 SENDFILE_BACKEND = 'sendfile.backends.xsendfile'

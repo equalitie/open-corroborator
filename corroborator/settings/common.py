@@ -9,7 +9,7 @@ ROOT_PATH = os.path.abspath(os.path.dirname(__name__))
 
 BROKER_URL = 'amqp://guest:guest@localhost:5672/'
 
-ALLOWED_HOST = ['insert_name_of_allowed_host']
+ALLOWED_HOSTS = ['*']
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -24,6 +24,9 @@ DATABASES = {
     }
 }
 
+AWS_ACCESS_KEY_ID = 'TODO'
+AWS_SECRET_ACCESS_KEY = 'TODO'
+AWS_STORAGE_BUCKET_NAME = 'equalitie'
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 QUEUED_STORAGE = False  #if True, stores locally then copies to S3; if False, uses DEFAULT_FILE_STORAGE
 SENDFILE_BACKEND = 'sendfile.backends.development'
