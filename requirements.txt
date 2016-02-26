@@ -38,4 +38,4 @@ sphinx-me==0.1.2
 wsgiref==0.1.2
 django-kombu
 kombu-sqlalchemy
-django-sendfile==0.2
+django-sendfile==0.3.10
