@@ -5,10 +5,10 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES['default']['NAME'] = 'corroborator_vm'
 
-AWS_ACCESS_KEY_ID = 'TODO'
-AWS_SECRET_ACCESS_KEY = 'TODO'
+AWS_ACCESS_KEY_ID = 'TODO IF QUEUED_STORAGE IS SET'
+AWS_SECRET_ACCESS_KEY = 'TODO IF QUEUED_STORAGE IS SET'
 AWS_STORAGE_BUCKET_NAME = 'equalitie'
-QUEUED_STORAGE = True  #i.e. local then queue to S3
+QUEUED_STORAGE = False  #i.e. save uploads locally (in MEDIA_ROOT)
 SENDFILE_BACKEND = 'sendfile.backends.xsendfile'
 
 SITE_ROOT = sys.prefix
