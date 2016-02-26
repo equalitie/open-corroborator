@@ -21,9 +21,3 @@ STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
 STATICFILES_DIRS = ('/var/local/checkouts/corroborator/static',)
 
 TIME_ZONE = 'Europe/London'
-
-#todo remove? TEMPLATE_DIRS = (
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-#    os.path.join(SITE_ROOT, 'corroborator_app/templates'),
-#)

@@ -173,7 +173,7 @@ LOCKING = {'time_until_expiration': 120, 'time_until_warning': 60}
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True,
+    'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(name)s %(process)d %(message)s',
@@ -203,12 +203,12 @@ LOGGING = {
         'django.request': {
             'handlers': ['console'],
             'level': 'WARNING',
-            'propagate': False,
+            'propagate': True,
         },
         'django': {
             'handlers': ['console'],
             'level': 'DEBUG',
-            'propagate': False,
+            'propagate': True,
         },
 
     }
