@@ -4,6 +4,8 @@ from common import *
 
 ALLOWED_HOSTS = ['<host>']
 
+PROD_BUILD = True
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

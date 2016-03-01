@@ -7,7 +7,7 @@
 
 {% block script %}
   {% include "includes/bootstrap.html" %}
-  {% if DEBUG %}
+  {% if not PROD_BUILD %}
     {% include "includes/dev_script.html" %}
   {% else %}
     {% include "includes/prod_script.html" %}

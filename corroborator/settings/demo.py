@@ -3,6 +3,8 @@ from common import *
 
 ALLOWED_HOSTS = ['*']
 
+PROD_BUILD = False  #enable when npm/grunt deployment works
+
 DATABASES['default']['NAME'] = 'corroborator_demo'
 
 QUEUED_STORAGE = False  #i.e. save uploads locally (in MEDIA_ROOT)

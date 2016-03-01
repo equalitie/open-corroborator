@@ -12,6 +12,7 @@ BROKER_URL = 'amqp://guest:guest@localhost:5672/'
 ALLOWED_HOSTS = ['*']
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+PROD_BUILD = False  #use js build
 
 DATABASES = {
     'default': {
