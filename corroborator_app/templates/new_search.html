@@ -7,7 +7,11 @@
 
 {% block script %}
   {% include "includes/bootstrap.html" %}
-  {% include "includes/dev_script.html" %}
+  {% if DEBUG %}
+    {% include "includes/dev_script.html" %}
+  {% else %}
+    {% include "includes/prod_script.html" %}
+  {% endif %}
 {% endblock %}
 
 {% block content%}
