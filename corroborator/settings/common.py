@@ -92,10 +92,11 @@ MEDIA_ROOT = '/tmp/corroborator'
 MEDIA_URL = '/corroborator/aws/'  #todo replace storage-specific 'aws' with just 'media'? (would need to modify url too)
 
 
-STATIC_ROOT = os.path.join(ROOT_PATH, 'static/')
+STATIC_ROOT = ''
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    os.path.join(ROOT_PATH, 'static/'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
