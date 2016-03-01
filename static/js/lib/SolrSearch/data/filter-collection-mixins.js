@@ -32,7 +32,9 @@ define (
     // from a uri
     var mapResourceToLabel = function(resourceList, uri) {
       var uriMapper = function(resource_uri) {
-        return _(resourceList).findWhere({resource_uri: resource_uri}).name;
+        if (_(resourceList).findWhere({resource_uri: resource_uri})) {
+          return _(resourceList).findWhere({resource_uri: resource_uri}).name;
+        }
       };
       return (arguments.length === 1) ?
         uriMapper:

@@ -54,10 +54,13 @@ define (
           var locModel, displayFilterNameTmp;
           locModel = LocationCollection.find(function(loc) {
             return loc.get('resource_uri') === model.get('filterName');
-          }).clone(); // cloned to make sure later versions don't override
-          locModel.set(model.toJSON());
-          locModel.set('displayFilterName', 
-            i18n.filters[locModel.get('key')] + ': ' + locModel.get('name'));
+          });
+          if (locModel) {
+            locModel = locModel.clone(); // cloned to make sure later versions don't override
+            locModel.set(model.toJSON());
+            locModel.set('displayFilterName', 
+              i18n.filters[locModel.get('key')] + ': ' + locModel.get('name'));
+          }
           return locModel;
         };
 

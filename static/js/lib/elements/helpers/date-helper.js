@@ -30,7 +30,9 @@ define (
 
     var getFromUri = function(uri, key) {
       var searchField = {resource_uri: uri};
-      return _.findWhere(Bootstrap[key], searchField).name;
+      if (_.findWhere(Bootstrap[key], searchField)) {
+        return _.findWhere(Bootstrap[key], searchField).name;
+      }
     };
 
     // key value functions
