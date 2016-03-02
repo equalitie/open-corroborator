@@ -41,7 +41,7 @@
     "generator-mocha": "~0.1.1",
     "grunt-cli": "~0.1.10",
     "bower": "~1.2.7",
-    "yo": "~1.0.4",
+    "yo": "~1.1.0",
     "generator-backbone-amd": "0.0.4"
   }
 }
