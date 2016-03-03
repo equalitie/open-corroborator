@@ -1,30 +1,32 @@
 corroborator
 ============
 
-Case management with data validation, corroboration, omission and duplication checking
+Case management with data validation, corroboration, omission and duplication checking.
 
 Installation
-==========
+============
 
-virtualenv should be used for package management
-To install virtualenv
+Install virtualenv:
+
 ```
 [sudo] apt-get install python-virtualenv
 ```
 
 Other packages are required for modules and other build dependencies:
+
 ```
-[sudo] apt-get install libmysqlclient-dev python-dev mysql-client libxslt-dev libgeos-c1 ffmpeg git libjpeg-dev
+[sudo] apt-get install libmysqlclient-dev python-dev mysql-client libxslt-dev libgeos-c1 git libjpeg-dev libevent-dev
 ```
 
 #### Install local python environment
-From the root folder run:
+From the project root folder run:
 
 ```
 virtualenv --python=python2.7 env --no-site-packages
 ```
 
 #### Install required packages
+
 ```
 env/bin/easy_install -U distribute
 env/bin/pip install -r requirements.txt
@@ -36,62 +38,113 @@ Install celeryd
 apt-get install python-celery
 ```
 
-On Debian, the configuration file for celeryd exists in /etc/default/celeryd - an example configuration file is provided in conf/celeryd.conf. Paths in this configuration file must be modified first. The celery daemon must be restarted once this file is installed via ```/etc/init.d/celeryd restart```.
-
-#### pull in git submodules
-```
-git submodule init
-git submodule update --recursive
-```
-
-#### Create and configure database
+#### Create and configure the database
 In mysql, create a database and user for the app:
+
 ```
-CREATE DATABASE corroborator_staging;
+CREATE DATABASE corroborator_dev;
 CREATE USER 'django'@'localhost' identified by 'password';
-GRANT ALL ON corroborator_staging.* to 'django'@'localhost';
+GRANT ALL ON corroborator_dev.* to 'django'@'localhost';
 ```
-Add this username and password combination to DATABASE in ```corroborator/settings/staging.py```.
+
+If you change the username/password, make sure they are put in the DATABASE setting in ```corroborator/settings/dev.py```.
 
 #### Initial db sync
 If you have no database set up, run
+
 ```
-env/bin/python2.7 managestaging.py syncdb
-env/bin/python2.7 managestaging.py migrate
+env/bin/python2.7 manage.py syncdb --settings=corroborator.settings.dev
+env/bin/python2.7 manage.py migrate --settings=corroborator.settings.dev
+```
+
+To install the minimum data fixtures:
+
+```
+env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/admin_user.json --settings=corroborator.settings.dev 
+env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/status_update.json --settings=corroborator.settings.dev 
+env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/auth.json --settings=corroborator.settings.dev 
+```
+
+And to install some sample fixtures (including a demo user):
+
+```
+env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/demo_user.json --settings=corroborator.settings.dev 
+env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/crimes.json --settings=corroborator.settings.dev 
 ```
 
 ### Solr installation
 
 Solr needs a few packages installed before use:
+
 ```
 [sudo] apt-get install supervisor openjdk-6-jdk
 ```
 
-Solr installation is a simple matter of untarring and chowning the
-file as is appropriate for your webserver configuration. Some extra
-configuration is required, as detailed in the section below.
+Download and install Solr 4, e.g.
 
-Solr can be tempermental so we run it via Supervisord. An example
-configuration file for solr exists in ```conf/solr.supervisor.conf```
-- it can be dropped into ```/etc/supervisor/conf.d/``` on Debian. Make
-sure to change the paths as required.
+```
+wget http://www.eu.apache.org/dist/lucene/solr/4.10.4/solr-4.10.4.tgz
+tar -xvf solr-4.10.4.tgz
+```
 
+Then add a new core:
+
+```
+cd solr-4.10.4/
+
+mkdir example/solr/corroborator-search
+cp -R example/solr/collection1/conf/ example/solr/corroborator-search/
+echo "name=corroborator-search" > example/solr/corroborator-search/core.properties
+cp ../conf/solr.schema.demo.xml example/solr/corroborator-search/conf/schema.xml
+```
+
+And start Solr
+
+```
+bin/solr start
+```
+ 
 #### Other configuration
-Assuming that you have Solr and Apache all good to go, you should be ready now.
+```
+env/bin/python2.7 manage.py backfill_api_keys --settings=corroborator.settings.dev
+env/bin/python2.7 manage.py rebuild_index --settings=corroborator.settings.dev
+```
 
-If you encounter the error ```ApiKey matching query does not
-exist. Lookup parameters were {'user': <User: root>}``` (or for
-another user), create an API key in the https://yoursite/admin panel.
+#### Media storage
+By default, uploaded media is stored in MEDIA_ROOT. To store media in S3, 
+set `QUEUED_STORAGE = True` and set the 3 `AWS_*` settings - see the deployment 
+steps for more details.
 
-Solr Usage
+### Running
+To run the celery worker (to process Solr updates and any S3 updates if used)
+
+```
+env/bin/python2.7 manage.py celery worker --events --time-limit 300 --concurrency 1 --queues celery --settings=corroborator.settings.dev
+```
+
+To run the development server:
+
+```
+env/bin/python2.7 manage.py runserver --settings=corroborator.settings.dev
+```
+
+
+
+Deployment
 ==========
+See https://github.com/equalitie/open-corroborator-deploy for Ansible deployment scripts.
 
+
+Development
+===========
+
+### Solr
 Changes to model schema where new fields are added or removed from Bulletin, Incident or Actor
 models will require an update to the solr schema. To do this the schema.xml file must be updated.
 Haystack will generate a new schema.xml file with the command
 
 ```
-env/bin/python manage.py build_solr_schema > schema.xml --settings=[local settings]
+env/bin/python manage.py build_solr_schema > schema.demo.xml --settings=[local settings]
 ```
 from the root dir of the project
 
@@ -100,7 +153,45 @@ you must then copy this file to the conf folder of your solr instance and add th
 <field name="_version_" type="long" indexed="true" stored="true"/>
 ```
 
-The schema can then be re-generated by running
+And prefix and `stopwords_en.txt` references with `lang/`
+
+The Solr index can then be re-generated by running
 ```
 env/bin/python manage.py rebuild_index --settings=[local settings]
+```
+
+### Javascript
+For Javascript template compiling etc. see the github wiki. Some steps to getting things working are:
+
+Install node and npm packages:
+
+```
+[sudo] apt-get install nodejs npm nodejs-legacy
+```
+
+Install latest npm, grunt, karma:
+
+```
+npm install -g grunt-cli karma
+```
+
+Install the application packages:
+
+```
+cd static/js
+npm install
+```
+
+To build a build.js file:
+
+```
+cd static/js
+grunt build
+```
+
+To compile handlebars templates:
+
+```
+cd static/js
+grunt handlebars
 ```
