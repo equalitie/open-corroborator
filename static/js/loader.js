@@ -71,7 +71,7 @@
     },
     config: {
       i18n: {
-        locale: (typeof Bootstrap !== 'undefined')? Bootstrap.locale : 'en'
+        locale: (typeof Bootstrap !== 'undefined')? (Bootstrap.locale || 'en') : 'en'
       }
     }
   });
