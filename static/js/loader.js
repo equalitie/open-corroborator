@@ -71,7 +71,7 @@
     },
     config: {
       i18n: {
-        locale: /* removed for grunt build: Bootstrap.locale || */ 'en'
+        locale: (typeof Bootstrap !== 'undefined')? Bootstrap.locale : 'en'
       }
     }
   });
