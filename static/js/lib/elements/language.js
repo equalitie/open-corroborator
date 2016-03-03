@@ -9,7 +9,7 @@ define(
   ],
   function($) {
     // array of possible languages
-    var languages = ['en', 'ar'];
+    var languages = ['en', 'ar', 'ru'];
 
     var toggleLanguageDiv = function(lang, i18nElement, elType) {
       var requestedLang = lang,
