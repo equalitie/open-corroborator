@@ -11,7 +11,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'Django<1.6',
+        'Django<1.7',
         #todo 
         #'South',
 

@@ -51,4 +51,4 @@ class CommentTestCase(ResourceTestCase):
             'comments_ar': "Test Comment Arabic",
         }
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)

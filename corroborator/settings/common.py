@@ -116,6 +116,8 @@ STATIC_URL = '/static/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '<DJANGO_SECRET_KEY>'
 
+SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'  #todo: use default JSON - serialise/remove dates first
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',

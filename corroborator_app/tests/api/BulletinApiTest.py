@@ -131,7 +131,7 @@ class BulletinTestCase(ResourceTestCase):
         )
         put_data = create_put_data(5)
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         self.check_dehydrated_data(response)
         self.assertEqual(retrieve_last_comment_status(response), 'Updated')
         vs = VersionStatus.objects.filter(
@@ -147,7 +147,7 @@ class BulletinTestCase(ResourceTestCase):
         )
         put_data = create_put_data(3)
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(retrieve_last_comment_status(response), 'Updated')
         b.assigned_user = None
         b.save()
@@ -163,7 +163,7 @@ class BulletinTestCase(ResourceTestCase):
         )
         put_data = create_put_data(4)
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(retrieve_last_comment_status(response), 'Reviewed')
 
     def test_chief_data_analyst_put(self):
@@ -175,7 +175,7 @@ class BulletinTestCase(ResourceTestCase):
         )
         put_data = create_put_data(5)
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         self.assertEqual(retrieve_last_comment_status(response), 'Finalized')
 
     def test_finalized_is_not_updated(self):

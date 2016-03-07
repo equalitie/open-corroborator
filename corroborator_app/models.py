@@ -104,7 +104,7 @@ class PredefinedSearch(models.Model):
     actor_filters = models.TextField(null=True, blank=True)
     incident_filters = models.TextField(null=True, blank=True)
     bulletin_filters = models.TextField(null=True, blank=True)
-    make_global = models.BooleanField()
+    make_global = models.BooleanField(default=False)
 
 
 class ActorStatus(models.Model):
@@ -743,7 +743,7 @@ class Actor(models.Model):
     This field tracks whether the entitiy has been deleted and should thus be
     ignored by the UI
     """
-    deleted = models.BooleanField()
+    deleted = models.BooleanField(default=False)
     actor_comments = models.ManyToManyField(Comment, blank=True, null=True)
 
     # Foreign Keys
@@ -992,7 +992,7 @@ class Bulletin(models.Model):
     This field tracks whether the entitiy has been deleted and should thus be
     ignored by the UI
     """
-    deleted = models.BooleanField()
+    deleted = models.BooleanField(default=False)
 
     # foreign key fields
     assigned_user = models.ForeignKey(User, blank=True, null=True)
@@ -1091,7 +1091,7 @@ class Incident(models.Model):
     This field tracks whether the entitiy has been deleted and should thus be
     ignored by the UI
     """
-    deleted = models.BooleanField()
+    deleted = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.title_en

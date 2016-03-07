@@ -52,7 +52,7 @@ class LabelTestCase(ResourceTestCase):
             'description_ar': "description Arabic",
         }
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         
     def test_label_patch(self):
         url = '/api/v1/label/?format=json{}'.format(self.auth_string)

@@ -69,7 +69,7 @@ class MediaTestCase(ResourceTestCase):
             'nickname_ar': "Nickname Arabic",
         }
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         
     def test_media_patch(self):
         url = '/api/v1/media/?format=json{}'.format(self.auth_string)

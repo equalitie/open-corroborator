@@ -4,6 +4,7 @@ from django.test.client import Client
 from tastypie.test import ResourceTestCase
 from autofixture import AutoFixture
 from corroborator_app.models import PredefinedSearch
+from django.db import transaction
 
 class PredefinedSearchTestCase(ResourceTestCase):
     def setUp(self):
@@ -39,7 +40,8 @@ class PredefinedSearchTestCase(ResourceTestCase):
             'search_type': "django_ct:*bulletin",
         }
         url = '/api/v1/predefinedSearch/?format=json{}'.format(self.auth_string)
-        response = self.api_client.post(url, data=post_data)
+        with transaction.atomic():
+            response = self.api_client.post(url, data=post_data)
         self.assertEqual(response.status_code, 201)
 
     def test_predefinedSearch_put(self):
@@ -52,7 +54,7 @@ class PredefinedSearchTestCase(ResourceTestCase):
             'search_type': "django_ct:*bulletin",
         }
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         
     def test_predefinedSearch_patch(self):
         url = '/api/v1/predefinedSearch/?format=json{}'.format(self.auth_string)
@@ -72,6 +74,7 @@ class PredefinedSearchTestCase(ResourceTestCase):
                 }
             ]
         }
-        response = self.api_client.patch(url, data=patch_data)
+        with transaction.atomic():
+            response = self.api_client.patch(url, data=patch_data)
         self.assertEqual(response.status_code, 202)
         

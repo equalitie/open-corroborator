@@ -116,7 +116,7 @@ class IncidentTestCase(ResourceTestCase):
         put_data = create_put_data()
         response = self.api_client.put(url, data=put_data)
         self.check_dehydrated_data(response)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         vs = VersionStatus.objects.filter(user_id=self.user.id).order_by('version_timestamp')
         self.assertEqual(len(vs), 1)
 

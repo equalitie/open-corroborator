@@ -48,7 +48,7 @@ class SourceTypeTestCase(ResourceTestCase):
             'description': "Test SourceType Arabic",
         }
         response = self.api_client.put(url, data=put_data)
-        self.assertEqual(response.status_code, 202)
+        self.assertEqual(response.status_code, 200)
         
     def test_sourceType_patch(self):
         url = '/api/v1/sourceType/?format=json{}'.format(self.auth_string)
