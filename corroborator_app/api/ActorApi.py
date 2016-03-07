@@ -14,7 +14,7 @@ from tastypie import fields
 from tastypie.exceptions import ImmediateHttpResponse
 from tastypie.http import HttpForbidden
 
-import reversion
+from reversion import revisions as reversion
 
 from corroborator_app.models import (
     ActorRelationship,

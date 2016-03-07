@@ -27,7 +27,7 @@
   {
     "fields": {
       "actors_role": [], 
-      "assigned_user": 1, 
+      "assigned_user": null, 
       "bulletin_comments": [
         ], 
       "bulletin_created": "2013-05-24T23:05:31Z", 

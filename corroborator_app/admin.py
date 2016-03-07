@@ -22,7 +22,7 @@ from corroborator_app.models import (
     RelationType
 )
 
-import reversion
+from reversion.admin import VersionAdmin
 
 
 class CommentsInlineIn(admin.TabularInline):
@@ -114,75 +114,75 @@ class TimeInfoAdmin(admin.ModelAdmin):
     list_display = ('time_from', 'time_to', 'comments_en', )
 
 
-class ActorAdmin(reversion.VersionAdmin):
+class ActorAdmin(VersionAdmin):
     pass
 
 
-class ActorConditionAdmin(reversion.VersionAdmin):
+class ActorConditionAdmin(VersionAdmin):
     pass
 
 
-class ActorRoleAdmin(reversion.VersionAdmin):
+class ActorRoleAdmin(VersionAdmin):
     pass
 
 
-class RelationTypeAdmin(reversion.VersionAdmin):
+class RelationTypeAdmin(VersionAdmin):
     pass
 
 
-class RoleTypeAdmin(reversion.VersionAdmin):
+class RoleTypeAdmin(VersionAdmin):
     pass
 
 
-class EventTypeAdmin(reversion.VersionAdmin):
+class EventTypeAdmin(VersionAdmin):
     pass
 
 
-class StatusUpdateAdmin(reversion.VersionAdmin):
+class StatusUpdateAdmin(VersionAdmin):
     pass
 
 
-class LocationAdmin(reversion.VersionAdmin):
+class LocationAdmin(VersionAdmin):
     pass
 
 
-class SourceAdmin(reversion.VersionAdmin):
+class SourceAdmin(VersionAdmin):
     pass
 
 
-class SourceTypeAdmin(reversion.VersionAdmin):
+class SourceTypeAdmin(VersionAdmin):
     pass
 
 
-class LabelAdmin(reversion.VersionAdmin):
+class LabelAdmin(VersionAdmin):
     pass
 
 
-class CrimeCategoryAdmin(reversion.VersionAdmin):
+class CrimeCategoryAdmin(VersionAdmin):
     pass
 
 
-class MediaAdmin(reversion.VersionAdmin):
+class MediaAdmin(VersionAdmin):
     pass
 
 
-class CommentAdmin(reversion.VersionAdmin):
+class CommentAdmin(VersionAdmin):
     pass
 
 
-class PredefinedSearchAdmin(reversion.VersionAdmin):
+class PredefinedSearchAdmin(VersionAdmin):
     pass
 
 
-class CorrobAdminRev(reversion.VersionAdmin, CorrobAdmin):
+class CorrobAdminRev(VersionAdmin, CorrobAdmin):
     pass
 
 
-class CorrobAdminInRev(reversion.VersionAdmin, CorrobAdminIn):
+class CorrobAdminInRev(VersionAdmin, CorrobAdminIn):
     pass
 
 
-class TimeInfoAdminRev(reversion.VersionAdmin, TimeInfoAdmin):
+class TimeInfoAdminRev(VersionAdmin, TimeInfoAdmin):
     pass
 #class test(LockableAdmin, CorrobAdminInRev):
     #list_display = ('get_lock_for_admin',)

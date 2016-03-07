@@ -1,6 +1,6 @@
 from corroborator_app.models import (Comment, VersionStatus, )
 
-import reversion
+from reversion import revisions as reversion
 
 
 class APIMixin():

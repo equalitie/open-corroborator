@@ -151,10 +151,10 @@ def monitoring_update_conf(request, conf_name):
         if 'error' in result_json:
             return HttpResponseServerError(
                 result_json,
-                mimetype='application/json'
+                content_type='application/json'
             )
         else:
-            return HttpResponse(result_json, mimetype='application/json')
+            return HttpResponse(result_json, content_type='application/json')
     else:
         return Http404
 
@@ -276,7 +276,7 @@ def entity_refresh(request):
     if request.user.is_authenticated:
         refreshed_entities = get_updated_objects()
         data = json.dumps(refreshed_entities)
-        return HttpResponse(data, mimetype='application/json')
+        return HttpResponse(data, content_type='application/json')
     else:
         raise Http404
 ###############################################################################

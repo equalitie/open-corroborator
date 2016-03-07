@@ -27,7 +27,7 @@ from corroborator_app.models import (
 )
 from corroborator_app.tasks import update_object
 
-import reversion
+from reversion import revisions as reversion
 
 ###########################################################################
 # COMMON METHODS
@@ -269,7 +269,7 @@ def multi_save_actors(request, actor_dict, username):
     if passed is False:
         return HttpResponseForbidden(
             error_response,
-            mimetype='application/json'
+            content_type='application/json'
         )
     status_id = parse_id_from_uri(actor_dict['status_uri'])
 
@@ -296,7 +296,7 @@ def multi_save_actors(request, actor_dict, username):
 
     return HttpResponse(
         response_content,
-        mimetype='application/json'
+        content_type='application/json'
     )
 
 
@@ -475,7 +475,7 @@ def multi_save_bulletins(request, bulletin_dict, username):
     if passed is False:
         return HttpResponseForbidden(
             error_response,
-            mimetype='application/json'
+            content_type='application/json'
         )
 
     bulletin_id_list = extract_ids(bulletin_dict, 'bulletins')
@@ -500,7 +500,7 @@ def multi_save_bulletins(request, bulletin_dict, username):
 
     return HttpResponse(
         response_content,
-        mimetype='application/json'
+        content_type='application/json'
     )
 
 
@@ -544,7 +544,7 @@ def multi_save_incidents(request, incident_dict, username):
     if passed is False:
         return HttpResponseForbidden(
             error_response,
-            mimetype='application/json'
+            content_type='application/json'
         )
 
     incident_id_list = extract_ids(incident_dict, 'incidents')
@@ -568,7 +568,7 @@ def multi_save_incidents(request, incident_dict, username):
     update_object.delay(username)
     return HttpResponse(
         response_content,
-        mimetype='application/json'
+        content_type='application/json'
     )
 
 

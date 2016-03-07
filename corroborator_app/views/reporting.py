@@ -57,7 +57,7 @@ def request_graph_data(request, graph_code, user_id=None):
         graph_function = graph_function_map[graph_code]
         json_result = graph_function_map[graph_code](user_id)
 
-    return HttpResponse(json_result, mimetype='application/json')
+    return HttpResponse(json_result, content_type='application/json')
 
 
 def total_edited_items():

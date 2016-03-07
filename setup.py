@@ -11,12 +11,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'Django<1.7',
-        #todo 
-        #'South',
-
-        # Third Party Standard
-        #'gunicorn',
+        'Django<1.8',
     ],
     scripts=[
         'manage.py',

@@ -31,7 +31,7 @@ from corroborator_app.tasks import update_object
 
 from corroborator_app.views.view_utils import can_assign_users, can_finalize
 
-import reversion
+from reversion import revisions as reversion
 
 from corroborator_app.models import (
     Incident, Comment, StatusUpdate, VersionStatus
