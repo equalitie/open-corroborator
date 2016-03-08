@@ -335,7 +335,7 @@ class TimeInfo(models.Model):
         'event name en', max_length=255, blank=True, null=True)
     event_name_ar = models.CharField(
         'event name ar', max_length=255, blank=True, null=True)
-    confidence_score = models.IntegerField(null=True, blank=True, max_length=3)
+    confidence_score = models.IntegerField(null=True, blank=True)
     event_location = models.ForeignKey(
         Location, blank=True, null=True)
     event_type = models.ForeignKey(
@@ -409,7 +409,7 @@ class Source(models.Model):
     name_en = models.CharField(max_length=255, blank=True, null=True)
     name_ar = models.CharField(max_length=255, blank=True, null=True)
     reliability_score = models.IntegerField(
-        'reliability score', blank=True, max_length=3)
+        'reliability score', blank=True)
     source_type = models.ForeignKey(SourceType, blank=True, null=True)
     comments_en = models.TextField(blank=True, null=True)
     comments_ar = models.TextField(blank=True, null=True)
@@ -723,7 +723,7 @@ class Actor(models.Model):
     health_status_en = models.CharField(max_length=255, blank=True, null=True)
     health_status_ar = models.CharField(max_length=255, blank=True, null=True)
 
-    times = models.ManyToManyField(TimeInfo, blank=True, null=True)
+    times = models.ManyToManyField(TimeInfo, blank=True)
     DOB = models.DateField('date of birth', blank=True, null=True)
     date_of_death = models.DateField('date of death', blank=True, null=True)
     date_of_disappearance = models.DateField(
@@ -744,14 +744,14 @@ class Actor(models.Model):
     ignored by the UI
     """
     deleted = models.BooleanField(default=False)
-    actor_comments = models.ManyToManyField(Comment, blank=True, null=True)
+    actor_comments = models.ManyToManyField(Comment, blank=True)
 
     # Foreign Keys
     #actor_status = models.ForeignKey(ActorStatus, blank=True, null=True)
     condition = models.ForeignKey(ActorCondition, blank=True, null=True)
     assigned_user = models.ForeignKey(User, blank=True, null=True)
     actors_role = models.ManyToManyField(
-        'ActorRole', blank=True, null=True, related_name='actors_role')
+        'ActorRole', blank=True, related_name='actors_role')
     POB = models.ForeignKey(
         Location, blank=True, null=True, related_name='POB')
     place_of_death = models.ForeignKey(
@@ -765,8 +765,8 @@ class Actor(models.Model):
     actor_created = models.DateTimeField(auto_now_add=True)
     actor_modified = models.DateTimeField(auto_now=True)
 
-    labels = models.ManyToManyField(Label, blank=True, null=True)
-    sources = models.ManyToManyField(Source, blank=True, null=True)
+    labels = models.ManyToManyField(Label, blank=True)
+    sources = models.ManyToManyField(Source, blank=True)
 
     def __unicode__(self):
         return self.fullname_en
@@ -998,21 +998,20 @@ class Bulletin(models.Model):
     assigned_user = models.ForeignKey(User, blank=True, null=True)
 
     # ManyToManyFields
-    sources = models.ManyToManyField(Source, blank=True, null=True)
-    bulletin_comments = models.ManyToManyField(Comment, blank=True, null=True)
+    sources = models.ManyToManyField(Source, blank=True)
+    bulletin_comments = models.ManyToManyField(Comment, blank=True)
     bulletin_imported_comments = models.ManyToManyField(
         Comment,
         blank=True,
-        null=True,
         related_name="bulletin_imported_comments"
     )
-    labels = models.ManyToManyField(Label, blank=True, null=True)
-    times = models.ManyToManyField(TimeInfo, blank=True, null=True)
+    labels = models.ManyToManyField(Label, blank=True)
+    times = models.ManyToManyField(TimeInfo, blank=True)
 
-    actors_role = models.ManyToManyField(ActorRole, blank=True, null=True)
-    medias = models.ManyToManyField(Media, blank=True, null=True)
-    locations = models.ManyToManyField(Location, blank=True, null=True)
-    ref_bulletins = models.ManyToManyField('self', blank=True, null=True)
+    actors_role = models.ManyToManyField(ActorRole, blank=True)
+    medias = models.ManyToManyField(Media, blank=True)
+    locations = models.ManyToManyField(Location, blank=True)
+    ref_bulletins = models.ManyToManyField('self', blank=True)
 
     def __unicode__(self):
         return self.title_en
@@ -1071,7 +1070,7 @@ class Incident(models.Model):
     incident_details_en = models.TextField(blank=True, null=True)
     incident_details_ar = models.TextField(blank=True, null=True)
     confidence_score = models.IntegerField(
-        'confidence score', blank=True, max_length=3, null=True)
+        'confidence score', blank=True, null=True)
     title_en = models.TextField()
     title_ar = models.TextField(blank=True)
     incident_created = models.DateTimeField(auto_now_add=True)
@@ -1079,14 +1078,14 @@ class Incident(models.Model):
 
     assigned_user = models.ForeignKey(User, blank=True, null=True)
 
-    incident_comments = models.ManyToManyField(Comment, blank=True, null=True)
-    ref_bulletins = models.ManyToManyField(Bulletin, blank=True, null=True)
-    actors_role = models.ManyToManyField(ActorRole, blank=True, null=True)
-    crimes = models.ManyToManyField(CrimeCategory, blank=True, null=True)
-    labels = models.ManyToManyField(Label, blank=True, null=True)
-    times = models.ManyToManyField(TimeInfo, blank=True, null=True)
-    locations = models.ManyToManyField(Location, blank=True, null=True)
-    ref_incidents = models.ManyToManyField('self', blank=True, null=True)
+    incident_comments = models.ManyToManyField(Comment, blank=True)
+    ref_bulletins = models.ManyToManyField(Bulletin, blank=True)
+    actors_role = models.ManyToManyField(ActorRole, blank=True)
+    crimes = models.ManyToManyField(CrimeCategory, blank=True)
+    labels = models.ManyToManyField(Label, blank=True)
+    times = models.ManyToManyField(TimeInfo, blank=True)
+    locations = models.ManyToManyField(Location, blank=True)
+    ref_incidents = models.ManyToManyField('self', blank=True)
     """
     This field tracks whether the entitiy has been deleted and should thus be
     ignored by the UI
