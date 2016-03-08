@@ -11,7 +11,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'Django<1.8',
+        'Django<1.9',
     ],
     scripts=[
         'manage.py',

@@ -168,7 +168,7 @@ class PermStatusUpdateManager(models.Manager):
         return the status that the user may update to, so if a user tries to
         update to finalized and may not, just return the updated status
         '''
-        queryset = super(PermStatusUpdateManager, self).get_query_set()
+        queryset = super(PermStatusUpdateManager, self).get_queryset()
         requested_status = queryset.get(id=requested_status_id)
         has_perm = False
         for group in user.groups.all():

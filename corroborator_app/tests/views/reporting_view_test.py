@@ -332,4 +332,5 @@ class ReportingTestCase(TestCase):
         })
         json_response = json.loads(ura.crud_per_day(user.id))
         expected_response = json.loads(expected_response)
+        self.maxDiff = None
         self.assertEqual(expected_response, json_response)
