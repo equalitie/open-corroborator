@@ -82,3 +82,6 @@ class IncidentIndex(CelerySearchIndex, indexes.Indexable, IncidentPrepMeta):
         for the tastypie api
         """
         return ActorPrepMeta().prepare_actors_role(object)
+
+    def get_updated_field(self):
+        return 'incident_modified'

@@ -89,3 +89,6 @@ class ActorIndex(CelerySearchIndex, indexes.Indexable, ActorPrepMeta):
 
     def get_model(self):
         return Actor
+    
+    def get_updated_field(self):
+        return 'actor_modified'
