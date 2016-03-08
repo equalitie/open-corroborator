@@ -54,7 +54,7 @@ If you have no database set up, run:
 
 ```
 env/bin/python2.7 manage.py syncdb --settings=corroborator.settings.dev
-env/bin/python2.7 manage.py migrate --settings=corroborator.settings.dev
+env/bin/python2.7 manage.py migrate --fake-initial --settings=corroborator.settings.dev
 ```
 
 To install the minimum data fixtures:
