@@ -665,21 +665,6 @@
         "delete_session", 
         "sessions", 
         "session"
-      ], 
-      [
-        "add_migrationhistory", 
-        "south", 
-        "migrationhistory"
-      ], 
-      [
-        "change_migrationhistory", 
-        "south", 
-        "migrationhistory"
-      ], 
-      [
-        "delete_migrationhistory", 
-        "south", 
-        "migrationhistory"
       ]
     ], 
             "date_joined": "2016-02-23 10:10:3+00:00",
