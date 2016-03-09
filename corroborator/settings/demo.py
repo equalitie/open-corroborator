@@ -1,9 +1,9 @@
 import sys
 from common import *
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.corroborator.org']
 
-PROD_BUILD = False  #enable when npm/grunt deployment works
+PROD_BUILD = False  #if True, use js/dist script(s)
 
 DATABASES['default']['NAME'] = 'corroborator_demo'
 

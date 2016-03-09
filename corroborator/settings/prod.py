@@ -2,9 +2,9 @@
 import sys
 from common import *
 
-ALLOWED_HOSTS = ['<host>']
+ALLOWED_HOSTS = ['.corroborator.org']
 
-PROD_BUILD = True
+PROD_BUILD = True  #if True, use js/dist script(s)
 
 DATABASES = {
     'default': {
