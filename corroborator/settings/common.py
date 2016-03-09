@@ -114,7 +114,7 @@ STATICFILES_FINDERS = (
 STATIC_URL = '/static/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '<DJANGO_SECRET_KEY>'
+SECRET_KEY = '<DJANGO_SECRET_KEY> should be more than 50 characters and have more than 5 unique characters.'
 
 SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'  #todo: use default JSON - serialise/remove dates first
 
@@ -132,11 +132,21 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
     'corroborator_app.custom_middleware.SessionAuditMiddleware',
     #'reversion.middleware.RevisionMiddleware',
     # Uncomment line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+X_FRAME_OPTIONS = 'DENY'
 
 ROOT_URLCONF = 'corroborator.urls'
 

@@ -10,6 +10,9 @@ TEMPLATE_DEBUG = DEBUG
 
 DATABASES['default']['NAME'] = 'corroborator_dev'
 
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+
 INSTALLED_APPS += (
     #'model_report',
     'autofixture',

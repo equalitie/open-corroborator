@@ -12,6 +12,9 @@ DATABASES = {
 }
 #DATABASES['default']['NAME'] = 'corroborator_dev'  #todo move from sqlite3 to mysql for tests
 
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+
 INSTALLED_APPS += (
     'autofixture',
 )

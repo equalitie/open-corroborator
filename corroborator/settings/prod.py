@@ -17,7 +17,10 @@ DATABASES = {
     }
 }
 
-SECRET_KEY = '<DJANGO_SECRET_KEY>'
+SECRET_KEY = '<DJANGO_SECRET_KEY> should be more than 50 characters and have more than 5 unique characters.'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 
 QUEUED_STORAGE = False  #i.e. save uploads locally (in MEDIA_ROOT)
 SENDFILE_BACKEND = 'sendfile.backends.xsendfile'
