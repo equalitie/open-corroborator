@@ -32,6 +32,8 @@ DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 QUEUED_STORAGE = False  #if True, stores locally then copies to S3; if False, uses DEFAULT_FILE_STORAGE
 SENDFILE_BACKEND = 'sendfile.backends.development'
 
+VIDEO_THUMBNAILING = True  #requires ffmpeg to be available
+
 SOLR_CORE = 'corroborator-search'
 SOLR_URL = 'http://localhost:8983/solr/' + SOLR_CORE + '/select'
 SOLR_PROXY_URL = '/corroborator/solrproxy/'

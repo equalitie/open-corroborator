@@ -5,7 +5,7 @@ Create api for media model, requires apikey auth
 tests in tests/api/tests.py
 """
 from django.conf import settings
-from django.core.files.uploadedfile import UploadedFile
+from django.core.files.uploadedfile import UploadedFile, InMemoryUploadedFile
 
 from tastypie.resources import ModelResource
 from tastypie.authorization import Authorization
@@ -17,6 +17,8 @@ from corroborator_app.tasks import update_object
 from corroborator_app.models import Media
 from corroborator_app.utilities.imageTools import Thumbnailer,\
     MiniFFMPEGWrapper
+import tempfile
+import os
 __all__ = ('MediaResource', )
 
 
@@ -78,17 +80,41 @@ class MediaResource(MultipartResource, ModelResource):
         media_file = bundle.data['media_file']
         bundle.data['media_type'] = 'Document'
 
+        #todo: perhaps don't fail the upload if thumbnailing fails
         if 'video' in bundle.data['media_file'].content_type:
             bundle.data['media_type'] = 'Video'
-            #ffmpeg_wrapper = MiniFFMPEGWrapper()
-            #ffmpeg_wrapper.video_file = media_file.temporary_file_path()
-            #ffmpeg_wrapper.create_jpeg_from_video()
-            #thumb_source_file = UploadedFile(ffmpeg_wrapper.out_filename)
-            #thumbnailer = Thumbnailer()
-            #bundle.data['media_thumb_file'] =\
-                #thumbnailer.construct_thumb_from_image(
-                    #thumb_source_file
-                #)
+            if settings.VIDEO_THUMBNAILING:
+                ffmpeg_wrapper = MiniFFMPEGWrapper()
+
+                # Files < 2.5MB get stored in memory rather than on disk
+                if hasattr(media_file, 'temporary_file_path'): # file_object is file path
+                    file_location = 'disk'
+                    file_object = media_file
+                    file_name = file_object.temporary_file_path()
+                    #filetype = mime.from_file(file_object)
+                    #file_info = m.from_file(file_object)
+                else: # file_object is an actual file object
+                    file_location = 'memory'
+                    file_object = media_file
+                    file_buffer = media_file.read()
+                    #filetype = mime.from_buffer(file_buffer)
+                    #file_info = m.from_buffer(file_buffer)
+                    file_object.seek(0)
+                    # write it to a temporary file on disk so we can get a path to pass to the ffmpeg command
+                    file_object = tempfile.NamedTemporaryFile(dir=settings.FILE_UPLOAD_TEMP_DIR)
+                    file_object.write(file_buffer)
+                    file_object.flush()
+                    os.fsync(file_object.fileno())
+                    file_name = file_object.name
+                
+                ffmpeg_wrapper.video_file = file_name
+                ffmpeg_wrapper.create_jpeg_from_video()
+                thumb_source_file = UploadedFile(open(ffmpeg_wrapper.out_filename))
+                thumbnailer = Thumbnailer()
+                bundle.data['media_thumb_file'] =\
+                    thumbnailer.construct_thumb_from_image(
+                        thumb_source_file
+                    )
 
         if 'image' in bundle.data['media_file'].content_type:
             bundle.data['media_type'] = 'Picture'
