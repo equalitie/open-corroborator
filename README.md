@@ -37,13 +37,7 @@ env/bin/easy_install -U distribute
 env/bin/pip install -r requirements.txt
 ```
 
-#### Set up system celeryd install
-Install celeryd
-```
-apt-get install python-celery
-```
-
-#### Create and configure the database
+#### Create and configure the (development) database
 In mysql, create a database and user for the app:
 
 ```
