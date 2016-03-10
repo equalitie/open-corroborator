@@ -18,6 +18,11 @@ Other packages are required for modules and other build dependencies:
 [sudo] apt-get install libmysqlclient-dev python-dev mysql-client libxslt-dev libgeos-c1 git libjpeg-dev libevent-dev
 ```
 
+If video thumbnailing is turned on (`settings.VIDEO_THUMBNAILING = True`) then `ffmpeg` is required:
+
+see https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu (or use the Ansible deployment scripts)
+
+
 #### Install local python environment
 From the project root folder run:
 
