@@ -105,6 +105,7 @@ bin/solr start
  
 #### Other configuration
 ```
+cd ..
 env/bin/python2.7 manage.py backfill_api_keys --settings=corroborator.settings.dev
 env/bin/python2.7 manage.py rebuild_index --settings=corroborator.settings.dev
 ```
@@ -127,7 +128,7 @@ To run the development server:
 env/bin/python2.7 manage.py runserver --settings=corroborator.settings.dev
 ```
 
-
+Test in a browser via http://localhost:8000/ and login with 'demo', password 'demo'.
 
 Deployment
 ==========
