@@ -58,11 +58,11 @@ If you change the username/password, make sure they are put in the DATABASE sett
 If you have no database set up, run:
 
 ```
-env/bin/python2.7 manage.py syncdb --settings=corroborator.settings.dev
 env/bin/python2.7 manage.py migrate --fake-initial --settings=corroborator.settings.dev
 ```
 
-To install the minimum data fixtures:
+To install the minimum data fixtures (including an admin user, password
+'password'):
 
 ```
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/admin_user.json --settings=corroborator.settings.dev 
@@ -70,7 +70,7 @@ env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/status_update.jso
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/auth.json --settings=corroborator.settings.dev 
 ```
 
-And to install some sample fixtures (including a demo user):
+And to install some sample fixtures (including a demo user, password 'demo'):
 
 ```
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/demo_user.json --settings=corroborator.settings.dev 
