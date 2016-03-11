@@ -39,13 +39,13 @@ class APIMixin():
         '''
         check if the user may edit this resource
         '''
-        user_has_perm = user.has_perms('can_edit_entities')
+        user_has_perm = user.has_perm('auth.can_edit_entities')
 
         # not crazy about multiple ifs, but trying to reduce number of
         # operations if possible
         if user_has_perm is False:
             user_has_perm = self.check_groups_for_permission(
-                user.groups.all(), 'can_edit_entities')
+                user.groups.all(), 'auth.can_edit_entities')
 
         if user_has_perm is False:
             user_has_perm = self.check_entity_assigned(ModelType, bundle, user)
