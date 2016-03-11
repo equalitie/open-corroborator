@@ -6,7 +6,10 @@ Create the assign user permissions - is this the right place??
 from django.contrib.auth.models import User, Permission
 import django.contrib.auth.models as auth_models
 from django.contrib.contenttypes.models import ContentType
-from django.db.models.signals import post_syncdb
+from django.db.models.signals import post_syncdb  #todo remove
+
+from django.apps import AppConfig
+from django.db.models.signals import post_migrate
 
 
 # Create the can_assign_user permission
@@ -36,4 +39,12 @@ def create_permission(codename, label, content_type):
     po.name = label
     po.save()
 
-post_syncdb.connect(add_assign_permission, sender=auth_models)
+#todo remove - deprecated: post_syncdb.connect(add_assign_permission, sender=auth_models)
+
+default_app_config = 'corroborator_app.CorroboratorAppConfig'
+
+class CorroboratorAppConfig(AppConfig):
+    name = 'corroborator_app'
+    
+    def ready(self):
+        post_migrate.connect(add_assign_permission, sender=auth_models)
