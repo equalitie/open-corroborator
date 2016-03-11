@@ -21,26 +21,6 @@
       ]
     ], 
     "user_permissions": [
-        [
-          "can_assign_users",
-          "auth",
-          "user"
-        ],
-        [
-          "can_delete_entities",
-          "auth",
-          "user"
-        ],
-        [
-          "can_edit_assigned_entities",
-          "auth",
-          "user"
-        ],
-        [
-          "can_edit_entities",
-          "auth",
-          "user"
-        ],
       [
         "add_contenttype", 
         "contenttypes", 

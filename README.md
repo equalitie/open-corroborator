@@ -71,6 +71,15 @@ env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/demo_user.json --
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/crimes.json --settings=corroborator.settings.dev 
 ```
 
+##### Permissions
+The `demo` user should be given the following permissions (via the admin interface):
+
+   * 'Can assign users via api'
+   * 'Can delete entities via api'
+   * 'Can edit entities via api'
+   * 'Can edit assigned entities via api'
+
+
 ### Solr installation
 
 Solr needs a few packages installed before use:
