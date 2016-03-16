@@ -26,4 +26,3 @@ MIDDLEWARE_CLASSES += (
 )
 
 TIME_ZONE = 'Europe/Dublin'
-
