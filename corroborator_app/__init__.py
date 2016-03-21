@@ -39,7 +39,8 @@ def create_permission(codename, label, content_type):
     po.name = label
     po.save()
 
-#todo remove - deprecated: post_syncdb.connect(add_assign_permission, sender=auth_models)
+#todo remove - deprecated: 
+post_syncdb.connect(add_assign_permission, sender=auth_models)
 
 default_app_config = 'corroborator_app.CorroboratorAppConfig'
 
