@@ -173,7 +173,7 @@ class MonitorDataLoader:
         """
 
         CONFIG_FILE = os.path.join(
-            os.path.dirname(__file__), 
+            #todo remove: full path now passed in: os.path.dirname(__file__), 
             config_file    
         )
 
@@ -187,7 +187,7 @@ class MonitorDataLoader:
         Write the specified json out to the given config file
         """
         CONFIG_FILE = os.path.join(
-            os.path.dirname(__file__), 
+            #todo remove: full path now passed in: os.path.dirname(__file__), 
             config_file    
         )
         try:

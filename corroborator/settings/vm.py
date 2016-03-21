@@ -23,4 +23,8 @@ MEDIA_ROOT = os.path.join(SITE_ROOT, 'var' ,'media')
 STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
 STATICFILES_DIRS = ('/var/local/checkouts/corroborator/static',)
 
+IMPORTER_CONF_FILE = os.path.join(STATICFILES_DIRS[0], 'js/test_confs/importer.json')
+SCRAPER_CONF_FILE = os.path.join(STATICFILES_DIRS[0], 'js/test_confs/scraper.json')
+MONITOR_JOB_FILE = os.path.join(STATICFILES_DIRS[0], 'js/test_confs/importer_stats.json')
+
 TIME_ZONE = 'Europe/London'
