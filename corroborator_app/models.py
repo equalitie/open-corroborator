@@ -1145,12 +1145,15 @@ def update_last_logout(sender, request, user, **kwargs):
         logout_timestamp = request.session['lastRequest']
         del request.session['lastRequest'] 
         
-    logged_time = logout_timestamp - user.last_login
 
     ul = UserLog( )
     ul.login = user.last_login
     ul.logout = logout_timestamp
-    ul.total_seconds = logged_time.total_seconds()
+    try:
+        logged_time = logout_timestamp - user.last_login
+        ul.total_seconds = logged_time.total_seconds()
+    except:
+        pass  #avoid #20 error for now: TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'NoneType'
     ul.user = user
     ul.save()
 
