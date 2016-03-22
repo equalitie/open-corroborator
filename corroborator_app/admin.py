@@ -119,7 +119,7 @@ class ActorAdmin(VersionAdmin):
 
 
 class ActorConditionAdmin(VersionAdmin):
-    pass
+    list_display = ('name_en', 'key',)
 
 
 class ActorRoleAdmin(VersionAdmin):
@@ -143,7 +143,8 @@ class StatusUpdateAdmin(VersionAdmin):
 
 
 class LocationAdmin(VersionAdmin):
-    pass
+    list_display = ('name_en', 'latitude', 'longitude', 'loc_type')
+    list_filter = ('loc_type',)
 
 
 class SourceAdmin(VersionAdmin):
@@ -163,15 +164,16 @@ class CrimeCategoryAdmin(VersionAdmin):
 
 
 class MediaAdmin(VersionAdmin):
-    pass
-
+    list_display = ('name_en', 'media_file', 'media_type', 'media_created')
+    list_filter = ('media_type',)
 
 class CommentAdmin(VersionAdmin):
-    pass
+    list_display = ('assigned_user', 'status', 'comments_en', 'comment_created')
+    list_filter = ('status',)
 
 
 class PredefinedSearchAdmin(VersionAdmin):
-    pass
+    list_display = ('user', 'search_title', 'search_string', 'make_global')
 
 
 class CorrobAdminRev(VersionAdmin, CorrobAdmin):
@@ -186,6 +188,10 @@ class TimeInfoAdminRev(VersionAdmin, TimeInfoAdmin):
     pass
 #class test(LockableAdmin, CorrobAdminInRev):
     #list_display = ('get_lock_for_admin',)
+
+class ActorStatusAdmin(VersionAdmin):
+    pass
+
 
 admin.site.register(Actor, ActorAdmin)
 admin.site.register(ActorCondition, ActorConditionAdmin)
@@ -206,3 +212,5 @@ admin.site.register(Comment, CommentAdmin)
 admin.site.register(PredefinedSearch, PredefinedSearchAdmin)
 admin.site.register(Incident, CorrobAdminInRev)
 #admin.site.register(Incident, test)
+
+admin.site.register(ActorStatus, ActorStatusAdmin)

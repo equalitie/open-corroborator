@@ -574,7 +574,7 @@ class Media(models.Model):
     media_type = models.CharField('type', max_length=25, choices=TYPE)
     media_created = models.DateTimeField(auto_now_add=True)
     media_file_type = models.CharField(max_length=255, blank=True, null=True)
-    media_created = models.DateTimeField(auto_now_add=True)
+    media_created = models.DateTimeField(auto_now_add=True)  #dupe!
 
     @property
     def name(self):
