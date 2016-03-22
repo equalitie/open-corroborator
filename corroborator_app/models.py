@@ -831,7 +831,7 @@ class ActorRelationship(models.Model):
         Actor, blank=True, null=True, related_name='actor_b')
 
     def __unicode__(self):
-        return self.actor.fullname_en + ': ' + self.relation_status
+        return "%s: %s" % (self.actor.fullname_en if self.actor else '', self.relation_status)
 
 
 class RoleType(models.Model):
@@ -905,11 +905,9 @@ class ActorRole(models.Model):
 
     def __unicode__(self):
         if self.relation_status is not None:
-            return str(self.id) + ': ' + self.relation_status\
-                + ': ' + str(self.actor.id)
+            return "%s: %s: %s" % (self.id, self.relation_status, self.actor.id if self.actor else '')
         else:
-            return str(self.id) + ': ' + self.role_status\
-                + ': ' + str(self.actor.id)
+            return "%s: %s: %s" % (self.id, self.role_status, self.actor.id if self.actor else '')
 
 
 class BulletinBootstrapManager(models.Manager):
