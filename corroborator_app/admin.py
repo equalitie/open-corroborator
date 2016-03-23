@@ -7,7 +7,7 @@ from corroborator_app.models import (
     TimeInfo,
     Location,
     Source,
-   StatusUpdate,
+    StatusUpdate,
     ActorRole,
     Label,
     SourceType,

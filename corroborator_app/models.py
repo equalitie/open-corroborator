@@ -118,6 +118,9 @@ class PredefinedSearch(models.Model):
     bulletin_filters = models.TextField(null=True, blank=True)
     make_global = models.BooleanField(default=False)
 
+    class Meta:
+        verbose_name_plural = 'predefined searches'
+
     def __unicode__(self):
         return "%s: %s" % (self.user, self.search_title)
 
@@ -131,6 +134,9 @@ class ActorStatus(models.Model):
     status_ar = models.CharField(max_length=255, blank=True, null=True)
     description_en = models.TextField(blank=True, null=True)
     description_ar = models.TextField(blank=True, null=True)
+
+    class Meta:
+        verbose_name_plural = 'actor statuses'
 
     def __unicode__(self):
         return self.status_en
@@ -404,6 +410,9 @@ class CrimeCategory(models.Model):
     def name(self):
         return lang_helper(self, 'name')
 
+    class Meta:
+        verbose_name_plural = 'crime categories'
+
     def __unicode__(self):
         return self.name_en
 
@@ -617,6 +626,9 @@ class Media(models.Model):
             return self.media_thumb_file.url
         else:
             return ''
+        
+    class Meta:
+        verbose_name_plural = 'media'
         
     def __unicode__(self):
         return self.name_en
