@@ -115,7 +115,8 @@ class TimeInfoAdmin(admin.ModelAdmin):
 
 
 class ActorAdmin(VersionAdmin):
-    pass
+    list_display = ('fullname_en', 'sex', 'DOB', 'deleted', 'actor_created',)
+    list_filter = ('deleted',)
 
 
 class ActorConditionAdmin(VersionAdmin):
@@ -127,11 +128,11 @@ class ActorRoleAdmin(VersionAdmin):
 
 
 class RelationTypeAdmin(VersionAdmin):
-    pass
+    list_display = ('name_en',)
 
 
 class RoleTypeAdmin(VersionAdmin):
-    pass
+    list_display = ('name_en',)
 
 
 class EventTypeAdmin(VersionAdmin):
@@ -177,11 +178,13 @@ class PredefinedSearchAdmin(VersionAdmin):
 
 
 class CorrobAdminRev(VersionAdmin, CorrobAdmin):
-    pass
+    list_display = ('title_en', 'type', 'bulletin_created', 'deleted')
+    list_filter = ('type', 'deleted',)
 
 
 class CorrobAdminInRev(VersionAdmin, CorrobAdminIn):
-    pass
+    list_display = ('title_en', 'incident_created',)
+    list_filter = ('deleted',)
 
 
 class TimeInfoAdminRev(VersionAdmin, TimeInfoAdmin):
