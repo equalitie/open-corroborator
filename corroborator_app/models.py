@@ -63,6 +63,9 @@ class UserLog(models.Model):
     login = models.DateTimeField(null=True, blank=True)
     logout = models.DateTimeField(null=True, blank=True)
     total_seconds = models.FloatField(null=True, blank=True)
+    
+    def __unicode__(self):
+        return self.user
 
 
 class VersionStatus(models.Model):
@@ -74,6 +77,9 @@ class VersionStatus(models.Model):
     user = models.ForeignKey(User, null=True, blank=True)
     version_timestamp = models.DateTimeField(auto_now=True)
 
+    def __unicode__(self):
+        return self.revision
+
 
 class SolrUpdate(models.Model):
     """
@@ -83,6 +89,9 @@ class SolrUpdate(models.Model):
     user = models.ForeignKey(User)
     update_timestamp = models.DateTimeField(auto_now=True)
 
+    def __unicode__(self):
+        return self.user
+
 
 class MonitorUpdate(models.Model):
     """
@@ -91,6 +100,9 @@ class MonitorUpdate(models.Model):
     """
     user = models.ForeignKey(User)
     update_timestamp = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.user
 
 
 class PredefinedSearch(models.Model):
@@ -105,6 +117,9 @@ class PredefinedSearch(models.Model):
     incident_filters = models.TextField(null=True, blank=True)
     bulletin_filters = models.TextField(null=True, blank=True)
     make_global = models.BooleanField(default=False)
+
+    def __unicode__(self):
+        return "%s: %s" % (self.user, self.search_title)
 
 
 class ActorStatus(models.Model):
@@ -269,6 +284,9 @@ class Comment(models.Model):
             #desc = '[0] - [1]'.format(self.comments_en, self.status.status_en)
 
         #return desc
+
+    def __unicode__(self):
+        return self.comments_en
 
 
 class Location(models.Model):
@@ -599,6 +617,10 @@ class Media(models.Model):
             return self.media_thumb_file.url
         else:
             return ''
+        
+    def __unicode__(self):
+        return self.name_en
+        
 
 
 class ActorBootstrapManager(models.Manager):
@@ -646,6 +668,9 @@ class ActorCondition(models.Model):
     @property
     def name(self):
         return lang_helper(self, 'name')
+
+    def __unicode__(self):
+        return self.name_en
 
 
 class Actor(models.Model):
@@ -843,6 +868,9 @@ class RoleType(models.Model):
     description_en = models.CharField(max_length=255, blank=True, null=True)
     description_ar = models.CharField(max_length=255, blank=True, null=True)
 
+    def __unicode__(self):
+        return self.name_en
+
 
 class RelationType(models.Model):
     """
@@ -852,6 +880,9 @@ class RelationType(models.Model):
     name_ar = models.CharField(max_length=255, blank=True, null=True)
     description_en = models.CharField(max_length=255, blank=True, null=True)
     description_ar = models.CharField(max_length=255, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.name_en
 
 
 class ActorRole(models.Model):

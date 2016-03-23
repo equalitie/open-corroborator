@@ -25,6 +25,9 @@ from corroborator_app.models import (
 from reversion.admin import VersionAdmin
 
 
+#todo set raw_id_fields for large datasets
+
+
 class CommentsInlineIn(admin.TabularInline):
     model = Incident.incident_comments.through
     extra = 1
