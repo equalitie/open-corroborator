@@ -436,7 +436,7 @@ class Source(models.Model):
     name_en = models.CharField(max_length=255, blank=True, null=True)
     name_ar = models.CharField(max_length=255, blank=True, null=True)
     reliability_score = models.IntegerField(
-        'reliability score', blank=True)
+        'reliability score', blank=True, null=True)
     source_type = models.ForeignKey(SourceType, blank=True, null=True)
     comments_en = models.TextField(blank=True, null=True)
     comments_ar = models.TextField(blank=True, null=True)
