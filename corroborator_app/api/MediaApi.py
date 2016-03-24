@@ -67,10 +67,8 @@ class MediaResource(MultipartResource, ModelResource):
         formatting for media_files
         '''
         try:
-            bundle.data['media_file'] = \
-                settings.MEDIA_URL + '' + bundle.obj.media_file.name
-            bundle.data['media_thumb_file'] = \
-                settings.MEDIA_URL + '' + bundle.obj.media_thumb_file.name
+            bundle.data['media_file'] = os.path.join(settings.MEDIA_URL, bundle.obj.media_file.name)
+            bundle.data['media_thumb_file'] = os.path.join(settings.MEDIA_URL, bundle.obj.media_thumb_file.name)
         except:
             pass
         return bundle

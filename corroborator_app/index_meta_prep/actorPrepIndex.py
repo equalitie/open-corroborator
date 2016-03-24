@@ -6,6 +6,7 @@ and the Tastypie dehyrdate cycle
 Bill Doran 2013/08/08
 """
 
+import os
 from django.conf import settings
 
 from corroborator_app.models import (
@@ -258,8 +259,7 @@ class ActorPrepMeta():
         Return AWS URL for associated thumbnail media
         """
         if object.media is not None:
-            return settings.MEDIA_URL + '' +\
-                object.media.media_thumb_file.name
+            return os.path.join(settings.MEDIA_URL, object.media.media_thumb_file.name)
         else:
             return ''
 
