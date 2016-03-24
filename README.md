@@ -41,7 +41,7 @@ env/bin/pip install -r requirements.txt
 In mysql, create a database and user for the app:
 
 ```
-CREATE DATABASE corroborator_dev;
+CREATE DATABASE corroborator_dev CHARACTER SET utf8 COLLATE utf8_general_ci;
 CREATE USER 'django'@'localhost' identified by 'password';
 GRANT ALL ON corroborator_dev.* to 'django'@'localhost';
 ```
