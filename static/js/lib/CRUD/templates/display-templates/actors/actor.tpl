@@ -40,10 +40,10 @@
             <span class="location">{{locationTpl tpl=i18n.actor.lives_in location=model.current_location}}</span>
           {{/if}}
           {{#if model.occupation_ar}}
-            <span class="occupation">{{wordTpl tpl=i18n.actor.works_as_a_ar word=model.occupation_en}}</span>
+            <span class="occupation">{{i18n.actor.works_as_a_ar}} {{model.occupation_ar}}</span>
           {{/if}}
           {{#if model.occupation_en}}
-            <span class="occupation">{{wordTpl tpl=i18n.actor.works_as_a_en word=model.occupation_en}}</span>
+            <span class="occupation">{{i18n.actor.works_as_a_en}} {{model.occupation_en}}</span>
           {{/if}}
           {{#if model.count_incidents}}
           <br>{{{pluralise tpl=i18n.actor.involved_in_incident numItems=model.count_incidents}}}

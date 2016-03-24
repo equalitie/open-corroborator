@@ -28,13 +28,13 @@
               <span class="location">{{model.lives_in.location_en}}</span>
             </p>
           {{/if}}
-          {{#if model.position_en}}
+          {{#if model.occupation_en}}
           <p class='works-as'>
           {{#if model.lives_in.location_en}}
           , 
           {{/if}}
           {{i18n.actor.works_as_a}} 
-            <span class="occupation">{{model.position_en}}</span> 
+            <span class="occupation">{{model.occupation_en}}</span> 
           </p>
           {{/if}}
 

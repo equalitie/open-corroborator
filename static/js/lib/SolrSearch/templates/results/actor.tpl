@@ -46,12 +46,12 @@
             <div class="L3">
               {{#if model.current_location}}
                 {{i18n.results.lives_in}}
-                <span class="location">{{fetchLocation model.current_location}}{{#if model.position_en}}, {{/if}} </span>
+                <span class="location">{{fetchLocation model.current_location}}{{#if model.occupation_en}}, {{/if}} </span>
               {{/if}}
-              {{#if model.position_en}}
+              {{#if model.occupation_en}}
               <span class='works-as'>
               {{i18n.results.works_as_a}}
-                <span class="occupation">{{model.position_en}}</span> 
+                <span class="occupation">{{model.occupation_en}}</span> 
               </span>
               {{/if}}
 
