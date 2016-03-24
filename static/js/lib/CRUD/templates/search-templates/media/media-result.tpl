@@ -5,10 +5,11 @@
          />
   {{/if_eq}}
   {{#if_eq model.media_type compare='Video' }}
-    <!--<img src="{{model.media_thumb_file}}"  -->
-         <!--class="media-video-thumbnail"-->
-         <!--/>-->
-    <span aria-hidden="true" data-icon="&#x56;" class="media-video-thumbnail"></span>
+    <img src="{{model.media_thumb_file}}"
+         class="media-video-thumbnail"
+         style="padding: 0;margin: 0;" {{!-- move into sass/css --}}
+         />
+    <!-- <span aria-hidden="true" data-icon="&#x56;" class="media-video-thumbnail"></span> -->
     <span class="screen-reader-text">{{i18n.media.video}}</span>
   {{/if_eq}}
   {{#if_eq model.media_type compare='Document' }}

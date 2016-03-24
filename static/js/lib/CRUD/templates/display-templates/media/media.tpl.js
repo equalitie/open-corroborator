@@ -21,9 +21,10 @@ function program1(depth0,data) {
 function program3(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "\n    <!--<img src=\""
+  buffer += "\n    <img src=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.model),stack1 == null || stack1 === false ? stack1 : stack1.media_thumb_file)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"  -->\n         <!--class=\"media-video-thumbnail\"-->\n         <!--/>-->\n    <span aria-hidden=\"true\" data-icon=\"&#x56;\" class=\"media-video-thumbnail\"></span>\n    <span class=\"screen-reader-text\">"
+    + "\"\n         class=\"media-video-thumbnail\"\n         style=\"padding: 0;margin: 0;\" "
+    + "\n         />\n    <!-- <span aria-hidden=\"true\" data-icon=\"&#x56;\" class=\"media-video-thumbnail\"></span> -->\n    <span class=\"screen-reader-text\">"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.i18n),stack1 == null || stack1 === false ? stack1 : stack1.media)),stack1 == null || stack1 === false ? stack1 : stack1.document)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</span>\n  ";
   return buffer;
