@@ -191,6 +191,10 @@ cd static/js
 npm install
 ```
 
+(Note: this creates a static/js/node_modules folder with many subdirectories. These can impact initial load times in development
+because Django FileSystemFinder and Django debug-toolbar scan the static folder. Switching off the 'Static files' checkbox 
+in debug-toolbar should improve things.)
+
 To build a build.js file (used if PROD_BUILD=True, though currently built for a single language):
 
 ```
