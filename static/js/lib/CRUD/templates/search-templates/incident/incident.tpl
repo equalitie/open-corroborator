@@ -27,6 +27,7 @@
                 class="required incident-field
                 w-100p">{{model.title_en}}</textarea>
             </div>
+            <!--
             <div lang="ar">
               <textarea 
                 id="incident_title_ar"
@@ -38,6 +39,7 @@
             <span class="toggle">
               <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
           </span>
         </div>
       </div>
@@ -125,6 +127,7 @@
                 name="incident_details_en"
                 class="incident-field w-100p">{{model.incident_details_en}}</textarea>
             </div>
+            <!--
             <div lang="ar">
               <textarea 
                 id="incident_details_ar"
@@ -134,6 +137,7 @@
             <span class="toggle">
               <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
           </div>
         </div>
 
