@@ -21,9 +21,11 @@
             {{#if model.fullname_en}}
               <p>{{model.fullname_en}}</p>
             {{/if}}
+            {{!--
             {{#if model.fullname_ar}}
               <p>{{model.fullname_ar}}</p>
             {{/if}}
+            --}}
           </h3>
         </a>
         <span class="sex">{{fetchSex model.sex}}</span>
@@ -39,9 +41,11 @@
           {{#if model.current_location}}
             <span class="location">{{locationTpl tpl=i18n.actor.lives_in location=model.current_location}}</span>
           {{/if}}
+          {{!--
           {{#if model.occupation_ar}}
             <span class="occupation">{{i18n.actor.works_as_a_ar}} {{model.occupation_ar}}</span>
           {{/if}}
+          --}}
           {{#if model.occupation_en}}
             <span class="occupation">{{i18n.actor.works_as_a_en}} {{model.occupation_en}}</span>
           {{/if}}

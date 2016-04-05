@@ -21,17 +21,21 @@
     {{#if model.event_name_en}}
       <div class="name">{{model.event_name_en}}</div>
     {{/if}}
+    {{!--
     {{#if model.event_name_ar}}
       <div class="name">{{model.event_name_ar}}</div>
     {{/if}}
+    --}}
 
     {{#if model.comments_en}}
       <div class="name">{{model.comments_en}}</div>
     {{/if}}
 
+    {{!--
     {{#if model.comments_ar}}
       <div class="name">{{model.comments_ar}}</div>
     {{/if}}
+    --}}
 
     <div class="time">
       {{#if model.time_from}}

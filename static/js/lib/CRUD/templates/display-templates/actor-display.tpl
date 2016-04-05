@@ -18,9 +18,11 @@
         {{#if model.fullname_en}}
           <p>{{model.fullname_en}}</p>
         {{/if}}
+        {{!--
         {{#if model.fullname_ar}}
           <p>{{model.fullname_ar}}</p>
-        {{/if}}
+        {{/if}} 
+        --}}
         {{#if model.sex}}
         (<span class="sex">{{fetchSex model.sex}}</span>)
         {{/if}}
@@ -95,6 +97,7 @@
           </td>
         </tr>
         {{/if}}
+        {{!--
         {{#if model.occupation_ar}}
         <tr>
           <th>{{i18n.actor.works_as_a_ar}}</th>
@@ -103,6 +106,7 @@
           </td>
         </tr>
         {{/if}}
+        --}}
         {{#if model.position_en}}
         <tr>
           <th>{{i18n.actor.position_en}}</th>
@@ -111,6 +115,7 @@
           </td>
         </tr>
         {{/if}}
+        {{!--
         {{#if model.position_ar}}
         <tr>
           <th>{{i18n.actor.position_ar}}</th>
@@ -119,30 +124,35 @@
           </td>
         </tr>
         {{/if}}
+        --}}
         {{#if model.nationality_en}}
         <tr>
           <th>{{i18n.actor.Nationality_en}}</th>
           <td>{{model.nationality_en}}</td>
         </tr>
         {{/if}}
+        {{!--
         {{#if model.nationality_ar}}
         <tr>
           <th>{{i18n.actor.Nationality_ar}}</th>
           <td>{{model.nationality_ar}}</td>
         </tr>
         {{/if}}
+        --}}
         {{#if model.ethnicity_en}}
         <tr>
           <th>{{i18n.actor.Ethnicity_en}}</th>
           <td>{{model.ethnicity_en}}</td>
         </tr>
         {{/if}}
+        {{!--
         {{#if model.ethnicity_ar}}
         <tr>
           <th>{{i18n.actor.Ethnicity_ar}}</th>
           <td>{{model.ethnicity_ar}}</td>
         </tr>
         {{/if}}
+        --}}
         {{#if model.spoken_dialect_en}}
         <tr>
           <th>{{i18n.actor.Speaks}}</th>

@@ -9,9 +9,11 @@
       {{name_en}}
     {{/if}}
     {{#unless name_en}}
+      {{!--
       {{#if name_ar}}
         {{name_ar}}
       {{/if}}
+      --}}
     {{/unless}}
   {{/unless}}
   </span>

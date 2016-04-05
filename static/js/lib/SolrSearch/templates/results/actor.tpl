@@ -19,9 +19,11 @@
             {{#if model.fullname_en}}
             <p class="name"> {{model.fullname_en}}</p>
             {{/if}}
+            {{!--
             {{#if model.fullname_ar}}
             <p class="name"> {{model.fullname_ar}}</p>
             {{/if}}
+            --}}
 
             {{#if model.sex}}
               <p class="sex">{{fetchSex model.sex}}</p>

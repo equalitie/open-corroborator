@@ -18,9 +18,11 @@
           {{#if model.title_en}}
             <p>{{model.title_en}}</p>
           {{/if}}
+          {{!--
           {{#if model.title_ar}}
             <p>{{model.title_ar}}</p>
           {{/if}}
+          --}}
         </div>
       </a>
     </div>

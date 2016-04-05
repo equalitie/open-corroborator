@@ -7,9 +7,11 @@
       {{#if model.title_en}}
         <p>{{model.title_en}}</p>
       {{/if}}
+      {{!--
       {{#if model.title_ar}}
         <p>{{model.title_ar}}</p>
       {{/if}}
+      --}}
     </h2>
   </div>
   <div class=" span-66p">
@@ -32,12 +34,14 @@
         <div class="description">{{model.incident_details_en}}</div>
       </div>
       {{/if}}
+      {{!--
       {{#if model.incident_details_ar}}
       <div class="is-description group">
         <h4>{{i18n.incident.Description}}</h4>
         <div class="description">{{model.incident_details_ar}}</div>
       </div>
       {{/if}}
+      --}}
       {{#if model.incident_comments}}
       <div class="comments group">
       </div>

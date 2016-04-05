@@ -41,25 +41,13 @@ function program4(depth0,data) {
 
 function program6(depth0,data) {
   
-  var buffer = "", stack1;
-  buffer += "\n      ";
-  stack1 = helpers['if'].call(depth0, depth0.name_ar, {hash:{},inverse:self.noop,fn:self.program(7, program7, data),data:data});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    ";
-  return buffer;
-  }
-function program7(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "\n        ";
-  if (stack1 = helpers.name_ar) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = depth0.name_ar; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "\n      ";
+  var buffer = "";
+  buffer += "\n      "
+    + "\n    ";
   return buffer;
   }
 
-function program9(depth0,data) {
+function program8(depth0,data) {
   
   
   return "\n    <span aria-hidden=\"true\" data-icon=\"x\" class=\"delete-saved-search\"></span>\n    <span class=\"screen-reader-text\">Delete Saved search</span>\n  ";
@@ -78,7 +66,7 @@ function program9(depth0,data) {
   buffer += "\n  </span>\n  ";
   options = {hash:{
     'compare': ("predefined_search")
-  },inverse:self.noop,fn:self.program(9, program9, data),data:data};
+  },inverse:self.noop,fn:self.program(8, program8, data),data:data};
   stack2 = ((stack1 = helpers.if_eq || depth0.if_eq),stack1 ? stack1.call(depth0, depth0.search_request, options) : helperMissing.call(depth0, "if_eq", depth0.search_request, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "\n</span>\n\n";

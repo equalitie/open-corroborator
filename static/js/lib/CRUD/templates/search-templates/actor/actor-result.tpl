@@ -9,9 +9,11 @@
         {{#if model.fullname_en}}
         <p class="name">{{model.fullname_en}}</p>
         {{/if}}
+        {{!--
         {{#if model.fullname_ar}}
         <p class="name">{{model.fullname_ar}}</p>
         {{/if}}
+        --}}
         <p class="sex">{{model.sex}}</p>
         <p class="age">{{model.age}}</p>
       </div>

@@ -7,9 +7,11 @@
       {{#if model.title_en}}
         <p>{{model.title_en}}</p>
       {{/if}}
+      {{!--
       {{#if model.title_ar}}
         <p>{{model.title_ar}}</p>
       {{/if}}
+      --}}
     </h2>
     <div class="group details">
       {{#if model.assigned_user}}

@@ -32,11 +32,11 @@ function program1(depth0,data) {
   if (stack2 = helpers.entityType) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.entityType; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "-field w-100p\" />\n        </div>\n        <div lang=\"ar\">\n          <input type=\"text\" name=\"name_ar\" id=\"fullname_ar\"\n          value=\"\" class=\"";
+    + "-field w-100p\" />\n        </div>\n        <!--\n        <div lang=\"ar\">\n          <input type=\"text\" name=\"name_ar\" id=\"fullname_ar\"\n          value=\"\" class=\"";
   if (stack2 = helpers.entityType) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
   else { stack2 = depth0.entityType; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "-field w-100p\" />\n        </div>\n        <span class=\"toggle\">\n          <span lang=\"en\">EN</span><span lang=\"ar\">AR</span>\n        </span>\n      </div>\n    </div>\n    <!--<div class=\"field\">-->\n      <!--<label>"
+    + "-field w-100p\" />\n        </div>\n        <span class=\"toggle\">\n          <span lang=\"en\">EN</span><span lang=\"ar\">AR</span>\n        </span>\n        -->\n      </div>\n    </div>\n    <!--<div class=\"field\">-->\n      <!--<label>"
     + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.i18n),stack1 == null || stack1 === false ? stack1 : stack1.media)),stack1 == null || stack1 === false ? stack1 : stack1.file_type)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</label>-->\n      <!--<select name=\"media_type\" id=\"";
   if (stack2 = helpers.entityType) { stack2 = stack2.call(depth0, {hash:{},data:data}); }
