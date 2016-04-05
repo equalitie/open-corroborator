@@ -15,11 +15,13 @@
       </div>
       <div class="title i18n" lang="en">
         <span lang="en">{{model.title_en}}</span>
+        <!--
         <span lang="ar">{{model.title_ar}}</span>
         <span class="toggle">
           <span lang="en">EN</span>
           <span lang="ar">AR</span>
         </span>
+        -->
       </div>
     </div>
     <div class="L3">

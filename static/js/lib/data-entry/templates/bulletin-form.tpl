@@ -23,19 +23,21 @@
                 name="title_en"
                 class="required bulletin-field
                 w-100p">{{model.title_en}}</textarea>
-            </div>
-            <div lang="ar">
-              <label>{{i18n.bulletin.Title}}</label>
-              <textarea
-                id="incident_title_ar"
-                name="title_ar"
-                type="text"
-                class="bulletin-field
-                w-100p">{{model.title_ar}}</textarea>
               </div>
-              <span class="toggle">
-                <span lang="en">EN</span><span lang="ar">AR</span>
-              </span>
+              <!--
+              <div lang="ar">
+                <label>{{i18n.bulletin.Title}}</label>
+                <textarea
+                  id="incident_title_ar"
+                  name="title_ar"
+                  type="text"
+                  class="bulletin-field
+                  w-100p">{{model.title_ar}}</textarea>
+              </div>
+                <span class="toggle">
+                  <span lang="en">EN</span><span lang="ar">AR</span>
+                </span>
+              -->
             </span>
           </div>
         </div>
@@ -104,6 +106,7 @@
                           type="text"
                           class="bulletin-field w-100p">{{model.description_en}}</textarea>
               </div>
+              <!--
               <div lang="ar">
                 <textarea id="bulletin_description_ar"
                           name="bulletin_description_ar"
@@ -114,6 +117,7 @@
                 <span lang="en">EN</span>
                 <span lang="ar">AR</span>
               </span>
+              -->
             </div>
           </div>
           <!-- location block -->
