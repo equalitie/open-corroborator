@@ -6,6 +6,7 @@
         <textarea name="event_name_en"
           class="w-100p {{entityType}}-field bulletin_event-description">{{model.event_name_en}}</textarea>
       </div>
+      <!--
       <div lang="ar">
         <textarea name="event_name_ar"
           class="w-100p {{entityType}}-field bulletin_event-description">{{model.event_name_ar}}</textarea>
@@ -13,6 +14,7 @@
       <span class="toggle">
         <span lang="en">EN</span><span lang="ar">AR</span>
       </span>
+      -->
     </div>
 
 
@@ -28,15 +30,17 @@
           name="comments_en"
           class="{{entityType}}-field w-100p">{{model.comments_en}}</textarea>
       </div>
+      <!--
       <div lang="ar">
         <textarea
           id="comments_ar"
           name="comments_ar"
           class="{{entityType}}-field w-100p">{{model.comments_ar}}</textarea>
       </div>
-  <span class="toggle">
-  <span lang="en">EN</span><span lang="ar">AR</span>
-  </span>
+      <span class="toggle">
+      <span lang="en">EN</span><span lang="ar">AR</span>
+      </span>
+      -->
   </div>
 
 

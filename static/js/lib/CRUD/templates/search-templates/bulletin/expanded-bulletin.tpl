@@ -18,12 +18,14 @@
               <div lang="en">
                 <textarea type="text" class="w-100p">{{model.title_en}}</textarea>
               </div>
+              <!--
               <div lang="ar">
                 <textarea type="text" class="w-100p">{{mdoel.title_ar}}</textarea>
               </div>
               <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
               </span>
+              -->
             </span>
           </div>
         </div>
@@ -46,6 +48,7 @@
                           type="text"
                           class="bulletin-field w-100p">{{model.description_en}}</textarea>
               </div>
+              <!--
               <div lang="ar">
                 <textarea id="bulletin_description_ar"
                           name="bulletin_description_ar"
@@ -56,6 +59,7 @@
                 <span lang="en">EN</span>
                 <span lang="ar">AR</span>
               </span>
+              -->
             </div>
           </div>
 
