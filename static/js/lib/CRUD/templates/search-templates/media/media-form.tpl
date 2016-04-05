@@ -16,6 +16,7 @@
           <input type="text" name="name_en"
             value="" class="{{entityType}}-field w-100p" />
         </div>
+        <!--
         <div lang="ar">
           <input type="text" name="name_ar" id="fullname_ar"
           value="" class="{{entityType}}-field w-100p" />
@@ -23,6 +24,7 @@
         <span class="toggle">
           <span lang="en">EN</span><span lang="ar">AR</span>
         </span>
+        -->
       </div>
     </div>
     <!--<div class="field">-->

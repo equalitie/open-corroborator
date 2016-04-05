@@ -28,6 +28,7 @@
           name="comments_en"
           class="comment-field w-100p">{{model.comments_en}}</textarea>
       </div>
+      <!--
       <div lang="ar">
         <label>{{i18n.comment.Comment}}</label>
         <textarea
@@ -35,9 +36,10 @@
           name="comments_ar"
           class="comment-field w-100p">{{model.comments_ar}}</textarea>
       </div>
-  <span class="toggle">
-  <span lang="en">EN</span><span lang="ar">AR</span>
-  </span>
+      <span class="toggle">
+      <span lang="en">EN</span><span lang="ar">AR</span>
+      </span>
+      -->
   </div>
 
 
