@@ -29,6 +29,7 @@
                        value="{{model.fullname_en}}"
                        class="required actor-field w-100p">
               </div>
+              <!--
               <div lang="ar">
                 <input type="text" name="fullname_ar" id="fullname_ar"
                   value="{{model.fullname_ar}}" class="actor-field w-100p">
@@ -36,6 +37,7 @@
               <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
               </span>
+              -->
             </span>
           </div>
           <!-- description -->
@@ -48,6 +50,7 @@
                           type="text"
                           class="actor-field w-100p">{{model.description_en}}</textarea>
               </div>
+              <!--
               <div lang="ar">
                 <textarea id="actor_description_ar"
                           name="description_ar"
@@ -58,6 +61,7 @@
                 <span lang="en">EN</span>
                 <span lang="ar">AR</span>
               </span>
+              -->
             </div>
           </div>
 
@@ -69,6 +73,7 @@
                 <input type="text" name="nickname_en" id="nickname_en"
                   value="{{model.nickname_en}}" class="actor-field w-100p">
               </div>
+              <!--
               <div lang="ar">
                 <input type="text" name="nickname_ar" id="nickname_ar"
                   value="{{model.nickname_ar}}" class="actor-field w-100p">
@@ -76,6 +81,7 @@
               <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
               </span>
+              -->
             </span>
           </div>
 
@@ -215,6 +221,7 @@
                         name="occupation_en"
                         id="actor_occupation_en">
                 </div>
+               <!--
                 <div lang="ar">
                     <label>{{i18n.actor.Occupation}}</label><br />
                     <input type="text"
@@ -226,6 +233,7 @@
                 <span class="toggle">
                     <span lang="en">EN</span><span lang="ar">AR</span>
                 </span>
+                -->
             </span>
           </div>
 
@@ -241,6 +249,7 @@
                         id="actor_position_en" >
 
                 </div>
+                <!--
                 <div lang="ar">
                     <label>{{i18n.actor.Position_rank}}</label><br />
                     <input type="text"
@@ -252,6 +261,7 @@
                 <span class="toggle">
                     <span lang="en">EN</span><span lang="ar">AR</span>
                 </span>
+                -->
             </span>
           </div>
 
@@ -266,6 +276,7 @@
                         name="ethnicity_en"
                         id="actor_ethnicity_en" >
                 </div>
+                <!--
                 <div lang="ar">
                     <label>{{i18n.actor.Ethnicity}}</label><br />
                     <input type="text"
@@ -277,6 +288,7 @@
                 <span class="toggle">
                     <span lang="en">EN</span><span lang="ar">AR</span>
                 </span>
+                -->
             </span>
           </div>
 
@@ -291,6 +303,7 @@
                         name="nationality_en"
                         id="actor_nationality_en">
                 </div>
+                <!--
                 <div lang="ar">
                     <label>{{i18n.actor.Nationality}}</label><br />
                     <input type="text"
@@ -302,6 +315,7 @@
                 <span class="toggle">
                     <span lang="en">EN</span><span lang="ar">AR</span>
                 </span>
+                -->
             </span>
           </div>
 
@@ -316,6 +330,7 @@
                     name="religion_en"
                     id="actor_religion_en" >
                 </div>
+                <!--
                 <div lang="ar">
                     <label>{{i18n.actor.Religion}}</label><br />
                     <input type="text"
@@ -327,6 +342,7 @@
                 <span class="toggle">
                     <span lang="en">EN</span><span lang="ar">AR</span>
                 </span>
+                -->
             </span>
           </div>
 
@@ -341,6 +357,7 @@
                     value="{{model.spoken_dialect_en}}"
                     id="actor_spoken_dialect_en" >
                 </div>
+                <!--
                 <div lang="ar">
                     <label>{{i18n.actor.Spoken_dialects}}</label><br />
                     <input type="text"
@@ -352,6 +369,7 @@
                 <span class="toggle">
                     <span lang="en">EN</span><span lang="ar">AR</span>
                 </span>
+                -->
             </span>
           </div>
 

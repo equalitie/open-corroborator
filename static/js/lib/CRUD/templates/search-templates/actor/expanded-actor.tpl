@@ -22,6 +22,7 @@
                 <input type="text" name="fullname_en" id="fullname_en" 
                   value="{{model.fullname_en}}" class="actor-field w-100p">
               </div>
+              <!--
               <div lang="ar">
                 <input type="text" name="fullname_ar" id="fullname_ar"
                   value="{{model.fullname_ar}}" class="actor-field w-100p">
@@ -29,6 +30,7 @@
               <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
               </span>
+              -->
             </span>
           </div>
 
@@ -40,6 +42,7 @@
                 <input type="text" name="nickname_en" id="nickname_en" 
                   value="{{model.nickname_en}}" class="actor-field w-100p">
               </div>
+              <!--
               <div lang="ar">
                 <input type="text" name="nickname_ar" id="nickname_ar" 
                   value="{{model.nickname_ar}}" class="actor-field w-100p">
@@ -47,6 +50,7 @@
               <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
               </span>
+              -->
             </span>
           </div>
 

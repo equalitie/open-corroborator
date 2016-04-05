@@ -27,6 +27,7 @@
                        value="{{model.fullname_en}}"
                        class="required actor-field w-100p">
               </div>
+              <!--
               <div lang="ar">
                 <input type="text" name="fullname_ar" id="fullname_ar"
                   value="{{model.fullname_ar}}" class="actor-field w-100p">
@@ -34,6 +35,7 @@
               <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
               </span>
+              -->
             </span>
           </div>
 
@@ -45,6 +47,7 @@
                 <input type="text" name="nickname_en" id="nickname_en"
                   value="{{model.nickname_en}}" class="actor-field w-100p">
               </div>
+              <!--
               <div lang="ar">
                 <input type="text" name="nickname_ar" id="nickname_ar"
                   value="{{model.nickname_ar}}" class="actor-field w-100p">
@@ -52,6 +55,7 @@
               <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
               </span>
+              -->
             </span>
           </div>
 
@@ -192,6 +196,7 @@
                     name="occupation_en" 
                     id="actor_occupation_en">
             </div>
+            <!--
             <div lang="ar">
                 <input type="text" 
                     class="actor-field with-select" 
@@ -202,6 +207,7 @@
             <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
         </span>  
       </div>
 
@@ -217,6 +223,7 @@
                     id="actor_position_en" >
 
             </div>
+            <!--
             <div lang="ar">
                 <input type="text" 
                     class="with-select actor-field" 
@@ -227,6 +234,7 @@
             <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
         </span>      
       </div>
 
@@ -241,6 +249,7 @@
                     name="ethnicity_en" 
                     id="actor_ethnicity_en" >
             </div>
+            <!--
             <div lang="ar">
                 <input type="text" 
                     class="with-select actor-field" 
@@ -251,6 +260,7 @@
             <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
         </span>
       </div>
 
@@ -265,6 +275,7 @@
                     name="nationality_en" 
                     id="actor_nationality_en">
             </div>
+            <!--
             <div lang="ar">
                 <input type="text" 
                     class="with-select actor-field" 
@@ -275,6 +286,7 @@
             <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
         </span>    
       </div>
 
@@ -289,6 +301,7 @@
                 name="religion_en" 
                 id="actor_religion_en" >
             </div>
+            <!--
             <div lang="ar">
                 <input type="text" 
                 class="with-select actor-field" 
@@ -299,6 +312,7 @@
             <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
         </span>          
       </div>
 
@@ -313,6 +327,7 @@
                 value="{{model.spoken_dialect_en}}" 
                 id="actor_spoken_dialect_en" >
             </div>
+            <!--
             <div lang="ar">
                 <input type="text" 
                 class="with-select actor-field" 
@@ -323,6 +338,7 @@
             <span class="toggle">
                 <span lang="en">EN</span><span lang="ar">AR</span>
             </span>
+            -->
         </span>          
       </div>
     </div>

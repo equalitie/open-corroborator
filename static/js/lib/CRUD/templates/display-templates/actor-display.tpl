@@ -149,11 +149,13 @@
             <td>
             <span class="i18n with-en with-ar">
               <span lang="en"><span class="name">{{model.spoken_dialect_en}}</span></span>
+              <!--
               <span lang="ar"><span class="name">{{model.spoken_dialect_ar}}</span></span>
               <span class="toggle">
                 <span lang="en">EN</span>
                 <span lang="ar">AR</span>
               </span>
+              -->
             </span>
             </td>
         </tr>
@@ -164,11 +166,13 @@
             <td>
             <span class="i18n with-en with-ar">
               <span lang="en"><span class="name">{{model.religion_en}}</span></span>
+              <!--
               <span lang="ar"><span class="name">{{model.religion_ar}}</span></span>
               <span class="toggle">
                 <span lang="en">EN</span>
                 <span lang="ar">AR</span>
               </span>
+              -->
             </span>
             </td>
         </tr>
