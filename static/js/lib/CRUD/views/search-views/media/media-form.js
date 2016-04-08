@@ -100,7 +100,7 @@ define (
         this.$formEl.ajaxSubmit(this.formOptions());
       },
       validateFile: function(arr, $form, options) {
-        if (arr[2].value === "") {
+        if (arr[2] != undefined && arr[2].value === "") {
             this.progressbar.hide();
             this.showMessage('.file');
             window.setTimeout(this.hideMessage.bind(this, '.file'), 2000);
