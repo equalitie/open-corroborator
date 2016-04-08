@@ -672,7 +672,7 @@ class ActorCondition(models.Model):
     What is the condition of the Actor
     """
     name_en = models.CharField(max_length=25)
-    name_ar = models.CharField(max_length=25)
+    name_ar = models.CharField(max_length=25, blank=True, null=True)
     description_en = models.TextField(blank=True, null=True)
     description_ar = models.TextField(blank=True, null=True)
     key = models.CharField(max_length=8, unique=True)
