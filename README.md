@@ -208,3 +208,6 @@ To compile handlebars templates:
 cd static/js
 grunt handlebars
 ```
+
+### CSS
+See the wiki (bundle, guard, compass (sass) etc)

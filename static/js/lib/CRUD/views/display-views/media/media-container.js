@@ -58,7 +58,10 @@ define (
             close: function( event, ui ) {
               $(this).children().remove();              
             },
-            modal: true
+            modal: true,
+            resizable: true,
+            width:800,
+            position:["center",20]
           });
       },
     });

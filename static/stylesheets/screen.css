@@ -3535,23 +3535,20 @@ body.login {
   cursor: pointer;
 }
 
-/* line 382, ../sass/_forms.scss */
+/*
 .rtl .field label {
   text-align: right;
 }
-
-/* line 385, ../sass/_forms.scss */
 .rtl .with-en.with-ar input,
-.rtl .actorAssigned input {
+.rtl .actorAssigned input,
+{
   width: 100%;
 }
 
-/* line 391, ../sass/_forms.scss */
 .rtl .is-birthdate label {
   margin-right: 50%;
 }
 
-/* line 395, ../sass/_forms.scss */
 .rtl #bulletin-comment-block label,
 .rtl #bulletin-event-block label,
 .rtl #bulletin-location-block label,
@@ -3561,26 +3558,24 @@ body.login {
 .rtl #incident-crime-block label,
 .rtl #incident-event-block label,
 .rtl #incident-location-block label,
-.rtl #incident-label-block label {
+.rtl #incident-label-block label{
   margin-right: 100%;
 }
 
-/* line 409, ../sass/_forms.scss */
-.rtl .is-media label,
-.rtl .is-actors label,
-.rtl .is-bulletins label,
-.rtl .is-incidents label {
-  margin-right: 25%;
-}
-/* line 415, ../sass/_forms.scss */
-.rtl select#status {
-  float: right;
-}
-/* line 418, ../sass/_forms.scss */
-.rtl .span-33p label {
-  margin-right: 15%;
-}
-
+.rtl {
+  .is-media label,
+  .is-actors label,
+  .is-bulletins label,
+  .is-incidents label {
+    margin-right: 25%;
+  }
+  select#status {
+    float: right;
+  }
+  .span-33p label {
+    margin-right: 15%;
+  }
+*/
 /* line 2, ../sass/_navigation.scss */
 .Header {
   position: fixed;
@@ -4093,6 +4088,13 @@ nav#search-navigation .search button.do-clear > span {
 /* line 264, ../sass/_search.scss */
 .overlay.is-middle > .header, .overlay.is-middle > .body, .overlay.is-middle > .footer {
   right: 0em;
+}
+
+/* line 270, ../sass/_search.scss */
+img.dialog-centre {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /* line 3, ../sass/_jqueryui.scss */
@@ -5143,6 +5145,7 @@ input[type=button].save-data-entry:hover {
   padding: 10px;
   border: 1px solid #ddd;
   z-index: 10000;
+  margin: 0 0 0 0;
   font-family: Arial;
   font-size: 13px;
   transition: opacity 500ms linear;
@@ -5165,27 +5168,27 @@ input[type=button].save-data-entry:hover {
   user-select: none;
 }
 
-/* line 88, ../sass/_reporting.scss */
+/* line 89, ../sass/_reporting.scss */
 .nvtooltip h3 {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-/* line 94, ../sass/_reporting.scss */
+/* line 95, ../sass/_reporting.scss */
 .nvtooltip p {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-/* line 100, ../sass/_reporting.scss */
+/* line 101, ../sass/_reporting.scss */
 .nvtooltip span {
   display: inline-block;
   margin: 2px 0;
 }
 
-/* line 105, ../sass/_reporting.scss */
+/* line 106, ../sass/_reporting.scss */
 .nvtooltip-pending-removal {
   position: absolute;
   pointer-events: none;

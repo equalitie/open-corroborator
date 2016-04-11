@@ -5,6 +5,6 @@
     <a href="{{model.media_file}}" class="button download" target="blank">Download</a>
   {{/if}}
   {{#if image}}
-    <img src="{{uri}}" alt="{{alt}}" />
+    <img class="dialog-centre" src="{{uri}}" alt="{{alt}}" />
   {{/if}}
 </div>
