@@ -53,8 +53,7 @@ define (
         previewParent.prepend('<div id="video-edit-preview"></div>');
         $videoEl = $('#video-edit-preview');
         $videoEl.flowplayer({
-          preload: 'none',
-          playlist: [[ video ]]
+          playlist: [ fileName ]
         });
       },
 

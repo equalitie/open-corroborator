@@ -93,9 +93,8 @@ define (
         video[fileType] = fileName;
         
         this.$el.children('.preview').flowplayer({
-          preload: 'none',
           playlist: [
-            [ video ]
+            fileName
           ]
         });
       },
