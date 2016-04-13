@@ -262,6 +262,24 @@ class ActorPrepMeta():
             return os.path.join(settings.MEDIA_URL, object.media.media_thumb_file.name)
         else:
             return ''
+        
+    def prepare_media_url(self, object):
+        """
+        Return URL for associated media_file
+        """
+        if object.media is not None:
+            return os.path.join(settings.MEDIA_URL, object.media.media_file.name)
+        else:
+            return ''
+
+    def prepare_media_file_type(self, object):
+        """
+        Return file_type for associated media
+        """
+        if object.media is not None:
+            return object.media.media_file_type
+        else:
+            return ''
 
     def prepare_actor_comments(self, object):
         """

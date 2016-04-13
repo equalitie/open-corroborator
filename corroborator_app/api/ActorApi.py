@@ -52,7 +52,7 @@ class ActorResource(ModelResource, APIMixin):
         'current_location',
         null=True
     )
-    media = fields.ForeignKey(MediaResource, 'media', null=True, full=True)
+    media = fields.ForeignKey(MediaResource, 'media', null=True)
     actors_role = fields.ManyToManyField(
         'corroborator_app.api.ActorRoleResource',
         'actors_role',
@@ -182,7 +182,8 @@ class ActorResource(ModelResource, APIMixin):
         fields = [
             'related_bulletins', 'related_incidents', 'count_incidents',
             'count_bulletins', 'roles', 'actors_role', 'actors',
-            'thumbnail_url', 'actor_roles_status', 'most_recent_status_actor'
+            'thumbnail_url', 'actor_roles_status', 'most_recent_status_actor',
+            'media_url', 'media_file_type',
         ]
         actor_prep = ActorPrepMeta()
         for field in fields:
