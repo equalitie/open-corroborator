@@ -72,7 +72,8 @@ env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/crimes.json --set
 ```
 
 ##### Permissions
-The `demo` user should be given the following permissions (via the admin interface):
+The `demo` user is a member of the chief-data-analyst, data-analyst and senior-data-analyst groups and should also be given 
+the following permissions (via the admin interface):
 
    * 'Can assign users via api'
    * 'Can delete entities via api'
@@ -210,4 +211,12 @@ grunt handlebars
 ```
 
 ### CSS
-See the wiki (bundle, guard, compass (sass) etc)
+See the wiki (bundle, guard, compass (sass) etc), though this seemed to work:
+
+```
+sudo apt-get install bundler
+
+bundle install
+```
+
+bundle exec guard
