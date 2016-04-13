@@ -13,11 +13,12 @@ define (
     'lib/CRUD/views/search-views/revision/revision-view',
     'lib/CRUD/views/display-views/misc/entity-not-found',
     'lib/CRUD/templates/display-templates/actor-display.tpl',
+    'lib/CRUD/templates/search-templates/media/media-viewer.tpl',
     'i18n!lib/CRUD/nls/dict'
   ],
   function (Backbone, _, Collections, Streams, ActorListView, 
     BulletinListView, IncidentListView, RevisionView, EntityNotFoundView,
-    actorDisplayTmp, i18n) {
+    actorDisplayTmp, mediaViewerTmp, i18n) {
     'use strict';
 
     var ActorDisplayView,
@@ -29,6 +30,9 @@ define (
     ActorDisplayView = Backbone.View.extend({
       className: 'actor-display-view',
       template: actorDisplayTmp,
+      events: {
+              'click .avatar'   : 'previewMedia'
+            },
       childViews: [],
       expanded: false,
       initialize: function(options) {
@@ -43,6 +47,57 @@ define (
         this.listenTo(this.model, 'sync', this.displayView.bind(this));
         this.listenTo(this.model, 'sync-error', this.displayNotFoundView.bind(this));
         this.listenTo(this, 'expand', this.toggleExpanded.bind(this));
+      },
+
+      previewMedia: function(event) {
+        var media_file = $(event.target).data('media_file');
+        var media_file_type = $(event.target).data('media_file_type');
+        if (media_file) {
+          if ($.inArray(media_file_type , ['flv', 'mp4','mov','m4v', 'f4v', 'avi']) != -1) {
+            //todo whether/where?: this.openVideoViewer(media_file);
+          } else {
+            this.openImageViewer(media_file);
+          }
+        }
+      },
+      
+      openVideoViewer: function(media) {
+        var video, fileType, fileName, $videoEl;
+        video = {};
+        fileType = media.media_file_type;
+        fileType = 'mp4';
+        fileName = media.media_file;
+        video[fileType] = fileName;
+
+        var previewParent = $('#video-edit-preview').parent();
+        $('#video-edit-preview').remove();
+        previewParent.prepend('<div id="video-edit-preview"></div>');
+        $videoEl = $('#video-edit-preview');
+        $videoEl.flowplayer({
+          playlist: [ fileName ]
+        });
+      },
+      openImageViewer: function(media_file) {
+        var dialogHtml = mediaViewerTmp({
+          image: true,
+          uri: media_file
+          //todo alt: media.name_en
+        });
+        this.openDialog($(dialogHtml));
+      },
+      
+      openDialog: function($dialogHtml, name_en) {
+        $dialogHtml.attr('title', name_en);
+          $dialogHtml.dialog({
+            resizable: false,
+            close: function( event, ui ) {
+              $(this).children().remove();              
+            },
+            modal:     true,
+            resizable: true,
+            width:800,
+            position:["center",20]
+          });
       },
 
       displayNotFoundView: function() {

@@ -10,7 +10,11 @@ function program1(depth0,data) {
   var buffer = "", stack1;
   buffer += "\n    <div class=\"avatar\"><img src=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.model),stack1 == null || stack1 === false ? stack1 : stack1.thumbnail_url)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" alt=\"actor thumbnail\"></div>\n    ";
+    + "\" alt=\"actor thumbnail\" data-media_file=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.model),stack1 == null || stack1 === false ? stack1 : stack1.media)),stack1 == null || stack1 === false ? stack1 : stack1.media_file)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" data-media_file_type=\""
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = depth0.model),stack1 == null || stack1 === false ? stack1 : stack1.media)),stack1 == null || stack1 === false ? stack1 : stack1.media_file_type)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"></div>\n    ";
   return buffer;
   }
 

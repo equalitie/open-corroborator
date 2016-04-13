@@ -52,7 +52,7 @@ class ActorResource(ModelResource, APIMixin):
         'current_location',
         null=True
     )
-    media = fields.ForeignKey(MediaResource, 'media', null=True)
+    media = fields.ForeignKey(MediaResource, 'media', null=True, full=True)
     actors_role = fields.ManyToManyField(
         'corroborator_app.api.ActorRoleResource',
         'actors_role',
@@ -210,7 +210,7 @@ class ActorRelationshipResource(ModelResource):
     tastypie api implementation for actor relationship model
     """
     actor = fields.ForeignKey(ActorResource, 'actor', null=True)
-
+    
     class Meta:
         queryset = ActorRelationship.objects.all()
         resource_name = 'actorRelationship'

@@ -4,7 +4,7 @@
       ID <span class="value out">{{model.django_id}}</span>
     </div>
     {{#if model.thumbnail_url}}
-    <div class="avatar"><img src="{{model.thumbnail_url}}" alt="actor thumbnail"></div>
+    <div class="avatar"><img src="{{model.thumbnail_url}}" alt="actor thumbnail" data-media_file="{{model.media.media_file}}" data-media_file_type="{{model.media.media_file_type}}"></div>
     {{else}}
     <div class="avatar">&nbsp;</div>
     {{/if}}
