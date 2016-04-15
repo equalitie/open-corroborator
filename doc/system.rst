@@ -19,7 +19,7 @@ The backend comprises a Django server which:
   * stores data in a mysql database
   * indexes data in a Solr search engine
   * stores media uploads locally and (optionally) in Amazon S3
-  * create thumbnail images of uploaded media
+  * creates thumbnail images of uploaded media
   * proxies media requests to Amazon S3
   * proxies search requests to Solr
   * exchanges data with a backbone-based Javascript frontend application
@@ -74,9 +74,13 @@ Local System Testing
 --------------------
 Vagrant and Ansible can be used to spin up a full system locally. Checkout the deployment repository and:
 
+.. code:: console
+
     vagrant up
 
 or:
+
+.. code:: console
 
     vagrant provision    #if the VM is already running
 
@@ -212,22 +216,29 @@ To add a new language:
 Add the option to the language selector widget in `corroborator_app/templates/nav/top_menu.html`.
 Add a line to the root dict.js, e.g.
 
+.. code::
+
     'es': true
 
-Each Javascript `static/lib` module has a dict.js containing a mapping of source to target strings
+Each Javascript `static/lib` module has a **dict.js** containing a mapping of source to target strings
 for the frontend application. These should be uploaded to Transifex along with an up-to-date `django.po` file.
 From there, they can be translated to the target language and downloaded back into place.
 
 To create a `django.po` for a new language, say `es`:
 
+.. code:: console
+
     pushd corroborator_app
     django-admin.py makemessages -l es
 
-Store the target django.po in a subdirectory for that language, e.g. `corroborator_app/locale_es/LC_MESSAGES/`
+
+Store the target `django.po` in a subdirectory for that language, e.g. `corroborator_app/locale_es/LC_MESSAGES/`
 and then compile it (to a compress `.mo` format):
+
+.. code:: console
 
     django-admin.py compilemessages
 
-Store the translated dict.js files in the appropriate subdirectory for the module and language, e.g. `/static/js/lib/<module>/nls/es`
+Store the translated `dict.js` files in the appropriate subdirectory for the module and language, e.g. `/static/js/lib/<module>/nls/es`
 
 #todo: add more pre-transifex details: http://docs.transifex.com/formats/require-js/
