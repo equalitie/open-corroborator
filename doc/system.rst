@@ -49,14 +49,26 @@ Possible Architecture Enhancements
 Database Schema
 ---------------
 
-
-
+.. image:: images/oc_data.png
 
 Many tables have duplicate text fields for Arabic, e.g. `description_en` and `description_ar`. It's not clear
-how these should be used for extra languages, e.g. Russian, Ukranian, but for the time being, just the
+how these should be used for extra languages, e.g. Russian, Ukrainian, but for the time being, just the
 `_en` fields will be used to store data for the currently selected language.
 Likewise, it's not clear how metadata should be used to support multiple languages, e.g. status and location names,
 other than limiting it to a single language per system.
+
+The following database models are defined but not used:
+
+  * Nationality
+  * ActorStatus
+  * Dialect
+  * Position
+  * Occupation
+  * Ethnicity
+  * Religion
+
+So instead of referring to pre-defined lists of options, these have been replaced by free-text fields
+on the Actor model.
 
 Local System Testing
 --------------------
@@ -136,7 +148,7 @@ The following packages are included in the frontend Javascript application:
   * jquery-ui - provides widgets
   * handlebars - provides templating for Javascript
   * modernizr - provides feature detection for Javascript
-  * q - provides asynchronous calls for Javascript
+  * q - provides asynchronous calls for Javascript (not used?)
   * bacon - ?
   * bacon-ui - ?
   * backbone - provides simplified ORM
