@@ -109,9 +109,9 @@ In addition, the following permissions are available but must be granted to each
   * 'Can edit assigned entities via api' - the user can edit any record to which they are assigned
 
 So a data-analyst could be given just the extra 'Can edit assigned entities via api' permission and then is limited
-to editing only those records that have been assigned to them (though they can still view all the records in the system).
+to editing **only** those records that have been assigned to them (though they can still view *all* the records in the system).
 
-The default demo user is a member of all three groups. The demo user should also be given these
+The default `demo` user is a member of all three groups. The `demo` user should also be given these
 extra permissions to give full access to the features available:
 
   * 'Can assign users via api'
@@ -135,9 +135,9 @@ Build/deploy the Backend
 ........................
 To deploy the backend, the following steps are needed:
 
-  * pip install -r requirements.txt
-  * syncdb
-  * collectstatic (for production)
+  * `pip install -r requirements.txt`
+  * `syncdb`
+  * `collectstatic` (for production)
 
 The ansible deployment scripts will do this.
 
@@ -198,10 +198,10 @@ Plus:
 
 Before deploying the frontend, the following steps are needed:
 
-  * npm install  #install a host of node modules
-  * bundle exec guard  #translates SASS into CSS stylesheets (i.e. sass -> .css)
-  * grunt handlebars  #translates templates into Javascript  (i.e. .tpl -> .js)
-  * grunt build  #lints,tests and builds
+  * `npm install`  #install a host of node modules
+  * `bundle exec guard`  #translates SASS into CSS stylesheets (i.e. sass -> .css)
+  * `grunt handlebars`  #translates templates into Javascript  (i.e. .tpl -> .js)
+  * `grunt build`  #lints,tests and builds
   * commit the translated target files
 
 The ansible deployment scripts won't do this
