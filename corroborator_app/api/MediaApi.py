@@ -68,7 +68,9 @@ class MediaResource(MultipartResource, ModelResource):
         '''
         try:
             bundle.data['media_file'] = os.path.join(settings.MEDIA_URL, bundle.obj.media_file.name)
-            bundle.data['media_thumb_file'] = os.path.join(settings.MEDIA_URL, bundle.obj.media_thumb_file.name)
+            if bundle.obj.media_thumb_file:
+                bundle.data['media_thumb_file'] = os.path.join(settings.MEDIA_URL, bundle.obj.media_thumb_file.name)
+            #else no thumbnail, e.g. PDF
         except:
             pass
         return bundle
