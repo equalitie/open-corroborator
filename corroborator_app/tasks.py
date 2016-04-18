@@ -9,7 +9,7 @@ logger = get_task_logger(__name__)
 @task
 def update_object(username):
     options = {}
-    options['age']=0.01
+    options['age']=1
     options['remove']=True
     update_index.Command().handle(**options)
     user = User.objects.filter(username=username)
