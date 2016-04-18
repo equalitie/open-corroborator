@@ -238,5 +238,10 @@ LOGGING = {
             'propagate': False,
             'level':'DEBUG',
         },
+        'corroborator_app.tasks': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },        
     }
 }
