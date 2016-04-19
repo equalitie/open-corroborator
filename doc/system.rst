@@ -119,6 +119,25 @@ extra permissions to give full access to the features available:
   * 'Can edit entities via api'
   * 'Can edit assigned entities via api'
 
+Solr Schema
+-----------
+The `corroborator_app/search_indexes` package contains the Haystack index definitions. These are based on CelerySearchIndex
+and so are called via celery:
+
+  * IncidentIndex
+  * BulletinIndex
+  * ActorIndex
+
+If these are changed, you should use them to generate an updated Solr schema by running:
+
+.. code:: console
+
+    env/bin/python manage.py build_solr_schema --settings=corroborator.settings.dev > newschema.xml
+
+And then move the generated xml file into the Solr collection `conf` folder (as schema.xml) for local testing.
+
+Once the schema is tested, move it to `conf/solr.schema.demo.xml` where the Ansible scripts will use it for deployment.
+
 Backend Stack
 -------------
 The following are the major packages added to Django:
@@ -242,3 +261,67 @@ and then compile it (to a compress `.mo` format):
 Store the translated `dict.js` files in the appropriate subdirectory for the module and language, e.g. `/static/js/lib/<module>/nls/es`
 
 #todo: add more pre-transifex details: http://docs.transifex.com/formats/require-js/
+
+Deployment/Ops
+--------------
+When deployed via the Ansible scripts, the following services and logs are available.
+
+Services
+........
+To restart (or `start`/`stop`/`status`) the gunicorn service:
+
+.. code:: console
+
+    service corroborator-gunicorn restart
+
+To restart (or `start`/`stop`/`status`) the celery service:
+
+.. code:: console
+
+    service corroborator-celery restart
+
+To restart (or `start`/`stop`/`status`) the Solr service:
+
+.. code:: console
+
+    service jetty restart
+
+Logs
+....
+The Solr logs are here:
+
+    /usr/share/jetty/logs
+
+The gunicorn log is here:
+
+    /var/log/upstart/corroborator-gunicorn.log
+
+The Celery logs is here:
+
+    /var/log/upstart/corroborator-celery.log
+
+The Apache logs are here:
+
+    /var/log/apache2/corroborator-access.log
+    /var/log/apache2/corroborator-error.log
+
+Data Locations
+..............
+The following volatile data should be included in any backup.
+
+The local media files are stored here:
+
+    /var/local/sites/corroborator/var/media/
+
+There may also be media files on Amazon S3 if `QUEUED_STORAGE=True`.
+
+The Solr index data is stored here:
+
+    /var/local/solr/corroborator-search/data/
+
+The mysql database is stored here:
+
+    /var/lib/mysql/<dbname>
+
+Although a mysql backup system should be used to backup the database, e.g. `mysqldump`.
+
