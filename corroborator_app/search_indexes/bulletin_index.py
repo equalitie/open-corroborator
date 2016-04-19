@@ -1,10 +1,15 @@
 from haystack import indexes
 from corroborator_app.models import Bulletin
 from celery_haystack.indexes import CelerySearchIndex
+from django.utils.html import strip_tags, escape
+from django.conf import settings
 
 from corroborator_app.index_meta_prep.bulletinPrepIndex import BulletinPrepMeta
 from corroborator_app.index_meta_prep.actorPrepIndex import ActorPrepMeta
 
+from celery.utils.log import get_task_logger
+
+logger = get_task_logger(__name__)
 
 class BulletinIndex(CelerySearchIndex, indexes.Indexable, BulletinPrepMeta):
     """
@@ -76,3 +81,18 @@ class BulletinIndex(CelerySearchIndex, indexes.Indexable, BulletinPrepMeta):
 
     def get_model(self):
         return Bulletin
+    
+    def prepare(self, obj):
+        data = super(BulletinIndex, self).prepare(obj)
+    
+        if settings.INDEX_MEDIA_CONTENT:
+            for media in obj.medias.all():
+                if media.media_file_type.lower() in settings.INDEX_MEDIA_FILE_TYPES:
+                    backend = self._get_backend(None)  #todo ok?
+                    logger.info("extracting contents from media file {0}".format(media.media_file.file.name))
+                    extracted_data = backend.extract_file_contents(media.media_file.file)
+                    data['text'] += escape(strip_tags(extracted_data['contents']))
+                    logger.info("extracted {0} bytes of content from media file".format(len(extracted_data['contents'])))
+    
+        return data
+    

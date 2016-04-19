@@ -48,6 +48,8 @@ HAYSTACK_CONNECTIONS = {
         'URL': 'http://127.0.0.1:8983/solr/' + SOLR_CORE,
     },
 }
+INDEX_MEDIA_CONTENT = True  #indexes media pdf/doc content along with Incident/Bulletin/Actor (#59)
+INDEX_MEDIA_FILE_TYPES = ('pdf', 'doc', 'docx', 'xlsx', 'rtf', 'txt',)  #lowercase list of indexable media content (see Apache Tika http://wiki.apache.org/solr/ExtractingRequestHandler)
 
 CORROBORATOR_LOGIN_TIMEOUT = 60 * 60 * 4
 #SESSION_COOKIE_AGE = 10
