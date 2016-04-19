@@ -296,7 +296,7 @@ The gunicorn log is here:
 
     /var/log/upstart/corroborator-gunicorn.log
 
-The Celery logs is here:
+The Celery log is here:
 
     /var/log/upstart/corroborator-celery.log
 
