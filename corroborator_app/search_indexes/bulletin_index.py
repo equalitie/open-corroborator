@@ -94,6 +94,8 @@ class BulletinIndex(CelerySearchIndex, indexes.Indexable, BulletinPrepMeta):
                     if extracted_data and 'contents' in extracted_data:
                         data['text'] += escape(strip_tags(extracted_data['contents']))
                         logger.info("extracted {0} bytes of content from media file".format(len(extracted_data['contents'])))
+                    else:
+                        logger.warn("failed extracting content from media file")
     
         return data
     
