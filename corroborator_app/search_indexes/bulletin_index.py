@@ -91,8 +91,9 @@ class BulletinIndex(CelerySearchIndex, indexes.Indexable, BulletinPrepMeta):
                     backend = self._get_backend(None)  #todo ok?
                     logger.info("extracting contents from media file {0}".format(media.media_file.file.name))
                     extracted_data = backend.extract_file_contents(media.media_file.file)
-                    data['text'] += escape(strip_tags(extracted_data['contents']))
-                    logger.info("extracted {0} bytes of content from media file".format(len(extracted_data['contents'])))
+                    if extracted_data and 'contents' in extracted_data:
+                        data['text'] += escape(strip_tags(extracted_data['contents']))
+                        logger.info("extracted {0} bytes of content from media file".format(len(extracted_data['contents'])))
     
         return data
     
