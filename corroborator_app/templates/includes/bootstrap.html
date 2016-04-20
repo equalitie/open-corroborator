@@ -38,12 +38,12 @@
         conditions.push({
           id            : {{condition.id}},
           resource_uri  : "/api/v1/actorCondition/{{condition.id}}/",
-          name_en       : '{{condition.name_en}}',
-          name          : '{{condition.name}}',
-          name_ar       : '{{condition.name_ar}}',
+          name_en       : '{{condition.name_en|escapejs}}',
+          name          : '{{condition.name|escapejs}}',
+          name_ar       : '{{condition.name_ar|escapejs}}',
           key           : '{{condition.key}}',
-          description_en: '{{condition.description_en}}',
-          description_ar: '{{condition.description_ar}}',
+          description_en: '{{condition.description_en|escapejs}}',
+          description_ar: '{{condition.description_ar|escapejs}}',
         });
     {% endfor %}
     {% for pds in predefined_search_set %}
@@ -51,16 +51,16 @@
                // skipped {{pds.search_title}}
       {% else %}
         predefined_list.push({
-            search_title:     "{{pds.search_title}}",
-            search_string:    '{{pds.search_string}}',
+            search_title:     "{{pds.search_title|escapejs}}",
+            search_string:    '{{pds.search_string|escapejs}}',
             actor_filters:    {{pds.actor_filters|escapejs}},
             bulletin_filters: {{pds.bulletin_filters|escapejs}},
             incident_filters: {{pds.incident_filters|escapejs}},
             resource_uri:     '/api/v1/predefinedSearch/{{pds.id}}/',
             id:               '{{pds.id}}',
             // some stuff just for frontend purposes
-            name_en:          "{{pds.search_title}}",
-            name:          "{{pds.search_title}}",
+            name_en:          "{{pds.search_title|escapejs}}",
+            name:          "{{pds.search_title|escapejs}}",
             search_request:   "predefined_search",
             type:             "predefined_search"
         });
@@ -69,43 +69,43 @@
     {%for sex in sexes_set %}
       sexes.push({ 
         key:"{{sex.key}}",
-        value: "{{sex.value}}"
+        value: "{{sex.value|escapejs}}"
       });
     {% endfor %}
 
     {%for age in age_set %}
       ages.push({ 
         key:"{{age.key}}",
-        value: "{{age.value}}"
+        value: "{{age.value|escapejs}}"
       });
     {% endfor %}
 
     {%for civ in civilian %}
       civilian.push({ 
         key:"{{civ.key}}",
-        value: "{{civ.value}}"
+        value: "{{civ.value|escapejs}}"
       });
     {% endfor %}
 
     {%for relation in relation_status_set %}
       gl_ac_relation_list.push({ 
         key:"{{relation.key}}",
-        value: "{{relation.value}}"
+        value: "{{relation.value|escapejs}}"
       });
     {% endfor %}
 
     {%for role in role_status_set %}
       gl_ac_role_list.push({ 
         key:"{{role.key}}",
-        value: "{{role.value}}"
+        value: "{{role.value|escapejs}}"
       });
     {% endfor %}
 
 
     {%for comment_status in all_status_set %}
       all_statuses.push({
-        comment_status:"{{comment_status.comment_status}}",
-        name:"{{comment_status.name}}",
+        comment_status:"{{comment_status.comment_status|escapejs}}",
+        name:"{{comment_status.name|escapejs}}",
         key:"{{comment_status.key}}",
         id:{{comment_status.id}},
         resource_uri:"/api/v1/statusUpdate/{{comment_status.id}}/"
@@ -113,8 +113,8 @@
     {% endfor %}
     {%for comment_status in status_set %}
       comment_statuses.push({
-        comment_status:"{{comment_status.comment_status}}",
-        name:"{{comment_status.name}}",
+        comment_status:"{{comment_status.comment_status|escapejs}}",
+        name:"{{comment_status.name|escapejs}}",
         key:"{{comment_status.key}}",
         id:{{comment_status.id}},
         resource_uri:"/api/v1/statusUpdate/{{comment_status.id}}/"
@@ -130,8 +130,8 @@
 
     {%for label in labels_set.all %}
       gl_ac_labels_list.push({
-        name:"{{label.name}}",
-        label:"{{label.name}}",
+        name:"{{label.name|escapejs}}",
+        label:"{{label.name|escapejs}}",
         id:"{{label.id}}",
         resource_uri:"/api/v1/label/{{label.id}}/"
       });
@@ -139,7 +139,7 @@
 
     {%for user in users_set.all %}
       gl_ac_users_list.push({
-        label:"{{user.username}}",
+        label:"{{user.username|escapejs}}",
         id:"/api/v1/user/{{user.id}}/",
         resource_uri:"/api/v1/user/{{user.id}}/"
       });
@@ -147,8 +147,8 @@
 
     {%for crime in crimes_set.all %}
       gl_ac_crimes_list.push({
-        name:"{{crime.name}}",
-        label:"{{crime.name}}",
+        name:"{{crime.name|escapejs}}",
+        label:"{{crime.name|escapejs}}",
         id:"{{crime.id}}",
         resource_uri:"/api/v1/crimeCategory/{{crime.id}}/"
       });
@@ -156,8 +156,8 @@
 
     {%for source in sources_set.all %}
       special_global_ac_sources_list.push({
-        name:"{{source.name}}",
-        label:"{{source.name}}",
+        name:"{{source.name|escapejs}}",
+        label:"{{source.name|escapejs}}",
         id:"{{source.id}}",
         resource_uri:"/api/v1/source/{{source.id}}/"
       });
@@ -165,15 +165,15 @@
 
     {%for loc in loc_set.all %}
       gl_ac_loc_set.push({
-        name_en:"{{loc.name_en}}",
-        name_ar:"{{loc.name_ar}}",
+        name_en:"{{loc.name_en|escapejs}}",
+        name_ar:"{{loc.name_ar|escapejs}}",
         name:"{{loc.name|escapejs}}",
         label: "{{loc.label|escapejs}}",
         latitude:"{{loc.latitude}}",
         longitude: "{{loc.longitude}}",
         loc_type: "{{loc.loc_type}}",
-        parent_text: "{{parent_text}}",
-        description: "{{description}}",
+        parent_text: "{{parent_text|escapejs}}",
+        description: "{{description|escapejs}}",
         parent_location: "{{parent_location}}",
         resource_uri: "/api/v1/location/{{loc.id}}/"
       });
@@ -181,8 +181,8 @@
 
     {%for user in users_set.all %}
       user_list.push({
-        label:"{{user.username}}",
-        name:"{{user.username}}",
+        label:"{{user.username|escapejs}}",
+        name:"{{user.username|escapejs}}",
         id:"{{user.id}}",
         resource_uri:"/api/v1/user/{{user.id}}/"
       });
