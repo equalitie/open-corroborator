@@ -53,11 +53,9 @@
         predefined_list.push({
             search_title:     "{{pds.search_title}}",
             search_string:    '{{pds.search_string}}',
-            {% autoescape off %}
-            actor_filters:    {{pds.actor_filters}},
-            bulletin_filters: {{pds.bulletin_filters}},
-            incident_filters: {{pds.incident_filters}},
-            {% endautoescape %}
+            actor_filters:    {{pds.actor_filters|escapejs}},
+            bulletin_filters: {{pds.bulletin_filters|escapejs}},
+            incident_filters: {{pds.incident_filters|escapejs}},
             resource_uri:     '/api/v1/predefinedSearch/{{pds.id}}/',
             id:               '{{pds.id}}',
             // some stuff just for frontend purposes
@@ -169,10 +167,8 @@
       gl_ac_loc_set.push({
         name_en:"{{loc.name_en}}",
         name_ar:"{{loc.name_ar}}",
-        {% autoescape off %}
-        name:"{{loc.name}}",
-        label: "{{loc.label}}",
-        {% endautoescape %}
+        name:"{{loc.name|escapejs}}",
+        label: "{{loc.label|escapejs}}",
         latitude:"{{loc.latitude}}",
         longitude: "{{loc.longitude}}",
         loc_type: "{{loc.loc_type}}",
