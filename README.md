@@ -69,6 +69,7 @@ And to install some sample fixtures (including a demo user, password 'demo'):
 ```
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/demo_user.json --settings=corroborator.settings.dev 
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/crimes.json --settings=corroborator.settings.dev 
+env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/locations_UA.json --settings=corroborator.settings.dev 
 ```
 
 ##### Permissions

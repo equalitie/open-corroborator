@@ -1,0 +1,2989 @@
+[
+{
+    "fields": {
+        "latitude": 47.60103,
+        "loc_type": "S",
+        "name_en": "Волноваха",
+        "name_ar": "Volnovakha",
+        "longitude": 37.49674
+    },
+    "model": "corroborator_app.location",
+    "pk": 1
+}
+,
+{
+    "fields": {
+        "latitude": 48.01140,
+        "loc_type": "S",
+        "name_en": "Зугрес",
+        "name_ar": "Zuhres",
+        "longitude": 38.26444
+    },
+    "model": "corroborator_app.location",
+    "pk": 2
+}
+,
+{
+    "fields": {
+        "latitude": 48.14135,
+        "loc_type": "S",
+        "name_en": "Виноградів",
+        "name_ar": "Vynohradiv",
+        "longitude": 23.02666
+    },
+    "model": "corroborator_app.location",
+    "pk": 3
+}
+,
+{
+    "fields": {
+        "latitude": 47.43694,
+        "loc_type": "S",
+        "name_en": "Василівка",
+        "name_ar": "Vasylivka",
+        "longitude": 35.27417
+    },
+    "model": "corroborator_app.location",
+    "pk": 4
+}
+,
+{
+    "fields": {
+        "latitude": 50.29078,
+        "loc_type": "S",
+        "name_en": "Vovchans'k,Вовчанськ",
+        "name_ar": "Vovchans’k",
+        "longitude": 36.94108
+    },
+    "model": "corroborator_app.location",
+    "pk": 5
+}
+,
+{
+    "fields": {
+        "latitude": 49.07866,
+        "loc_type": "S",
+        "name_en": "Звенигородка",
+        "name_ar": "Zvenyhorodka",
+        "longitude": 30.96755
+    },
+    "model": "corroborator_app.location",
+    "pk": 6
+}
+,
+{
+    "fields": {
+        "latitude": 48.12980,
+        "loc_type": "S",
+        "name_en": "Yasinovataya,Ясинувата",
+        "name_ar": "Yasynuvata",
+        "longitude": 37.85940
+    },
+    "model": "corroborator_app.location",
+    "pk": 7
+}
+,
+{
+    "fields": {
+        "latitude": 47.25522,
+        "loc_type": "S",
+        "name_en": "Токмак",
+        "name_ar": "Tokmak",
+        "longitude": 35.71238
+    },
+    "model": "corroborator_app.location",
+    "pk": 8
+}
+,
+{
+    "fields": {
+        "latitude": 48.63013,
+        "loc_type": "S",
+        "name_en": "Druzhkovka,Дружківка",
+        "name_ar": "Druzhkivka",
+        "longitude": 37.55259
+    },
+    "model": "corroborator_app.location",
+    "pk": 9
+}
+,
+{
+    "fields": {
+        "latitude": 49.80597,
+        "loc_type": "S",
+        "name_en": "Золочів",
+        "name_ar": "Zolochiv",
+        "longitude": 24.89436
+    },
+    "model": "corroborator_app.location",
+    "pk": 10
+}
+,
+{
+    "fields": {
+        "latitude": 48.67448,
+        "loc_type": "S",
+        "name_en": "Тульчин",
+        "name_ar": "Tul’chyn",
+        "longitude": 28.84641
+    },
+    "model": "corroborator_app.location",
+    "pk": 11
+}
+,
+{
+    "fields": {
+        "latitude": 49.67453,
+        "loc_type": "S",
+        "name_en": "Зміїв",
+        "name_ar": "Zmiyiv",
+        "longitude": 36.34775
+    },
+    "model": "corroborator_app.location",
+    "pk": 12
+}
+,
+{
+    "fields": {
+        "latitude": 48.61667,
+        "loc_type": "S",
+        "name_en": "Ужгород",
+        "name_ar": "Uzhhorod",
+        "longitude": 22.30000
+    },
+    "model": "corroborator_app.location",
+    "pk": 13
+}
+,
+{
+    "fields": {
+        "latitude": 49.23278,
+        "loc_type": "S",
+        "name_en": "Вінниця",
+        "name_ar": "Vinnytsya",
+        "longitude": 28.48097
+    },
+    "model": "corroborator_app.location",
+    "pk": 14
+}
+,
+{
+    "fields": {
+        "latitude": 48.08964,
+        "loc_type": "S",
+        "name_en": "Sverdlovs'k,Свердловськ",
+        "name_ar": "Sverdlovs’k",
+        "longitude": 39.65243
+    },
+    "model": "corroborator_app.location",
+    "pk": 15
+}
+,
+{
+    "fields": {
+        "latitude": 49.41029,
+        "loc_type": "S",
+        "name_en": "Сватове",
+        "name_ar": "Svatove",
+        "longitude": 38.15035
+    },
+    "model": "corroborator_app.location",
+    "pk": 16
+}
+,
+{
+    "fields": {
+        "latitude": 50.52060,
+        "loc_type": "S",
+        "name_en": "Здолбунів",
+        "name_ar": "Zdolbuniv",
+        "longitude": 26.24251
+    },
+    "model": "corroborator_app.location",
+    "pk": 17
+}
+,
+{
+    "fields": {
+        "latitude": 49.27837,
+        "loc_type": "S",
+        "name_en": "Трускавець",
+        "name_ar": "Truskavets",
+        "longitude": 23.50618
+    },
+    "model": "corroborator_app.location",
+    "pk": 18
+}
+,
+{
+    "fields": {
+        "latitude": 44.95719,
+        "loc_type": "S",
+        "name_en": "Сімферополь",
+        "name_ar": "Simferopol",
+        "longitude": 34.11079
+    },
+    "model": "corroborator_app.location",
+    "pk": 19
+}
+,
+{
+    "fields": {
+        "latitude": 50.47438,
+        "loc_type": "S",
+        "name_en": "Сокаль",
+        "name_ar": "Sokal’",
+        "longitude": 24.28288
+    },
+    "model": "corroborator_app.location",
+    "pk": 20
+}
+,
+{
+    "fields": {
+        "latitude": 48.08331,
+        "loc_type": "S",
+        "name_en": "Rovenki,Ровеньки",
+        "name_ar": "Roven’ky",
+        "longitude": 39.37764
+    },
+    "model": "corroborator_app.location",
+    "pk": 21
+}
+,
+{
+    "fields": {
+        "latitude": 50.49613,
+        "loc_type": "S",
+        "name_en": "Радомишль",
+        "name_ar": "Radomyshl’",
+        "longitude": 29.22911
+    },
+    "model": "corroborator_app.location",
+    "pk": 22
+}
+,
+{
+    "fields": {
+        "latitude": 45.13424,
+        "loc_type": "S",
+        "name_en": "Саки",
+        "name_ar": "Saky",
+        "longitude": 33.59996
+    },
+    "model": "corroborator_app.location",
+    "pk": 23
+}
+,
+{
+    "fields": {
+        "latitude": 48.02612,
+        "loc_type": "S",
+        "name_en": "Сніжне",
+        "name_ar": "Snizhne",
+        "longitude": 38.77225
+    },
+    "model": "corroborator_app.location",
+    "pk": 24
+}
+,
+{
+    "fields": {
+        "latitude": 44.58883,
+        "loc_type": "S",
+        "name_en": "Севастополь",
+        "name_ar": "Sevastopol",
+        "longitude": 33.52240
+    },
+    "model": "corroborator_app.location",
+    "pk": 25
+}
+,
+{
+    "fields": {
+        "latitude": 49.00687,
+        "loc_type": "S",
+        "name_en": "Шпола",
+        "name_ar": "Shpola",
+        "longitude": 31.39471
+    },
+    "model": "corroborator_app.location",
+    "pk": 26
+}
+,
+{
+    "fields": {
+        "latitude": 51.86296,
+        "loc_type": "S",
+        "name_en": "Шостка",
+        "name_ar": "Shostka",
+        "longitude": 33.46980
+    },
+    "model": "corroborator_app.location",
+    "pk": 27
+}
+,
+{
+    "fields": {
+        "latitude": 49.22242,
+        "loc_type": "S",
+        "name_en": "Сміла",
+        "name_ar": "Smila",
+        "longitude": 31.88714
+    },
+    "model": "corroborator_app.location",
+    "pk": 28
+}
+,
+{
+    "fields": {
+        "latitude": 48.86667,
+        "loc_type": "S",
+        "name_en": "Словянськ",
+        "name_ar": "Sloviansk",
+        "longitude": 37.61667
+    },
+    "model": "corroborator_app.location",
+    "pk": 29
+}
+,
+{
+    "fields": {
+        "latitude": 48.63328,
+        "loc_type": "S",
+        "name_en": "Popasnaya,Попасна",
+        "name_ar": "Popasna",
+        "longitude": 38.37804
+    },
+    "model": "corroborator_app.location",
+    "pk": 30
+}
+,
+{
+    "fields": {
+        "latitude": 50.62308,
+        "loc_type": "S",
+        "name_en": "Рівне",
+        "name_ar": "Rivne",
+        "longitude": 26.22743
+    },
+    "model": "corroborator_app.location",
+    "pk": 31
+}
+,
+{
+    "fields": {
+        "latitude": 50.59323,
+        "loc_type": "S",
+        "name_en": "Прилуки",
+        "name_ar": "Pryluky",
+        "longitude": 32.38761
+    },
+    "model": "corroborator_app.location",
+    "pk": 32
+}
+,
+{
+    "fields": {
+        "latitude": 48.43779,
+        "loc_type": "S",
+        "name_en": "Pereval'sk,Перевальськ",
+        "name_ar": "Pereval’s’k",
+        "longitude": 38.84384
+    },
+    "model": "corroborator_app.location",
+    "pk": 33
+}
+,
+{
+    "fields": {
+        "latitude": 49.59373,
+        "loc_type": "S",
+        "name_en": "Полтава",
+        "name_ar": "Poltava",
+        "longitude": 34.54073
+    },
+    "model": "corroborator_app.location",
+    "pk": 34
+}
+,
+{
+    "fields": {
+        "latitude": 50.12424,
+        "loc_type": "S",
+        "name_en": "Полонне",
+        "name_ar": "Polonne",
+        "longitude": 27.51087
+    },
+    "model": "corroborator_app.location",
+    "pk": 35
+}
+,
+{
+    "fields": {
+        "latitude": 45.45727,
+        "loc_type": "S",
+        "name_en": "Рені",
+        "name_ar": "Reni",
+        "longitude": 28.29317
+    },
+    "model": "corroborator_app.location",
+    "pk": 36
+}
+,
+{
+    "fields": {
+        "latitude": 49.29416,
+        "loc_type": "S",
+        "name_en": "Стебник",
+        "name_ar": "Stebnyk",
+        "longitude": 23.56357
+    },
+    "model": "corroborator_app.location",
+    "pk": 37
+}
+,
+{
+    "fields": {
+        "latitude": 48.54853,
+        "loc_type": "S",
+        "name_en": "Свалява",
+        "name_ar": "Svalyava",
+        "longitude": 22.99578
+    },
+    "model": "corroborator_app.location",
+    "pk": 38
+}
+,
+{
+    "fields": {
+        "latitude": 50.92160,
+        "loc_type": "S",
+        "name_en": "Суми",
+        "name_ar": "Sumy",
+        "longitude": 34.80029
+    },
+    "model": "corroborator_app.location",
+    "pk": 39
+}
+,
+{
+    "fields": {
+        "latitude": 49.01229,
+        "loc_type": "S",
+        "name_en": "Рубіжне",
+        "name_ar": "Rubizhne",
+        "longitude": 38.37967
+    },
+    "model": "corroborator_app.location",
+    "pk": 40
+}
+,
+{
+    "fields": {
+        "latitude": 47.56731,
+        "loc_type": "S",
+        "name_en": "Оріхів",
+        "name_ar": "Orikhiv",
+        "longitude": 35.78575
+    },
+    "model": "corroborator_app.location",
+    "pk": 41
+}
+,
+{
+    "fields": {
+        "latitude": 44.43068,
+        "loc_type": "S",
+        "name_en": "Місхор",
+        "name_ar": "Miskhor",
+        "longitude": 34.07965
+    },
+    "model": "corroborator_app.location",
+    "pk": 42
+}
+,
+{
+    "fields": {
+        "latitude": 49.83826,
+        "loc_type": "S",
+        "name_en": "Львів",
+        "name_ar": "Lviv",
+        "longitude": 24.02324
+    },
+    "model": "corroborator_app.location",
+    "pk": 43
+}
+,
+{
+    "fields": {
+        "latitude": 48.63480,
+        "loc_type": "S",
+        "name_en": "Надвірна",
+        "name_ar": "Nadvirna",
+        "longitude": 24.56936
+    },
+    "model": "corroborator_app.location",
+    "pk": 44
+}
+,
+{
+    "fields": {
+        "latitude": 50.75932,
+        "loc_type": "S",
+        "name_en": "Lutsk,Луцьк",
+        "name_ar": "Luts’k",
+        "longitude": 25.34244
+    },
+    "model": "corroborator_app.location",
+    "pk": 45
+}
+,
+{
+    "fields": {
+        "latitude": 47.57119,
+        "loc_type": "S",
+        "name_en": "Nikopol',Нікополь",
+        "name_ar": "Nikopol’",
+        "longitude": 34.39637
+    },
+    "model": "corroborator_app.location",
+    "pk": 46
+}
+,
+{
+    "fields": {
+        "latitude": 50.72576,
+        "loc_type": "S",
+        "name_en": "Нововолинськ",
+        "name_ar": "Novovolyns’k",
+        "longitude": 24.16265
+    },
+    "model": "corroborator_app.location",
+    "pk": 47
+}
+,
+{
+    "fields": {
+        "latitude": 50.77233,
+        "loc_type": "S",
+        "name_en": "Малин",
+        "name_ar": "Malyn",
+        "longitude": 29.23833
+    },
+    "model": "corroborator_app.location",
+    "pk": 48
+}
+,
+{
+    "fields": {
+        "latitude": 48.56705,
+        "loc_type": "S",
+        "name_en": "Луганськ",
+        "name_ar": "Luhansk",
+        "longitude": 39.31706
+    },
+    "model": "corroborator_app.location",
+    "pk": 49
+}
+,
+{
+    "fields": {
+        "latitude": 48.43919,
+        "loc_type": "S",
+        "name_en": "Мукачеве",
+        "name_ar": "Mukacheve",
+        "longitude": 22.71779
+    },
+    "model": "corroborator_app.location",
+    "pk": 50
+}
+,
+{
+    "fields": {
+        "latitude": 50.01625,
+        "loc_type": "S",
+        "name_en": "Лубни",
+        "name_ar": "Lubny",
+        "longitude": 32.99694
+    },
+    "model": "corroborator_app.location",
+    "pk": 51
+}
+,
+{
+    "fields": {
+        "latitude": 51.32460,
+        "loc_type": "S",
+        "name_en": "Овруч",
+        "name_ar": "Ovruch",
+        "longitude": 28.80351
+    },
+    "model": "corroborator_app.location",
+    "pk": 52
+}
+,
+{
+    "fields": {
+        "latitude": 48.04782,
+        "loc_type": "S",
+        "name_en": "Макіївка",
+        "name_ar": "Makiyivka",
+        "longitude": 37.92576
+    },
+    "model": "corroborator_app.location",
+    "pk": 53
+}
+,
+{
+    "fields": {
+        "latitude": 49.96854,
+        "loc_type": "S",
+        "name_en": "Миргород",
+        "name_ar": "Myrhorod",
+        "longitude": 33.60886
+    },
+    "model": "corroborator_app.location",
+    "pk": 54
+}
+,
+{
+    "fields": {
+        "latitude": 46.61283,
+        "loc_type": "S",
+        "name_en": "Очаків",
+        "name_ar": "Ochakiv",
+        "longitude": 31.54982
+    },
+    "model": "corroborator_app.location",
+    "pk": 55
+}
+,
+{
+    "fields": {
+        "latitude": 50.10689,
+        "loc_type": "S",
+        "name_en": "Обухів",
+        "name_ar": "Obukhiv",
+        "longitude": 30.61848
+    },
+    "model": "corroborator_app.location",
+    "pk": 56
+}
+,
+{
+    "fields": {
+        "latitude": 46.75451,
+        "loc_type": "S",
+        "name_en": "Нова Каховка",
+        "name_ar": "Nova Kakhovka",
+        "longitude": 33.34864
+    },
+    "model": "corroborator_app.location",
+    "pk": 57
+}
+,
+{
+    "fields": {
+        "latitude": 46.84891,
+        "loc_type": "S",
+        "name_en": "Melitopol,Мелітополь",
+        "name_ar": "Melitopol’",
+        "longitude": 35.36533
+    },
+    "model": "corroborator_app.location",
+    "pk": 58
+}
+,
+{
+    "fields": {
+        "latitude": 51.68333,
+        "loc_type": "S",
+        "name_en": "Kuznetsovsk",
+        "name_ar": "Kuznetsovs’k",
+        "longitude": 25.86667
+    },
+    "model": "corroborator_app.location",
+    "pk": 59
+}
+,
+{
+    "fields": {
+        "latitude": 48.90485,
+        "loc_type": "S",
+        "name_en": "Lisichansk,Лисичанськ",
+        "name_ar": "Lysychans’k",
+        "longitude": 38.44207
+    },
+    "model": "corroborator_app.location",
+    "pk": 60
+}
+,
+{
+    "fields": {
+        "latitude": 49.01187,
+        "loc_type": "S",
+        "name_en": "Калуш",
+        "name_ar": "Kalush",
+        "longitude": 24.37308
+    },
+    "model": "corroborator_app.location",
+    "pk": 61
+}
+,
+{
+    "fields": {
+        "latitude": 51.24032,
+        "loc_type": "S",
+        "name_en": "Конотоп",
+        "name_ar": "Konotop",
+        "longitude": 33.20263
+    },
+    "model": "corroborator_app.location",
+    "pk": 62
+}
+,
+{
+    "fields": {
+        "latitude": 49.63096,
+        "loc_type": "S",
+        "name_en": "Ківшарівка",
+        "name_ar": "Kivsharivka",
+        "longitude": 37.68821
+    },
+    "model": "corroborator_app.location",
+    "pk": 63
+}
+,
+{
+    "fields": {
+        "latitude": 51.21526,
+        "loc_type": "S",
+        "name_en": "Kovel,Ковель",
+        "name_ar": "Kovel’",
+        "longitude": 24.70867
+    },
+    "model": "corroborator_app.location",
+    "pk": 64
+}
+,
+{
+    "fields": {
+        "latitude": 50.09693,
+        "loc_type": "S",
+        "name_en": "Kremenets,Кременець",
+        "name_ar": "Kremenets’",
+        "longitude": 25.72459
+    },
+    "model": "corroborator_app.location",
+    "pk": 65
+}
+,
+{
+    "fields": {
+        "latitude": 47.75305,
+        "loc_type": "S",
+        "name_en": "Котовськ",
+        "name_ar": "Kotovs’k",
+        "longitude": 29.53205
+    },
+    "model": "corroborator_app.location",
+    "pk": 66
+}
+,
+{
+    "fields": {
+        "latitude": 46.81371,
+        "loc_type": "S",
+        "name_en": "Каховка",
+        "name_ar": "Kakhovka",
+        "longitude": 33.48698
+    },
+    "model": "corroborator_app.location",
+    "pk": 67
+}
+,
+{
+    "fields": {
+        "latitude": 50.87841,
+        "loc_type": "S",
+        "name_en": "Костопіль",
+        "name_ar": "Kostopil’",
+        "longitude": 26.45192
+    },
+    "model": "corroborator_app.location",
+    "pk": 68
+}
+,
+{
+    "fields": {
+        "latitude": 50.83425,
+        "loc_type": "S",
+        "name_en": "Ківерці",
+        "name_ar": "Kivertsi",
+        "longitude": 25.45821
+    },
+    "model": "corroborator_app.location",
+    "pk": 69
+}
+,
+{
+    "fields": {
+        "latitude": 45.36070,
+        "loc_type": "S",
+        "name_en": "Керч",
+        "name_ar": "Kerch",
+        "longitude": 36.47060
+    },
+    "model": "corroborator_app.location",
+    "pk": 70
+}
+,
+{
+    "fields": {
+        "latitude": 48.63751,
+        "loc_type": "S",
+        "name_en": "Kirovsk,Кіровськ",
+        "name_ar": "Kirovs’k",
+        "longitude": 38.64280
+    },
+    "model": "corroborator_app.location",
+    "pk": 71
+}
+,
+{
+    "fields": {
+        "latitude": 49.06802,
+        "loc_type": "S",
+        "name_en": "Кременчук",
+        "name_ar": "Kremenchuk",
+        "longitude": 33.42041
+    },
+    "model": "corroborator_app.location",
+    "pk": 72
+}
+,
+{
+    "fields": {
+        "latitude": 49.55979,
+        "loc_type": "S",
+        "name_en": "Хмільник",
+        "name_ar": "Khmil’nyk",
+        "longitude": 27.95754
+    },
+    "model": "corroborator_app.location",
+    "pk": 73
+}
+,
+{
+    "fields": {
+        "latitude": 45.45518,
+        "loc_type": "S",
+        "name_en": "Кілія",
+        "name_ar": "Kiliya",
+        "longitude": 29.26367
+    },
+    "model": "corroborator_app.location",
+    "pk": 74
+}
+,
+{
+    "fields": {
+        "latitude": 49.38009,
+        "loc_type": "S",
+        "name_en": "Красноград",
+        "name_ar": "Krasnohrad",
+        "longitude": 35.44186
+    },
+    "model": "corroborator_app.location",
+    "pk": 75
+}
+,
+{
+    "fields": {
+        "latitude": 48.72305,
+        "loc_type": "S",
+        "name_en": "Kramators'k,Kramatorsk,Краматорськ",
+        "name_ar": "Kramators’k",
+        "longitude": 37.55629
+    },
+    "model": "corroborator_app.location",
+    "pk": 76
+}
+,
+{
+    "fields": {
+        "latitude": 46.65581,
+        "loc_type": "S",
+        "name_en": "Херсон",
+        "name_ar": "Kherson",
+        "longitude": 32.61780
+    },
+    "model": "corroborator_app.location",
+    "pk": 77
+}
+,
+{
+    "fields": {
+        "latitude": 48.29235,
+        "loc_type": "S",
+        "name_en": "Краснодон",
+        "name_ar": "Krasnodon",
+        "longitude": 39.73921
+    },
+    "model": "corroborator_app.location",
+    "pk": 78
+}
+,
+{
+    "fields": {
+        "latitude": 50.95937,
+        "loc_type": "S",
+        "name_en": "Korosten,Коростень",
+        "name_ar": "Korosten’",
+        "longitude": 28.63855
+    },
+    "model": "corroborator_app.location",
+    "pk": 79
+}
+,
+{
+    "fields": {
+        "latitude": 49.98081,
+        "loc_type": "S",
+        "name_en": "Харків",
+        "name_ar": "Kharkiv",
+        "longitude": 36.25272
+    },
+    "model": "corroborator_app.location",
+    "pk": 80
+}
+,
+{
+    "fields": {
+        "latitude": 48.52770,
+        "loc_type": "S",
+        "name_en": "Костянтинівка",
+        "name_ar": "Kostyantynivka",
+        "longitude": 37.70690
+    },
+    "model": "corroborator_app.location",
+    "pk": 81
+}
+,
+{
+    "fields": {
+        "latitude": 49.75182,
+        "loc_type": "S",
+        "name_en": "Канів",
+        "name_ar": "Kaniv",
+        "longitude": 31.46004
+    },
+    "model": "corroborator_app.location",
+    "pk": 82
+}
+,
+{
+    "fields": {
+        "latitude": 51.67822,
+        "loc_type": "S",
+        "name_en": "Глухів",
+        "name_ar": "Hlukhiv",
+        "longitude": 33.91620
+    },
+    "model": "corroborator_app.location",
+    "pk": 83
+}
+,
+{
+    "fields": {
+        "latitude": 45.03677,
+        "loc_type": "S",
+        "name_en": "Феодосія",
+        "name_ar": "Feodosiya",
+        "longitude": 35.37789
+    },
+    "model": "corroborator_app.location",
+    "pk": 84
+}
+,
+{
+    "fields": {
+        "latitude": 47.92498,
+        "loc_type": "S",
+        "name_en": "Ilovays'k",
+        "name_ar": "Ilovays’k",
+        "longitude": 38.20235
+    },
+    "model": "corroborator_app.location",
+    "pk": 85
+}
+,
+{
+    "fields": {
+        "latitude": 46.17592,
+        "loc_type": "S",
+        "name_en": "Genichesk,Генічеськ",
+        "name_ar": "Heniches’k",
+        "longitude": 34.80340
+    },
+    "model": "corroborator_app.location",
+    "pk": 86
+}
+,
+{
+    "fields": {
+        "latitude": 48.97330,
+        "loc_type": "S",
+        "name_en": "Долина",
+        "name_ar": "Dolyna",
+        "longitude": 24.00944
+    },
+    "model": "corroborator_app.location",
+    "pk": 87
+}
+,
+{
+    "fields": {
+        "latitude": 47.49865,
+        "loc_type": "S",
+        "name_en": "Енергодар",
+        "name_ar": "Energodar",
+        "longitude": 34.65740
+    },
+    "model": "corroborator_app.location",
+    "pk": 88
+}
+,
+{
+    "fields": {
+        "latitude": 47.75046,
+        "loc_type": "S",
+        "name_en": "Dokuchayevsk,Докучаєвськ",
+        "name_ar": "Dokuchayevs’k",
+        "longitude": 37.67936
+    },
+    "model": "corroborator_app.location",
+    "pk": 89
+}
+,
+{
+    "fields": {
+        "latitude": 48.81143,
+        "loc_type": "S",
+        "name_en": "Гайсин",
+        "name_ar": "Haysyn",
+        "longitude": 29.38977
+    },
+    "model": "corroborator_app.location",
+    "pk": 90
+}
+,
+{
+    "fields": {
+        "latitude": 48.45000,
+        "loc_type": "S",
+        "name_en": "Dnipropetrovs'k,Дніпропетровськ",
+        "name_ar": "Dnipropetrovsk",
+        "longitude": 34.98333
+    },
+    "model": "corroborator_app.location",
+    "pk": 91
+}
+,
+{
+    "fields": {
+        "latitude": 48.51134,
+        "loc_type": "S",
+        "name_en": "Dniprodzerzhyns'k",
+        "name_ar": "Dniprodzerzhyns’k",
+        "longitude": 34.60210
+    },
+    "model": "corroborator_app.location",
+    "pk": 92
+}
+,
+{
+    "fields": {
+        "latitude": 47.38169,
+        "loc_type": "S",
+        "name_en": "Дніпрорудне",
+        "name_ar": "Dniprorudne",
+        "longitude": 34.97652
+    },
+    "model": "corroborator_app.location",
+    "pk": 93
+}
+,
+{
+    "fields": {
+        "latitude": 48.33958,
+        "loc_type": "S",
+        "name_en": "Гайворон",
+        "name_ar": "Hayvoron",
+        "longitude": 29.86791
+    },
+    "model": "corroborator_app.location",
+    "pk": 94
+}
+,
+{
+    "fields": {
+        "latitude": 47.66389,
+        "loc_type": "S",
+        "name_en": "Гуляйполе",
+        "name_ar": "Hulyaypole",
+        "longitude": 36.25633
+    },
+    "model": "corroborator_app.location",
+    "pk": 95
+}
+,
+{
+    "fields": {
+        "latitude": 49.34991,
+        "loc_type": "S",
+        "name_en": "Дрогобич",
+        "name_ar": "Drohobych",
+        "longitude": 23.50561
+    },
+    "model": "corroborator_app.location",
+    "pk": 96
+}
+,
+{
+    "fields": {
+        "latitude": 50.39105,
+        "loc_type": "S",
+        "name_en": "Червоноград",
+        "name_ar": "Chervonohrad",
+        "longitude": 24.23514
+    },
+    "model": "corroborator_app.location",
+    "pk": 97
+}
+,
+{
+    "fields": {
+        "latitude": 50.41694,
+        "loc_type": "S",
+        "name_en": "Дубно",
+        "name_ar": "Dubno",
+        "longitude": 25.73432
+    },
+    "model": "corroborator_app.location",
+    "pk": 98
+}
+,
+{
+    "fields": {
+        "latitude": 50.37112,
+        "loc_type": "S",
+        "name_en": "Гадяч",
+        "name_ar": "Hadyach",
+        "longitude": 33.99099
+    },
+    "model": "corroborator_app.location",
+    "pk": 99
+}
+,
+{
+    "fields": {
+        "latitude": 50.52175,
+        "loc_type": "S",
+        "name_en": "Ірпінь",
+        "name_ar": "Irpin",
+        "longitude": 30.25055
+    },
+    "model": "corroborator_app.location",
+    "pk": 100
+}
+,
+{
+    "fields": {
+        "latitude": 48.74838,
+        "loc_type": "S",
+        "name_en": "Uman',Умань",
+        "name_ar": "Uman’",
+        "longitude": 30.22184
+    },
+    "model": "corroborator_app.location",
+    "pk": 101
+}
+,
+{
+    "fields": {
+        "latitude": 51.54775,
+        "loc_type": "S",
+        "name_en": "Krolevets,Кролевець",
+        "name_ar": "Krolevets’",
+        "longitude": 33.38475
+    },
+    "model": "corroborator_app.location",
+    "pk": 102
+}
+,
+{
+    "fields": {
+        "latitude": 51.15016,
+        "loc_type": "S",
+        "name_en": "Білопілля",
+        "name_ar": "Bilopillya",
+        "longitude": 34.31287
+    },
+    "model": "corroborator_app.location",
+    "pk": 103
+}
+,
+{
+    "fields": {
+        "latitude": 48.13989,
+        "loc_type": "S",
+        "name_en": "Avdeyevka,Авдіївка",
+        "name_ar": "Avdiyivka",
+        "longitude": 37.74255
+    },
+    "model": "corroborator_app.location",
+    "pk": 104
+}
+,
+{
+    "fields": {
+        "latitude": 47.66003,
+        "loc_type": "S",
+        "name_en": "Апостолове",
+        "name_ar": "Apostolove",
+        "longitude": 33.71369
+    },
+    "model": "corroborator_app.location",
+    "pk": 105
+}
+,
+{
+    "fields": {
+        "latitude": 48.11503,
+        "loc_type": "S",
+        "name_en": "Antratsit,Антрацит",
+        "name_ar": "Antratsyt",
+        "longitude": 39.09128
+    },
+    "model": "corroborator_app.location",
+    "pk": 106
+}
+,
+{
+    "fields": {
+        "latitude": 49.45000,
+        "loc_type": "S",
+        "name_en": "Berezhany",
+        "name_ar": "Бережани",
+        "longitude": 24.93333
+    },
+    "model": "corroborator_app.location",
+    "pk": 107
+}
+,
+{
+    "fields": {
+        "latitude": 46.10919,
+        "loc_type": "S",
+        "name_en": "Армянськ",
+        "name_ar": "Armyans’k",
+        "longitude": 33.69206
+    },
+    "model": "corroborator_app.location",
+    "pk": 108
+}
+,
+{
+    "fields": {
+        "latitude": 47.79348,
+        "loc_type": "S",
+        "name_en": "Амвросіївка",
+        "name_ar": "Amvrosiyivka",
+        "longitude": 38.47768
+    },
+    "model": "corroborator_app.location",
+    "pk": 109
+}
+,
+{
+    "fields": {
+        "latitude": 48.20555,
+        "loc_type": "S",
+        "name_en": "Берегове",
+        "name_ar": "Berehove",
+        "longitude": 22.64418
+    },
+    "model": "corroborator_app.location",
+    "pk": 110
+}
+,
+{
+    "fields": {
+        "latitude": 44.67728,
+        "loc_type": "S",
+        "name_en": "Алушта",
+        "name_ar": "Alushta",
+        "longitude": 34.40970
+    },
+    "model": "corroborator_app.location",
+    "pk": 111
+}
+,
+{
+    "fields": {
+        "latitude": 51.18144,
+        "loc_type": "S",
+        "name_en": "Бахмач",
+        "name_ar": "Bakhmach",
+        "longitude": 32.83463
+    },
+    "model": "corroborator_app.location",
+    "pk": 112
+}
+,
+{
+    "fields": {
+        "latitude": 49.46270,
+        "loc_type": "S",
+        "name_en": "Балаклія",
+        "name_ar": "Balakliya",
+        "longitude": 36.85951
+    },
+    "model": "corroborator_app.location",
+    "pk": 113
+}
+,
+{
+    "fields": {
+        "latitude": 45.05462,
+        "loc_type": "S",
+        "name_en": "Білогірськ",
+        "name_ar": "Bilohirs’k",
+        "longitude": 34.60185
+    },
+    "model": "corroborator_app.location",
+    "pk": 114
+}
+,
+{
+    "fields": {
+        "latitude": 49.01018,
+        "loc_type": "S",
+        "name_en": "Комсомольськ",
+        "name_ar": "Komsomolsk",
+        "longitude": 33.63567
+    },
+    "model": "corroborator_app.location",
+    "pk": 115
+}
+,
+{
+    "fields": {
+        "latitude": 49.07717,
+        "loc_type": "S",
+        "name_en": "Бар",
+        "name_ar": "Bar",
+        "longitude": 27.68256
+    },
+    "model": "corroborator_app.location",
+    "pk": 116
+}
+,
+{
+    "fields": {
+        "latitude": 48.59559,
+        "loc_type": "S",
+        "name_en": "Artemivs'k,Артемівськ",
+        "name_ar": "Artemivs’k",
+        "longitude": 37.99987
+    },
+    "model": "corroborator_app.location",
+    "pk": 117
+}
+,
+{
+    "fields": {
+        "latitude": 49.80939,
+        "loc_type": "S",
+        "name_en": "Біла Церква",
+        "name_ar": "Bila Tserkva",
+        "longitude": 30.11209
+    },
+    "model": "corroborator_app.location",
+    "pk": 118
+}
+,
+{
+    "fields": {
+        "latitude": 48.46893,
+        "loc_type": "S",
+        "name_en": "Alchevs'k,Алчевськ",
+        "name_ar": "Alchevs’k",
+        "longitude": 38.81669
+    },
+    "model": "corroborator_app.location",
+    "pk": 119
+}
+,
+{
+    "fields": {
+        "latitude": 45.34929,
+        "loc_type": "S",
+        "name_en": "Izmail,Ізмаїл,Измаїл",
+        "name_ar": "Izmayil",
+        "longitude": 28.84079
+    },
+    "model": "corroborator_app.location",
+    "pk": 120
+}
+,
+{
+    "fields": {
+        "latitude": 51.33795,
+        "loc_type": "S",
+        "name_en": "Сарни",
+        "name_ar": "Sarny",
+        "longitude": 26.60191
+    },
+    "model": "corroborator_app.location",
+    "pk": 121
+}
+,
+{
+    "fields": {
+        "latitude": 48.39869,
+        "loc_type": "S",
+        "name_en": "Dzerzhyns'k,Дзержинськ",
+        "name_ar": "Dzerzhyns’k",
+        "longitude": 37.84787
+    },
+    "model": "corroborator_app.location",
+    "pk": 122
+}
+,
+{
+    "fields": {
+        "latitude": 49.71431,
+        "loc_type": "S",
+        "name_en": "Козятин",
+        "name_ar": "Kozyatyn",
+        "longitude": 28.83385
+    },
+    "model": "corroborator_app.location",
+    "pk": 123
+}
+,
+{
+    "fields": {
+        "latitude": 49.03705,
+        "loc_type": "S",
+        "name_en": "Жмеринка",
+        "name_ar": "Zhmerynka",
+        "longitude": 28.11201
+    },
+    "model": "corroborator_app.location",
+    "pk": 124
+}
+,
+{
+    "fields": {
+        "latitude": 50.93152,
+        "loc_type": "S",
+        "name_en": "Носівка",
+        "name_ar": "Nosivka",
+        "longitude": 31.58282
+    },
+    "model": "corroborator_app.location",
+    "pk": 125
+}
+,
+{
+    "fields": {
+        "latitude": 49.45389,
+        "loc_type": "S",
+        "name_en": "Калинівка",
+        "name_ar": "Kalynivka",
+        "longitude": 28.52608
+    },
+    "model": "corroborator_app.location",
+    "pk": 126
+}
+,
+{
+    "fields": {
+        "latitude": 46.76644,
+        "loc_type": "S",
+        "name_en": "Berdyans'k,Бердянськ",
+        "name_ar": "Berdyans’k",
+        "longitude": 36.79872
+    },
+    "model": "corroborator_app.location",
+    "pk": 127
+}
+,
+{
+    "fields": {
+        "latitude": 48.23331,
+        "loc_type": "S",
+        "name_en": "Єнакієве",
+        "name_ar": "Yenakiyeve",
+        "longitude": 38.21137
+    },
+    "model": "corroborator_app.location",
+    "pk": 128
+}
+,
+{
+    "fields": {
+        "latitude": 46.52719,
+        "loc_type": "S",
+        "name_en": "Гола Пристань",
+        "name_ar": "Hola Prystan’",
+        "longitude": 32.52417
+    },
+    "model": "corroborator_app.location",
+    "pk": 129
+}
+,
+{
+    "fields": {
+        "latitude": 48.34072,
+        "loc_type": "S",
+        "name_en": "Debal'tsevo,Дебальцеве",
+        "name_ar": "Debal’tseve",
+        "longitude": 38.40490
+    },
+    "model": "corroborator_app.location",
+    "pk": 130
+}
+,
+{
+    "fields": {
+        "latitude": 48.53426,
+        "loc_type": "S",
+        "name_en": "Павлоград",
+        "name_ar": "Pavlohrad",
+        "longitude": 35.87098
+    },
+    "model": "corroborator_app.location",
+    "pk": 131
+}
+,
+{
+    "fields": {
+        "latitude": 50.31911,
+        "loc_type": "S",
+        "name_en": "Боярка",
+        "name_ar": "Boyarka",
+        "longitude": 30.29728
+    },
+    "model": "corroborator_app.location",
+    "pk": 132
+}
+,
+{
+    "fields": {
+        "latitude": 48.32044,
+        "loc_type": "S",
+        "name_en": "Synel'nykove,Синельникове",
+        "name_ar": "Synel’nykove",
+        "longitude": 35.51792
+    },
+    "model": "corroborator_app.location",
+    "pk": 133
+}
+,
+{
+    "fields": {
+        "latitude": 51.04801,
+        "loc_type": "S",
+        "name_en": "Ніжин",
+        "name_ar": "Nizhyn",
+        "longitude": 31.88688
+    },
+    "model": "corroborator_app.location",
+    "pk": 134
+}
+,
+{
+    "fields": {
+        "latitude": 50.54345,
+        "loc_type": "S",
+        "name_en": "Буча",
+        "name_ar": "Bucha",
+        "longitude": 30.21201
+    },
+    "model": "corroborator_app.location",
+    "pk": 135
+}
+,
+{
+    "fields": {
+        "latitude": 48.17930,
+        "loc_type": "S",
+        "name_en": "Хуст",
+        "name_ar": "Khust",
+        "longitude": 23.29909
+    },
+    "model": "corroborator_app.location",
+    "pk": 136
+}
+,
+{
+    "fields": {
+        "latitude": 49.01709,
+        "loc_type": "S",
+        "name_en": "Чортків",
+        "name_ar": "Chortkiv",
+        "longitude": 25.79804
+    },
+    "model": "corroborator_app.location",
+    "pk": 137
+}
+,
+{
+    "fields": {
+        "latitude": 44.75525,
+        "loc_type": "S",
+        "name_en": "Bakhchisaray,Бахчисарай",
+        "name_ar": "Bakhchysaray",
+        "longitude": 33.85782
+    },
+    "model": "corroborator_app.location",
+    "pk": 138
+}
+,
+{
+    "fields": {
+        "latitude": 48.29149,
+        "loc_type": "S",
+        "name_en": "Чернівці",
+        "name_ar": "Chernivtsi",
+        "longitude": 25.94034
+    },
+    "model": "corroborator_app.location",
+    "pk": 139
+}
+,
+{
+    "fields": {
+        "latitude": 47.69308,
+        "loc_type": "S",
+        "name_en": "Новий Буг",
+        "name_ar": "Novyy Buh",
+        "longitude": 32.52160
+    },
+    "model": "corroborator_app.location",
+    "pk": 140
+}
+,
+{
+    "fields": {
+        "latitude": 51.50551,
+        "loc_type": "S",
+        "name_en": "Чернігів",
+        "name_ar": "Chernihiv",
+        "longitude": 31.28487
+    },
+    "model": "corroborator_app.location",
+    "pk": 141
+}
+,
+{
+    "fields": {
+        "latitude": 49.51830,
+        "loc_type": "S",
+        "name_en": "Самбір",
+        "name_ar": "Sambir",
+        "longitude": 23.19752
+    },
+    "model": "corroborator_app.location",
+    "pk": 142
+}
+,
+{
+    "fields": {
+        "latitude": 49.75764,
+        "loc_type": "S",
+        "name_en": "Старокостянтинів",
+        "name_ar": "Starokostyantyniv",
+        "longitude": 27.20342
+    },
+    "model": "corroborator_app.location",
+    "pk": 143
+}
+,
+{
+    "fields": {
+        "latitude": 47.82289,
+        "loc_type": "S",
+        "name_en": "Zaporizhia,Zaporozhye,Запоріжжя",
+        "name_ar": "Zaporizhzhya",
+        "longitude": 35.19031
+    },
+    "model": "corroborator_app.location",
+    "pk": 144
+}
+,
+{
+    "fields": {
+        "latitude": 50.08791,
+        "loc_type": "S",
+        "name_en": "Броди",
+        "name_ar": "Brody",
+        "longitude": 25.15027
+    },
+    "model": "corroborator_app.location",
+    "pk": 145
+}
+,
+{
+    "fields": {
+        "latitude": 48.34493,
+        "loc_type": "S",
+        "name_en": "Жовті Води",
+        "name_ar": "Zhovti Vody",
+        "longitude": 33.50374
+    },
+    "model": "corroborator_app.location",
+    "pk": 146
+}
+,
+{
+    "fields": {
+        "latitude": 50.34004,
+        "loc_type": "S",
+        "name_en": "Нетішин",
+        "name_ar": "Netishyn",
+        "longitude": 26.64171
+    },
+    "model": "corroborator_app.location",
+    "pk": 147
+}
+,
+{
+    "fields": {
+        "latitude": 49.27832,
+        "loc_type": "S",
+        "name_en": "Starobil's'k,Старобільськ",
+        "name_ar": "Starobil’s’k",
+        "longitude": 38.91069
+    },
+    "model": "corroborator_app.location",
+    "pk": 148
+}
+,
+{
+    "fields": {
+        "latitude": 48.40507,
+        "loc_type": "S",
+        "name_en": "Lutugino,Лутугине",
+        "name_ar": "Lutuhyne",
+        "longitude": 39.22675
+    },
+    "model": "corroborator_app.location",
+    "pk": 149
+}
+,
+{
+    "fields": {
+        "latitude": 48.05657,
+        "loc_type": "S",
+        "name_en": "Shakhtërsk,Шахтарськ",
+        "name_ar": "Shakhtars’k",
+        "longitude": 38.43826
+    },
+    "model": "corroborator_app.location",
+    "pk": 150
+}
+,
+{
+    "fields": {
+        "latitude": 48.57528,
+        "loc_type": "S",
+        "name_en": "Підгородне",
+        "name_ar": "Pidhorodne",
+        "longitude": 35.10680
+    },
+    "model": "corroborator_app.location",
+    "pk": 151
+}
+,
+{
+    "fields": {
+        "latitude": 46.30495,
+        "loc_type": "S",
+        "name_en": "Іллічівськ",
+        "name_ar": "Illichivs’k",
+        "longitude": 30.65478
+    },
+    "model": "corroborator_app.location",
+    "pk": 152
+}
+,
+{
+    "fields": {
+        "latitude": 45.44789,
+        "loc_type": "S",
+        "name_en": "Нижньогірський",
+        "name_ar": "Nyzhn’ohirs’kyy",
+        "longitude": 34.73839
+    },
+    "model": "corroborator_app.location",
+    "pk": 153
+}
+,
+{
+    "fields": {
+        "latitude": 50.31036,
+        "loc_type": "S",
+        "name_en": "Охтирка",
+        "name_ar": "Okhtyrka",
+        "longitude": 34.89879
+    },
+    "model": "corroborator_app.location",
+    "pk": 154
+}
+,
+{
+    "fields": {
+        "latitude": 50.07670,
+        "loc_type": "S",
+        "name_en": "Фастів",
+        "name_ar": "Fastiv",
+        "longitude": 29.91770
+    },
+    "model": "corroborator_app.location",
+    "pk": 155
+}
+,
+{
+    "fields": {
+        "latitude": 49.42854,
+        "loc_type": "S",
+        "name_en": "Черкаси",
+        "name_ar": "Cherkasy",
+        "longitude": 32.06207
+    },
+    "model": "corroborator_app.location",
+    "pk": 156
+}
+,
+{
+    "fields": {
+        "latitude": 49.01502,
+        "loc_type": "S",
+        "name_en": "Ватутіне",
+        "name_ar": "Vatutine",
+        "longitude": 31.06211
+    },
+    "model": "corroborator_app.location",
+    "pk": 157
+}
+,
+{
+    "fields": {
+        "latitude": 49.04950,
+        "loc_type": "S",
+        "name_en": "Кремінна",
+        "name_ar": "Kreminna",
+        "longitude": 38.21792
+    },
+    "model": "corroborator_app.location",
+    "pk": 158
+}
+,
+{
+    "fields": {
+        "latitude": 49.24545,
+        "loc_type": "S",
+        "name_en": "Жашків",
+        "name_ar": "Zhashkiv",
+        "longitude": 30.11020
+    },
+    "model": "corroborator_app.location",
+    "pk": 159
+}
+,
+{
+    "fields": {
+        "latitude": 49.26223,
+        "loc_type": "S",
+        "name_en": "Стрий",
+        "name_ar": "Stryi",
+        "longitude": 23.85609
+    },
+    "model": "corroborator_app.location",
+    "pk": 160
+}
+,
+{
+    "fields": {
+        "latitude": 46.96591,
+        "loc_type": "S",
+        "name_en": "Mykolaiv,Nikolaev,Nikolajew,Nikolayev,Миколаїв",
+        "name_ar": "Mykolayiv",
+        "longitude": 31.99740
+    },
+    "model": "corroborator_app.location",
+    "pk": 161
+}
+,
+{
+    "fields": {
+        "latitude": 48.41333,
+        "loc_type": "S",
+        "name_en": "P'yatykhatky,Пятихатки",
+        "name_ar": "Piatykhatky",
+        "longitude": 33.71056
+    },
+    "model": "corroborator_app.location",
+    "pk": 162
+}
+,
+{
+    "fields": {
+        "latitude": 49.59701,
+        "loc_type": "S",
+        "name_en": "Komsomol's'ke,Комсомольське",
+        "name_ar": "Komsomol’s’ke",
+        "longitude": 36.52618
+    },
+    "model": "corroborator_app.location",
+    "pk": 163
+}
+,
+{
+    "fields": {
+        "latitude": 50.59412,
+        "loc_type": "S",
+        "name_en": "Новоград-Волинський",
+        "name_ar": "Novohrad-Volyns’kyy",
+        "longitude": 27.61650
+    },
+    "model": "corroborator_app.location",
+    "pk": 164
+}
+,
+{
+    "fields": {
+        "latitude": 50.75104,
+        "loc_type": "S",
+        "name_en": "Ромни",
+        "name_ar": "Romny",
+        "longitude": 33.47471
+    },
+    "model": "corroborator_app.location",
+    "pk": 165
+}
+,
+{
+    "fields": {
+        "latitude": 48.33576,
+        "loc_type": "S",
+        "name_en": "Горлівка",
+        "name_ar": "Horlivka",
+        "longitude": 38.05325
+    },
+    "model": "corroborator_app.location",
+    "pk": 166
+}
+,
+{
+    "fields": {
+        "latitude": 48.03876,
+        "loc_type": "S",
+        "name_en": "Топез,Торез",
+        "name_ar": "Torez",
+        "longitude": 38.59685
+    },
+    "model": "corroborator_app.location",
+    "pk": 167
+}
+,
+{
+    "fields": {
+        "latitude": 46.47747,
+        "loc_type": "S",
+        "name_en": "Odesa,Одеса",
+        "name_ar": "Odessa",
+        "longitude": 30.73262
+    },
+    "model": "corroborator_app.location",
+    "pk": 168
+}
+,
+{
+    "fields": {
+        "latitude": 49.54939,
+        "loc_type": "S",
+        "name_en": "Богуслав",
+        "name_ar": "Bohuslav",
+        "longitude": 30.87440
+    },
+    "model": "corroborator_app.location",
+    "pk": 169
+}
+,
+{
+    "fields": {
+        "latitude": 49.45723,
+        "loc_type": "S",
+        "name_en": "Карлівка",
+        "name_ar": "Karlivka",
+        "longitude": 35.12975
+    },
+    "model": "corroborator_app.location",
+    "pk": 170
+}
+,
+{
+    "fields": {
+        "latitude": 48.32635,
+        "loc_type": "S",
+        "name_en": "Новоукраїнка",
+        "name_ar": "Novoukrayinka",
+        "longitude": 31.52852
+    },
+    "model": "corroborator_app.location",
+    "pk": 171
+}
+,
+{
+    "fields": {
+        "latitude": 51.33745,
+        "loc_type": "S",
+        "name_en": "Putyvl',Путивль",
+        "name_ar": "Putyvl’",
+        "longitude": 33.87066
+    },
+    "model": "corroborator_app.location",
+    "pk": 172
+}
+,
+{
+    "fields": {
+        "latitude": 48.51100,
+        "loc_type": "S",
+        "name_en": "Брянка",
+        "name_ar": "Bryanka",
+        "longitude": 38.67222
+    },
+    "model": "corroborator_app.location",
+    "pk": 173
+}
+,
+{
+    "fields": {
+        "latitude": 48.13954,
+        "loc_type": "S",
+        "name_en": "Красний Луч",
+        "name_ar": "Krasnyy Luch",
+        "longitude": 38.93715
+    },
+    "model": "corroborator_app.location",
+    "pk": 174
+}
+,
+{
+    "fields": {
+        "latitude": 50.26487,
+        "loc_type": "S",
+        "name_en": "Житомир",
+        "name_ar": "Zhytomyr",
+        "longitude": 28.67669
+    },
+    "model": "corroborator_app.location",
+    "pk": 175
+}
+,
+{
+    "fields": {
+        "latitude": 48.98837,
+        "loc_type": "S",
+        "name_en": "Krasniy Liman,Красний Лиман",
+        "name_ar": "Krasnyy Lyman",
+        "longitude": 37.80225
+    },
+    "model": "corroborator_app.location",
+    "pk": 176
+}
+,
+{
+    "fields": {
+        "latitude": 45.71168,
+        "loc_type": "S",
+        "name_en": "Джанкой",
+        "name_ar": "Dzhankoy",
+        "longitude": 34.39274
+    },
+    "model": "corroborator_app.location",
+    "pk": 177
+}
+,
+{
+    "fields": {
+        "latitude": 49.78465,
+        "loc_type": "S",
+        "name_en": "Городок",
+        "name_ar": "Horodok",
+        "longitude": 23.64806
+    },
+    "model": "corroborator_app.location",
+    "pk": 178
+}
+,
+{
+    "fields": {
+        "latitude": 50.51809,
+        "loc_type": "S",
+        "name_en": "Бровари",
+        "name_ar": "Brovary",
+        "longitude": 30.80671
+    },
+    "model": "corroborator_app.location",
+    "pk": 179
+}
+,
+{
+    "fields": {
+        "latitude": 48.88877,
+        "loc_type": "S",
+        "name_en": "Tal'ne,Тальне",
+        "name_ar": "Tal’ne",
+        "longitude": 30.69482
+    },
+    "model": "corroborator_app.location",
+    "pk": 180
+}
+,
+{
+    "fields": {
+        "latitude": 50.85253,
+        "loc_type": "S",
+        "name_en": "Володимир-Волинський",
+        "name_ar": "Volodymyr-Volyns’kyy",
+        "longitude": 24.32364
+    },
+    "model": "corroborator_app.location",
+    "pk": 181
+}
+,
+{
+    "fields": {
+        "latitude": 50.11947,
+        "loc_type": "S",
+        "name_en": "Ізяслав,Изяслав",
+        "name_ar": "Izyaslav",
+        "longitude": 26.82125
+    },
+    "model": "corroborator_app.location",
+    "pk": 182
+}
+,
+{
+    "fields": {
+        "latitude": 50.18693,
+        "loc_type": "S",
+        "name_en": "Васильків",
+        "name_ar": "Vasylkiv",
+        "longitude": 30.31346
+    },
+    "model": "corroborator_app.location",
+    "pk": 183
+}
+,
+{
+    "fields": {
+        "latitude": 48.56818,
+        "loc_type": "S",
+        "name_en": "Стаханов",
+        "name_ar": "Stakhanov",
+        "longitude": 38.64352
+    },
+    "model": "corroborator_app.location",
+    "pk": 184
+}
+,
+{
+    "fields": {
+        "latitude": 48.62988,
+        "loc_type": "S",
+        "name_en": "Pervomaysk,Первомайськ",
+        "name_ar": "Pervomays’k",
+        "longitude": 38.54806
+    },
+    "model": "corroborator_app.location",
+    "pk": 185
+}
+,
+{
+    "fields": {
+        "latitude": 48.04433,
+        "loc_type": "S",
+        "name_en": "Pervomays'k,Первомайськ",
+        "name_ar": "Pervomays’k",
+        "longitude": 30.85073
+    },
+    "model": "corroborator_app.location",
+    "pk": 186
+}
+,
+{
+    "fields": {
+        "latitude": 47.93548,
+        "loc_type": "S",
+        "name_en": "Балта",
+        "name_ar": "Balta",
+        "longitude": 29.61982
+    },
+    "model": "corroborator_app.location",
+    "pk": 187
+}
+,
+{
+    "fields": {
+        "latitude": 48.66961,
+        "loc_type": "S",
+        "name_en": "Олександрия,Олександрія",
+        "name_ar": "Oleksandriya",
+        "longitude": 33.11593
+    },
+    "model": "corroborator_app.location",
+    "pk": 188
+}
+,
+{
+    "fields": {
+        "latitude": 50.16466,
+        "loc_type": "S",
+        "name_en": "Богодухів",
+        "name_ar": "Bohodukhiv",
+        "longitude": 35.52765
+    },
+    "model": "corroborator_app.location",
+    "pk": 189
+}
+,
+{
+    "fields": {
+        "latitude": 48.46147,
+        "loc_type": "S",
+        "name_en": "Dobropol'ye,Добропілля",
+        "name_ar": "Dobropillya",
+        "longitude": 37.08524
+    },
+    "model": "corroborator_app.location",
+    "pk": 190
+}
+,
+{
+    "fields": {
+        "latitude": 49.28489,
+        "loc_type": "S",
+        "name_en": "Городище",
+        "name_ar": "Horodyshche",
+        "longitude": 31.44513
+    },
+    "model": "corroborator_app.location",
+    "pk": 191
+}
+,
+{
+    "fields": {
+        "latitude": 45.99194,
+        "loc_type": "S",
+        "name_en": "Арциз",
+        "name_ar": "Artsyz",
+        "longitude": 29.41824
+    },
+    "model": "corroborator_app.location",
+    "pk": 192
+}
+,
+{
+    "fields": {
+        "latitude": 48.51320,
+        "loc_type": "S",
+        "name_en": "Кіровоград",
+        "name_ar": "Kirovohrad",
+        "longitude": 32.25970
+    },
+    "model": "corroborator_app.location",
+    "pk": 193
+}
+,
+{
+    "fields": {
+        "latitude": 49.93023,
+        "loc_type": "S",
+        "name_en": "Новояворівськ",
+        "name_ar": "Novoyavorivs'k",
+        "longitude": 23.57357
+    },
+    "model": "corroborator_app.location",
+    "pk": 194
+}
+,
+{
+    "fields": {
+        "latitude": 49.66832,
+        "loc_type": "S",
+        "name_en": "Золотоноша",
+        "name_ar": "Zolotonosha",
+        "longitude": 32.04047
+    },
+    "model": "corroborator_app.location",
+    "pk": 195
+}
+,
+{
+    "fields": {
+        "latitude": 48.94832,
+        "loc_type": "S",
+        "name_en": "Syeverodonets'k,Сєвєродонецьк",
+        "name_ar": "Syevyerodonets’k",
+        "longitude": 38.49166
+    },
+    "model": "corroborator_app.location",
+    "pk": 196
+}
+,
+{
+    "fields": {
+        "latitude": 50.06739,
+        "loc_type": "S",
+        "name_en": "Pereyaslav-Khmel'nyts'kyy,Переяслав-Хмельницький",
+        "name_ar": "Pereyaslav-Khmel’nyts’kyy",
+        "longitude": 31.44969
+    },
+    "model": "corroborator_app.location",
+    "pk": 197
+}
+,
+{
+    "fields": {
+        "latitude": 48.88937,
+        "loc_type": "S",
+        "name_en": "Лозова",
+        "name_ar": "Lozova",
+        "longitude": 36.31755
+    },
+    "model": "corroborator_app.location",
+    "pk": 198
+}
+,
+{
+    "fields": {
+        "latitude": 47.56494,
+        "loc_type": "S",
+        "name_en": "Вознесенськ,Вознесеньськ",
+        "name_ar": "Voznesensk",
+        "longitude": 31.33078
+    },
+    "model": "corroborator_app.location",
+    "pk": 199
+}
+,
+{
+    "fields": {
+        "latitude": 49.83588,
+        "loc_type": "S",
+        "name_en": "Чугуїв",
+        "name_ar": "Chuhuyiv",
+        "longitude": 36.68803
+    },
+    "model": "corroborator_app.location",
+    "pk": 200
+}
+,
+{
+    "fields": {
+        "latitude": 48.88909,
+        "loc_type": "S",
+        "name_en": "Дунаївці",
+        "name_ar": "Dunaivtsi",
+        "longitude": 26.85636
+    },
+    "model": "corroborator_app.location",
+    "pk": 201
+}
+,
+{
+    "fields": {
+        "latitude": 49.16374,
+        "loc_type": "S",
+        "name_en": "Городок",
+        "name_ar": "Horodok",
+        "longitude": 26.58394
+    },
+    "model": "corroborator_app.location",
+    "pk": 202
+}
+,
+{
+    "fields": {
+        "latitude": 48.63799,
+        "loc_type": "S",
+        "name_en": "Novomoskovsk,Новомосковськ",
+        "name_ar": "Novomoskovs’k",
+        "longitude": 35.24548
+    },
+    "model": "corroborator_app.location",
+    "pk": 203
+}
+,
+{
+    "fields": {
+        "latitude": 48.53115,
+        "loc_type": "S",
+        "name_en": "Kolomyia,Коломия",
+        "name_ar": "Kolomyya",
+        "longitude": 25.03649
+    },
+    "model": "corroborator_app.location",
+    "pk": 204
+}
+,
+{
+    "fields": {
+        "latitude": 48.71278,
+        "loc_type": "S",
+        "name_en": "Znam”yanka,Знам’янка",
+        "name_ar": "Znomenka",
+        "longitude": 32.66472
+    },
+    "model": "corroborator_app.location",
+    "pk": 205
+}
+,
+{
+    "fields": {
+        "latitude": 50.30155,
+        "loc_type": "S",
+        "name_en": "Славута",
+        "name_ar": "Slavuta",
+        "longitude": 26.86506
+    },
+    "model": "corroborator_app.location",
+    "pk": 206
+}
+,
+{
+    "fields": {
+        "latitude": 50.38913,
+        "loc_type": "S",
+        "name_en": "Вишневе",
+        "name_ar": "Vyshneve",
+        "longitude": 30.37050
+    },
+    "model": "corroborator_app.location",
+    "pk": 207
+}
+,
+{
+    "fields": {
+        "latitude": 49.41894,
+        "loc_type": "S",
+        "name_en": "Korsun'-Shevchenkivs'kyy,Корсунь-Шевченківський",
+        "name_ar": "Korsun’-Shevchenkivs’kyy",
+        "longitude": 31.25865
+    },
+    "model": "corroborator_app.location",
+    "pk": 208
+}
+,
+{
+    "fields": {
+        "latitude": 46.61842,
+        "loc_type": "S",
+        "name_en": "Tsyurupinsk,Цюрупинськ",
+        "name_ar": "Tsyurupyns’k",
+        "longitude": 32.71890
+    },
+    "model": "corroborator_app.location",
+    "pk": 209
+}
+,
+{
+    "fields": {
+        "latitude": 50.24242,
+        "loc_type": "S",
+        "name_en": "Пирятин",
+        "name_ar": "Pyryatyn",
+        "longitude": 32.50621
+    },
+    "model": "corroborator_app.location",
+    "pk": 210
+}
+,
+{
+    "fields": {
+        "latitude": 47.48444,
+        "loc_type": "S",
+        "name_en": "Пологи",
+        "name_ar": "Polohy",
+        "longitude": 36.25361
+    },
+    "model": "corroborator_app.location",
+    "pk": 211
+}
+,
+{
+    "fields": {
+        "latitude": 45.95716,
+        "loc_type": "S",
+        "name_en": "Красноперекопськ",
+        "name_ar": "Krasnoperekops’k",
+        "longitude": 33.79650
+    },
+    "model": "corroborator_app.location",
+    "pk": 212
+}
+,
+{
+    "fields": {
+        "latitude": 49.73177,
+        "loc_type": "S",
+        "name_en": "Сквира",
+        "name_ar": "Skvyra",
+        "longitude": 29.66569
+    },
+    "model": "corroborator_app.location",
+    "pk": 213
+}
+,
+{
+    "fields": {
+        "latitude": 50.31723,
+        "loc_type": "S",
+        "name_en": "Коростишів",
+        "name_ar": "Korostyshiv",
+        "longitude": 29.05630
+    },
+    "model": "corroborator_app.location",
+    "pk": 214
+}
+,
+{
+    "fields": {
+        "latitude": 49.04894,
+        "loc_type": "S",
+        "name_en": "Svitlovods'k,Світловодськ",
+        "name_ar": "Svitlovods’k",
+        "longitude": 33.24106
+    },
+    "model": "corroborator_app.location",
+    "pk": 215
+}
+,
+{
+    "fields": {
+        "latitude": 50.35269,
+        "loc_type": "S",
+        "name_en": "Boryspil,Boryspil',Бориспіль",
+        "name_ar": "Boryspil’",
+        "longitude": 30.95501
+    },
+    "model": "corroborator_app.location",
+    "pk": 216
+}
+,
+{
+    "fields": {
+        "latitude": 46.62211,
+        "loc_type": "S",
+        "name_en": "Южне",
+        "name_ar": "Yuzhne",
+        "longitude": 31.10131
+    },
+    "model": "corroborator_app.location",
+    "pk": 217
+}
+,
+{
+    "fields": {
+        "latitude": 47.09514,
+        "loc_type": "S",
+        "name_en": "Маріуполь",
+        "name_ar": "Mariupol",
+        "longitude": 37.54131
+    },
+    "model": "corroborator_app.location",
+    "pk": 218
+}
+,
+{
+    "fields": {
+        "latitude": 48.14708,
+        "loc_type": "S",
+        "name_en": "Selidovo,Селидове",
+        "name_ar": "Selydove",
+        "longitude": 37.30032
+    },
+    "model": "corroborator_app.location",
+    "pk": 219
+}
+,
+{
+    "fields": {
+        "latitude": 48.68450,
+        "loc_type": "S",
+        "name_en": "Kamenets-Podilski,Kamianets-Podilskyi,Kamyanets-Podilsky,Камянець-Подільський,Кам’янець-Подільський",
+        "name_ar": "Kamieniec Podolski",
+        "longitude": 26.58559
+    },
+    "model": "corroborator_app.location",
+    "pk": 220
+}
+,
+{
+    "fields": {
+        "latitude": 49.42161,
+        "loc_type": "S",
+        "name_en": "Хмельницький",
+        "name_ar": "Khmel’nyts’kyy",
+        "longitude": 26.99653
+    },
+    "model": "corroborator_app.location",
+    "pk": 221
+}
+,
+{
+    "fields": {
+        "latitude": 48.92150,
+        "loc_type": "S",
+        "name_en": "Івано-Франківськ",
+        "name_ar": "Ivano-Frankivs’k",
+        "longitude": 24.70972
+    },
+    "model": "corroborator_app.location",
+    "pk": 222
+}
+,
+{
+    "fields": {
+        "latitude": 48.07613,
+        "loc_type": "S",
+        "name_en": "Chervonopartizansk,Червонопартизанськ",
+        "name_ar": "Chervonopartyzans’k",
+        "longitude": 39.79618
+    },
+    "model": "corroborator_app.location",
+    "pk": 223
+}
+,
+{
+    "fields": {
+        "latitude": 44.50218,
+        "loc_type": "S",
+        "name_en": "Ялта",
+        "name_ar": "Yalta",
+        "longitude": 34.16624
+    },
+    "model": "corroborator_app.location",
+    "pk": 224
+}
+,
+{
+    "fields": {
+        "latitude": 51.51964,
+        "loc_type": "S",
+        "name_en": "Славутич",
+        "name_ar": "Slavutych",
+        "longitude": 30.73434
+    },
+    "model": "corroborator_app.location",
+    "pk": 225
+}
+,
+{
+    "fields": {
+        "latitude": 50.58518,
+        "loc_type": "S",
+        "name_en": "Лебедин",
+        "name_ar": "Lebedyn",
+        "longitude": 34.48490
+    },
+    "model": "corroborator_app.location",
+    "pk": 226
+}
+,
+{
+    "fields": {
+        "latitude": 48.34511,
+        "loc_type": "S",
+        "name_en": "Молодогвардійськ",
+        "name_ar": "Molodohvardiys’k",
+        "longitude": 39.65244
+    },
+    "model": "corroborator_app.location",
+    "pk": 227
+}
+,
+{
+    "fields": {
+        "latitude": 48.04243,
+        "loc_type": "S",
+        "name_en": "Khartsyzsk,Харцизьк",
+        "name_ar": "Khartsyz’k",
+        "longitude": 38.14728
+    },
+    "model": "corroborator_app.location",
+    "pk": 228
+}
+,
+{
+    "fields": {
+        "latitude": 49.82302,
+        "loc_type": "S",
+        "name_en": "Мерефа",
+        "name_ar": "Merefa",
+        "longitude": 36.05069
+    },
+    "model": "corroborator_app.location",
+    "pk": 229
+}
+,
+{
+    "fields": {
+        "latitude": 48.28198,
+        "loc_type": "S",
+        "name_en": "Krasnoarmiys'k,Красноармійськ",
+        "name_ar": "Krasnoarmiys’k",
+        "longitude": 37.17585
+    },
+    "model": "corroborator_app.location",
+    "pk": 230
+}
+,
+{
+    "fields": {
+        "latitude": 48.30523,
+        "loc_type": "S",
+        "name_en": "Dimitrov,Димитров",
+        "name_ar": "Dymytrov",
+        "longitude": 37.26091
+    },
+    "model": "corroborator_app.location",
+    "pk": 231
+}
+,
+{
+    "fields": {
+        "latitude": 49.55589,
+        "loc_type": "S",
+        "name_en": "Ternopil,Тернопіль",
+        "name_ar": "Ternopil’",
+        "longitude": 25.60556
+    },
+    "model": "corroborator_app.location",
+    "pk": 232
+}
+,
+{
+    "fields": {
+        "latitude": 48.68496,
+        "loc_type": "S",
+        "name_en": "Ладижин",
+        "name_ar": "Ladyzhyn",
+        "longitude": 29.23679
+    },
+    "model": "corroborator_app.location",
+    "pk": 233
+}
+,
+{
+    "fields": {
+        "latitude": 47.90966,
+        "loc_type": "S",
+        "name_en": "Кривий Ріг",
+        "name_ar": "Kryvyi Rih",
+        "longitude": 33.38044
+    },
+    "model": "corroborator_app.location",
+    "pk": 234
+}
+,
+{
+    "fields": {
+        "latitude": 50.18545,
+        "loc_type": "S",
+        "name_en": "Шепетівка",
+        "name_ar": "Shepetivka",
+        "longitude": 27.06365
+    },
+    "model": "corroborator_app.location",
+    "pk": 235
+}
+,
+{
+    "fields": {
+        "latitude": 45.68262,
+        "loc_type": "S",
+        "name_en": "Болград",
+        "name_ar": "Bolhrad",
+        "longitude": 28.61487
+    },
+    "model": "corroborator_app.location",
+    "pk": 236
+}
+,
+{
+    "fields": {
+        "latitude": 50.27975,
+        "loc_type": "S",
+        "name_en": "Яготин",
+        "name_ar": "Yahotyn",
+        "longitude": 31.76246
+    },
+    "model": "corroborator_app.location",
+    "pk": 237
+}
+,
+{
+    "fields": {
+        "latitude": 46.11610,
+        "loc_type": "S",
+        "name_en": "Skadowsk,Скадовськ",
+        "name_ar": "Skadovs’k",
+        "longitude": 32.91124
+    },
+    "model": "corroborator_app.location",
+    "pk": 238
+}
+,
+{
+    "fields": {
+        "latitude": 50.10659,
+        "loc_type": "S",
+        "name_en": "Дергачі",
+        "name_ar": "Derhachi",
+        "longitude": 36.12112
+    },
+    "model": "corroborator_app.location",
+    "pk": 239
+}
+,
+{
+    "fields": {
+        "latitude": 49.89928,
+        "loc_type": "S",
+        "name_en": "Бердичів",
+        "name_ar": "Berdychiv",
+        "longitude": 28.60235
+    },
+    "model": "corroborator_app.location",
+    "pk": 240
+}
+,
+{
+    "fields": {
+        "latitude": 50.45466,
+        "loc_type": "S",
+        "name_en": "Kyiv,Київ",
+        "name_ar": "Kiev",
+        "longitude": 30.52380
+    },
+    "model": "corroborator_app.location",
+    "pk": 241
+}
+,
+{
+    "fields": {
+        "latitude": 46.19520,
+        "loc_type": "S",
+        "name_en": "Білгород-Дністровський",
+        "name_ar": "Bilhorod-Dnistrovs’kyy",
+        "longitude": 30.34938
+    },
+    "model": "corroborator_app.location",
+    "pk": 242
+}
+,
+{
+    "fields": {
+        "latitude": 45.20091,
+        "loc_type": "S",
+        "name_en": "Yevpatoria,Євпаторія,Эвпаторія",
+        "name_ar": "Yevpatoriya",
+        "longitude": 33.36655
+    },
+    "model": "corroborator_app.location",
+    "pk": 243
+}
+,
+{
+    "fields": {
+        "latitude": 49.65186,
+        "loc_type": "S",
+        "name_en": "Красилів",
+        "name_ar": "Krasyliv",
+        "longitude": 26.97253
+    },
+    "model": "corroborator_app.location",
+    "pk": 244
+}
+,
+{
+    "fields": {
+        "latitude": 49.71055,
+        "loc_type": "S",
+        "name_en": "Kup\"yans'k,Kupiansk,Купянськ,Куп’янськ",
+        "name_ar": "Kupjansk",
+        "longitude": 37.61517
+    },
+    "model": "corroborator_app.location",
+    "pk": 245
+}
+,
+{
+    "fields": {
+        "latitude": 50.58476,
+        "loc_type": "S",
+        "name_en": "Вишгород",
+        "name_ar": "Vyshhorod",
+        "longitude": 30.48980
+    },
+    "model": "corroborator_app.location",
+    "pk": 246
+}
+,
+{
+    "fields": {
+        "latitude": 49.28672,
+        "loc_type": "S",
+        "name_en": "Борислав",
+        "name_ar": "Boryslav",
+        "longitude": 23.43238
+    },
+    "model": "corroborator_app.location",
+    "pk": 247
+}
+,
+{
+    "fields": {
+        "latitude": 48.44598,
+        "loc_type": "S",
+        "name_en": "Могилів-Подільський",
+        "name_ar": "Mohyliv-Podil’s’kyy",
+        "longitude": 27.79820
+    },
+    "model": "corroborator_app.location",
+    "pk": 248
+}
+,
+{
+    "fields": {
+        "latitude": 48.02300,
+        "loc_type": "S",
+        "name_en": "Донецьк,Сталіне,Сталіно,Юзівка",
+        "name_ar": "Donetsk",
+        "longitude": 37.80224
+    },
+    "model": "corroborator_app.location",
+    "pk": 249
+}
+]
