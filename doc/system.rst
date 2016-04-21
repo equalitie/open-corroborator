@@ -70,8 +70,38 @@ The following database models are defined but not used:
 So instead of referring to pre-defined lists of options, these have been replaced by free-text fields
 on the Actor model.
 
-Local System Testing
---------------------
+Solr Schema
+-----------
+The `corroborator_app/search_indexes` package contains the Haystack index definitions. These are based on CelerySearchIndex
+and so are called via celery:
+
+  * IncidentIndex
+  * BulletinIndex
+  * ActorIndex
+
+If these are changed, you should use them to generate an updated Solr schema by running:
+
+.. code:: console
+
+    env/bin/python manage.py build_solr_schema --settings=corroborator.settings.dev > newschema.xml
+
+And then move the generated xml file into the Solr collection `conf` folder (as schema.xml) for local testing.
+
+Once the schema is tested, copy it to `conf/solr.schema.demo.xml` where the Ansible scripts will use it for deployment.
+
+Database/Solr split
+---------------------
+The listings displayed in the frontend (incidents, bulletins, actors) are driven by the data that has been
+added to the Solr search engine.
+This can be confusing after running automated tests or after switching databases, as the Solr and mysql data
+won't be aligned. To re-build the Solr index from the database:
+
+.. code:: console
+
+    env/bin/python manage.py rebuild_index --settings=corroborator.settings.dev
+
+Local System/Deployment Testing
+-------------------------------
 Vagrant and Ansible can be used to spin up a full system locally. Checkout the deployment repository and:
 
 .. code:: console
@@ -118,25 +148,6 @@ extra permissions to give full access to the features available:
   * 'Can delete entities via api'
   * 'Can edit entities via api'
   * 'Can edit assigned entities via api'
-
-Solr Schema
------------
-The `corroborator_app/search_indexes` package contains the Haystack index definitions. These are based on CelerySearchIndex
-and so are called via celery:
-
-  * IncidentIndex
-  * BulletinIndex
-  * ActorIndex
-
-If these are changed, you should use them to generate an updated Solr schema by running:
-
-.. code:: console
-
-    env/bin/python manage.py build_solr_schema --settings=corroborator.settings.dev > newschema.xml
-
-And then move the generated xml file into the Solr collection `conf` folder (as schema.xml) for local testing.
-
-Once the schema is tested, move it to `conf/solr.schema.demo.xml` where the Ansible scripts will use it for deployment.
 
 Backend Stack
 -------------
@@ -233,6 +244,7 @@ New Translations
 To add a new language:
 
 Add the option to the language selector widget in `corroborator_app/templates/nav/top_menu.html`.
+
 Add a line to the root dict.js, e.g.
 
 .. code::
@@ -260,7 +272,20 @@ and then compile it (to a compress `.mo` format):
 
 Store the translated `dict.js` files in the appropriate subdirectory for the module and language, e.g. `/static/js/lib/<module>/nls/es`
 
-#todo: add more pre-transifex details: http://docs.transifex.com/formats/require-js/
+Note: currently, the format of the `dict.js` files is not accepted by Transifex.
+The following changes needed to be made before uploading, and then reversed on downloading:
+
+  * remove the `"'root': {"` and closing `}`
+  * remove trailing `"ar": true` (true is not a string)
+  * swap `"` and `'`
+
+    * replace `"` with `
+    * replace `'` with `"`
+    * replace ` with `'`
+
+  * replace `",    {"` with `"    {"`
+
+See http://docs.transifex.com/formats/require-js/ for acceptable JSON formats.
 
 Deployment/Ops
 --------------
