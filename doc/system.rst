@@ -70,6 +70,12 @@ The following database models are defined but not used:
 So instead of referring to pre-defined lists of options, these have been replaced by free-text fields
 on the Actor model.
 
+And the following, although still linked by foreign key constraints and possibly having API end-points are also not used:
+
+  * ActorRelationship
+  * RoleType (superseded by role_status)
+  * RelationType (superseded by relation_status)
+
 Solr Schema
 -----------
 The `corroborator_app/search_indexes` package contains the Haystack index definitions. These are based on CelerySearchIndex
