@@ -14,12 +14,9 @@ from corroborator_app.models import (
     Comment,
     Media,
     PredefinedSearch,
-    ActorRelationship,
     ActorCondition,
     ActorStatus,
     EventType,
-    RoleType,
-    RelationType
 )
 
 from reversion.admin import VersionAdmin
@@ -129,15 +126,6 @@ class ActorConditionAdmin(VersionAdmin):
 class ActorRoleAdmin(VersionAdmin):
     pass
 
-
-class RelationTypeAdmin(VersionAdmin):
-    list_display = ('name_en',)
-
-
-class RoleTypeAdmin(VersionAdmin):
-    list_display = ('name_en',)
-
-
 class EventTypeAdmin(VersionAdmin):
     pass
 
@@ -202,8 +190,6 @@ class ActorStatusAdmin(VersionAdmin):
 admin.site.register(Actor, ActorAdmin)
 admin.site.register(ActorCondition, ActorConditionAdmin)
 admin.site.register(ActorRole, ActorRoleAdmin)
-admin.site.register(RelationType, RelationTypeAdmin)
-admin.site.register(RoleType, RoleTypeAdmin)
 admin.site.register(EventType, EventTypeAdmin)
 admin.site.register(Bulletin, CorrobAdminRev)
 admin.site.register(StatusUpdate, StatusUpdateAdmin)
