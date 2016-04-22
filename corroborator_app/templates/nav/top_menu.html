@@ -40,7 +40,7 @@
       <a href="/admin/" class="text T">{% trans "Administration" %}</a>
     </li>
     {% endif %}
-    {% if is_chief_analyst %}
+    {% if is_chief_analyst and monitoring_enabled %}
     <li
       {% if monitoring == True %}
         class="current"

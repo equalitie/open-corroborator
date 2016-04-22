@@ -76,6 +76,7 @@ def build_js_context(user):
         'is_analyst': is_in_group(user, 'data-analyst'),
         'is_senior_analyst': is_in_group(user, 'senior-data-analyst'),
         'is_chief_analyst': is_in_group(user, 'chief-data-analyst'),
+        'monitoring_enabled': settings.MONITORING_ENABLED,
         'PROD_BUILD': settings.PROD_BUILD,
     }
 
