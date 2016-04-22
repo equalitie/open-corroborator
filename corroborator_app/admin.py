@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.http import HttpResponse
+import csv
 from corroborator_app.models import (
     Incident,
     CrimeCategory,
@@ -20,6 +22,22 @@ from corroborator_app.models import (
 )
 
 from reversion.admin import VersionAdmin
+
+
+def export_csv(modeladmin, request, queryset):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename={}.csv'.format(modeladmin.model._meta.model_name)
+    writer = csv.writer(response, csv.excel)
+    response.write(u'\ufeff'.encode('utf8')) # BOM (optional...Excel needs it to open UTF-8 file properly)
+    writer.writerow([unicode(f.name)
+                     for f in modeladmin.model._meta.fields
+                    ])
+    for obj in queryset:
+        writer.writerow([unicode(getattr(obj, f.name)).encode('utf-8')
+                         for f in modeladmin.model._meta.fields
+                        ])
+    return response
+export_csv.short_description = u"Export to CSV"
 
 
 #todo set raw_id_fields for large datasets
@@ -117,14 +135,14 @@ class TimeInfoAdmin(admin.ModelAdmin):
 class ActorAdmin(VersionAdmin):
     list_display = ('fullname_en', 'sex', 'DOB', 'deleted', 'actor_created',)
     list_filter = ('deleted',)
-
+    actions = [export_csv]
 
 class ActorConditionAdmin(VersionAdmin):
     list_display = ('name_en', 'key',)
 
 
 class ActorRoleAdmin(VersionAdmin):
-    pass
+    actions = [export_csv]
 
 class EventTypeAdmin(VersionAdmin):
     pass
@@ -137,6 +155,7 @@ class StatusUpdateAdmin(VersionAdmin):
 class LocationAdmin(VersionAdmin):
     list_display = ('name_en', 'latitude', 'longitude', 'loc_type')
     list_filter = ('loc_type',)
+    actions = [export_csv]
 
 
 class SourceAdmin(VersionAdmin):
@@ -158,11 +177,12 @@ class CrimeCategoryAdmin(VersionAdmin):
 class MediaAdmin(VersionAdmin):
     list_display = ('name_en', 'media_file', 'media_type', 'media_created')
     list_filter = ('media_type',)
+    actions = [export_csv]
 
 class CommentAdmin(VersionAdmin):
     list_display = ('assigned_user', 'status', 'comments_en', 'comment_created')
     list_filter = ('status',)
-
+    actions = [export_csv]
 
 class PredefinedSearchAdmin(VersionAdmin):
     list_display = ('user', 'search_title', 'search_string', 'make_global')
@@ -171,12 +191,12 @@ class PredefinedSearchAdmin(VersionAdmin):
 class CorrobAdminRev(VersionAdmin, CorrobAdmin):
     list_display = ('title_en', 'type', 'bulletin_created', 'deleted')
     list_filter = ('type', 'deleted',)
-
+    actions = [export_csv]
 
 class CorrobAdminInRev(VersionAdmin, CorrobAdminIn):
     list_display = ('title_en', 'incident_created',)
     list_filter = ('deleted',)
-
+    actions = [export_csv]
 
 class TimeInfoAdminRev(VersionAdmin, TimeInfoAdmin):
     pass
