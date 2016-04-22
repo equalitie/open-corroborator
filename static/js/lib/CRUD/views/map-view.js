@@ -17,8 +17,8 @@ define (
     var CoordinateDisplayView,
         searchBus = Streams.searchBus,
         api_key = 'e76611fbacfb4bb2a8709c6e51201048',
-        start_lat = 34.83392,
-        start_long = 35.4541,
+        start_lat = 49.707978,
+        start_long = 30.85770,
         LocationCollection = Location.LocationCollection,
         filterLocationAdded, filterLocationRemoved;
 
