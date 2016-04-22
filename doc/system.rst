@@ -126,7 +126,7 @@ There are options to change the branch used, and to skip steps, e.g. building ff
 
 Permissions
 -----------
-There are 3 user groups. Each one has a limited number of status options when editing records:
+There are 3 user groups controlling access and workflow. Each one has a limited number of status options when editing records:
 
   * data-analyst: statuses available: updated
   * senior-data-analyst: statuses available: updated, reviewed
@@ -154,6 +154,12 @@ extra permissions to give full access to the features available:
   * 'Can delete entities via api'
   * 'Can edit entities via api'
   * 'Can edit assigned entities via api'
+
+Data Entry
+..........
+Another user group is used to switch to a simpler data-entry view of the application: `data-entry`. If a user is
+assigned to this group (and not `data-analyst` or `chief-data-analyst`) then the user is limited to adding new Bulletins
+and Actors.
 
 Data Export
 -----------
