@@ -155,6 +155,16 @@ extra permissions to give full access to the features available:
   * 'Can edit entities via api'
   * 'Can edit assigned entities via api'
 
+Data Export
+-----------
+Data for some models can be exported from the Administration section to CSV files.
+
+The Action drop-down has an 'Export to CSV' option which will download a file containing the selected items.
+
+Note: the select-all checkbox will only select all the items on the current page. Clicking this gives another option
+alongside the count of items selected, 'Select all...' - you should click this to select *all* items before
+clicking `Go` to export.
+
 Backend Stack
 -------------
 The following are the major packages added to Django:
