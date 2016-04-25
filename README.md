@@ -2,6 +2,7 @@ corroborator
 ============
 
 Case management with data validation, corroboration, omission and duplication checking.
+See `doc/system.rst` for an overview (https://github.com/equalitie/open-corroborator/blob/updatedemo/doc/system.rst)
 
 Installation
 ============
@@ -64,7 +65,7 @@ env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/status_update.jso
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/auth.json --settings=corroborator.settings.dev 
 ```
 
-And to install some sample fixtures (including a demo user, password 'demo'):
+And to install some sample fixtures (including 'demo' and 'demodata' users, password 'demo'):
 
 ```
 env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/demo_user.json --settings=corroborator.settings.dev 
@@ -74,13 +75,14 @@ env/bin/python2.7 manage.py loaddata corroborator_app/fixtures/locations_UA.json
 
 ##### Permissions
 The `demo` user is a member of the chief-data-analyst, data-analyst and senior-data-analyst groups and should also be given 
-the following permissions (via the admin interface):
+the following permissions (via the admin interface) to be able to edit any item:
 
    * 'Can assign users via api'
    * 'Can delete entities via api'
    * 'Can edit entities via api'
    * 'Can edit assigned entities via api'
 
+The `demodata` user is a member of the data-entry group and sees a simplified data-entry interface for bulletins and actors.
 
 ### Solr installation
 
