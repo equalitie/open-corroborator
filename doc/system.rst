@@ -158,8 +158,8 @@ extra permissions to give full access to the features available:
 Data Entry
 ..........
 Another user group is used to switch to a simpler data-entry view of the application: `data-entry`. If a user is
-assigned to this group (and not `data-analyst` or `chief-data-analyst`) then the user is limited to adding new Bulletins
-and Actors.
+assigned to this group (and not `data-analyst` or `chief-data-analyst`) then the user is limited to adding new bulletins
+and actors. The default `demodata` user is a member of this group and so sees the simplified data-entry interface.
 
 Data Export
 -----------
