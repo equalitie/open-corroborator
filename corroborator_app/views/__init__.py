@@ -10,6 +10,7 @@ import json
 import os
 from datetime import datetime, timedelta
 from django.utils import translation
+from django.utils.translation import ugettext as _
 from django.shortcuts import render_to_response, render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -54,7 +55,7 @@ def login_user(request):
     '''
     login view
     '''
-    state = "Please log in below..."
+    state = _("Please log in below...")
     username = password = ''
     if request.POST:
         username = request.POST.get('username')
@@ -64,11 +65,11 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request,  user)
-                state = "You're successfully logged in!"
+                state = _("You're successfully logged in!")
                 return HttpResponseRedirect('/corroborator/')
             else:
-                state = "Your account is not active,\
-                please contact the site admin."
+                state = _("Your account is not active,\
+                please contact the site admin.")
                 return render_to_response(
                     'auth.html',
                     {
@@ -78,7 +79,7 @@ def login_user(request):
                     RequestContext(request)
                 )
         else:
-            state = "Your username and/or password were incorrect."
+            state = _("Your username and/or password were incorrect.")
             return render_to_response(
                 'auth.html',
                 {

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-13 12:19+0000\n"
+"POT-Creation-Date: 2016-04-25 10:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,31 +18,31 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: models.py:646 views/context.py:126
+#: models.py:693 views/context.py:128
 msgid "adult"
 msgstr "بالغ"
 
-#: models.py:647 views/context.py:130
+#: models.py:694 views/context.py:132
 msgid "child"
 msgstr "طفل"
 
-#: models.py:650 views/context.py:117
+#: models.py:697 views/context.py:119
 msgid "female"
 msgstr "إنثى"
 
-#: models.py:651 views/context.py:113
+#: models.py:698 views/context.py:115
 msgid "male"
 msgstr "ذكر"
 
-#: models.py:654 views/context.py:96
+#: models.py:701 views/context.py:98
 msgid "Civilian"
 msgstr "مدني"
 
-#: models.py:655 views/context.py:100
+#: models.py:702 views/context.py:102
 msgid "Non-civilian"
 msgstr "غير مدني"
 
-#: models.py:656 views/context.py:104
+#: models.py:703 views/context.py:106
 msgid "Police"
 msgstr ""
 
@@ -54,32 +54,32 @@ msgstr "الوقت الكلي الذي أمضاه المستخدم"
 msgid "Total user login time per day"
 msgstr "الوقت الذي أمضاه المستخدم يوميا"
 
-#: reporting/user_reporting.py:75
+#: reporting/user_reporting.py:78
 msgid "Average user updates per hour"
 msgstr "وسطي التحديثات التي قام بها المستخدم في الساعة الواحدة"
 
-#: reporting/user_reporting.py:117
+#: reporting/user_reporting.py:120
 msgid "User assigned items by status"
 msgstr "عدد العناصر المفرزة للأشخاص - وفق الحالة"
 
-#: reporting/user_reporting.py:178
+#: reporting/user_reporting.py:181
 #, python-format
 msgid "Total %(type)s items by User"
 msgstr "العدد الكلي للعناصر %(type)s بحسب المستخدم"
 
-#: reporting/user_reporting.py:193
+#: reporting/user_reporting.py:196
 msgid "Deleted, created and edited items by date"
 msgstr "عدد العناصر المنشأة والمعدلة والمحذوفة بحسب التاريخ"
 
-#: reporting/user_reporting.py:198
+#: reporting/user_reporting.py:201
 msgid "Deleted items by date"
 msgstr "عدد العناصر المحذوفة بحسب التاريخ"
 
-#: reporting/user_reporting.py:202
+#: reporting/user_reporting.py:205
 msgid "Created items by date"
 msgstr "عدد العناصر المنشأة بحسب التاريخ"
 
-#: reporting/user_reporting.py:206
+#: reporting/user_reporting.py:209
 msgid "Edited items by date"
 msgstr "عدد العناصر المعدلة بحسب التاريخ"
 
@@ -102,18 +102,6 @@ msgstr "كلمة المرور"
 #: templates/auth.html:41
 msgid "Log In"
 msgstr "دخول"
-
-#: templates/new_search.html:27
-msgid "Search help"
-msgstr "المساعدة - البحث"
-
-#: templates/new_search.html:31
-msgid "search in progress"
-msgstr "البحث مستمر"
-
-#: templates/new_search.html:41
-msgid "My assigned items"
-msgstr "العناصر المفرزة لي"
 
 #: templates/nav/dataentry_tabs.html:7 templates/nav/reporting_tabs.html:15
 #: templates/nav/tabs.html:15
@@ -165,43 +153,72 @@ msgstr "الإدارة"
 msgid "Monitoring"
 msgstr "الرصد"
 
-#: views/context.py:153
+#: templates/new_search.html:31
+msgid "Search help"
+msgstr "المساعدة - البحث"
+
+#: templates/new_search.html:35
+msgid "search in progress"
+msgstr "البحث مستمر"
+
+#: templates/new_search.html:45
+msgid "My assigned items"
+msgstr "العناصر المفرزة لي"
+
+#: views/__init__.py:58
+msgid "Please log in below..."
+msgstr ""
+
+#: views/__init__.py:68
+msgid "You're successfully logged in!"
+msgstr ""
+
+#: views/__init__.py:71
+msgid ""
+"Your account is not active,                please contact the site admin."
+msgstr ""
+
+#: views/__init__.py:82
+msgid "Your username and/or password were incorrect."
+msgstr ""
+
+#: views/context.py:155
 msgid "Victim"
 msgstr ""
 
-#: views/context.py:154
+#: views/context.py:156
 msgid "Witness"
 msgstr "شاهد"
 
-#: views/context.py:155
+#: views/context.py:157
 msgid "Perpetrator"
 msgstr ""
 
-#: views/context.py:156
+#: views/context.py:158
 msgid "Appeared"
 msgstr ""
 
-#: views/context.py:157
+#: views/context.py:159
 msgid "Other"
 msgstr ""
 
-#: views/context.py:176
+#: views/context.py:178
 msgid "Parent"
 msgstr "أب/أم"
 
-#: views/context.py:177
+#: views/context.py:179
 msgid "Sibling"
 msgstr "أخ/أخت"
 
-#: views/context.py:178
+#: views/context.py:180
 msgid "Family member"
 msgstr "أحد أفراد العائلة"
 
-#: views/context.py:179
+#: views/context.py:181
 msgid "Superior officer"
 msgstr "الضابط الرئيس"
 
-#: views/context.py:180
+#: views/context.py:182
 msgid "Subordinate officer"
 msgstr "الضابط المرؤس"
 

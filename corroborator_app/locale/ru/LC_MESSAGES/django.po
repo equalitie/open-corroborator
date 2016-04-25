@@ -1,48 +1,51 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # U <uff.hitech@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Corroborator\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-08 14:10+0000\n"
+"POT-Creation-Date: 2016-04-25 10:17+0100\n"
 "PO-Revision-Date: 2016-02-09 08:30+0000\n"
 "Last-Translator: U <uff.hitech@gmail.com>\n"
-"Language-Team: Russian (http://www.transifex.com/equalitie/corroborator/language/ru/)\n"
+"Language-Team: Russian (http://www.transifex.com/equalitie/corroborator/"
+"language/ru/)\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: models.py:654 views/context.py:126
+#: models.py:693 views/context.py:128
 msgid "adult"
 msgstr "взрослый"
 
-#: models.py:655 views/context.py:130
+#: models.py:694 views/context.py:132
 msgid "child"
 msgstr "ребёнок"
 
-#: models.py:658 views/context.py:117
+#: models.py:697 views/context.py:119
 msgid "female"
 msgstr "женщина"
 
-#: models.py:659 views/context.py:113
+#: models.py:698 views/context.py:115
 msgid "male"
 msgstr "мужчина"
 
-#: models.py:662 views/context.py:96
+#: models.py:701 views/context.py:98
 msgid "Civilian"
 msgstr "Гражданский"
 
-#: models.py:663 views/context.py:100
+#: models.py:702 views/context.py:102
 msgid "Non-civilian"
 msgstr "Не-гражданский"
 
-#: models.py:664 views/context.py:104
+#: models.py:703 views/context.py:106
 msgid "Police"
 msgstr "Милиция"
 
@@ -103,18 +106,6 @@ msgstr "пароль:"
 msgid "Log In"
 msgstr "Войти"
 
-#: templates/new_search.html:27
-msgid "Search help"
-msgstr "Поиск по справке"
-
-#: templates/new_search.html:31
-msgid "search in progress"
-msgstr "идёт поиск"
-
-#: templates/new_search.html:41
-msgid "My assigned items"
-msgstr "Назначенные мне"
-
 #: templates/nav/dataentry_tabs.html:7 templates/nav/reporting_tabs.html:15
 #: templates/nav/tabs.html:15
 msgid "Bulletins"
@@ -165,42 +156,71 @@ msgstr "Администрирование"
 msgid "Monitoring"
 msgstr "Мониторинг"
 
-#: views/context.py:153
+#: templates/new_search.html:31
+msgid "Search help"
+msgstr "Поиск по справке"
+
+#: templates/new_search.html:35
+msgid "search in progress"
+msgstr "идёт поиск"
+
+#: templates/new_search.html:45
+msgid "My assigned items"
+msgstr "Назначенные мне"
+
+#: views/__init__.py:58
+msgid "Please log in below..."
+msgstr ""
+
+#: views/__init__.py:68
+msgid "You're successfully logged in!"
+msgstr ""
+
+#: views/__init__.py:71
+msgid ""
+"Your account is not active,                please contact the site admin."
+msgstr ""
+
+#: views/__init__.py:82
+msgid "Your username and/or password were incorrect."
+msgstr ""
+
+#: views/context.py:155
 msgid "Victim"
 msgstr "Жертва"
 
-#: views/context.py:154
+#: views/context.py:156
 msgid "Witness"
 msgstr "Свидетель"
 
-#: views/context.py:155
+#: views/context.py:157
 msgid "Perpetrator"
 msgstr "Правонарушитель"
 
-#: views/context.py:156
+#: views/context.py:158
 msgid "Appeared"
 msgstr "Появился"
 
-#: views/context.py:157
+#: views/context.py:159
 msgid "Other"
 msgstr "Другое"
 
-#: views/context.py:176
+#: views/context.py:178
 msgid "Parent"
 msgstr "Родители"
 
-#: views/context.py:177
+#: views/context.py:179
 msgid "Sibling"
 msgstr "Брат (сестра)"
 
-#: views/context.py:178
+#: views/context.py:180
 msgid "Family member"
 msgstr "Член семьи"
 
-#: views/context.py:179
+#: views/context.py:181
 msgid "Superior officer"
 msgstr "Вышестоящее должностное лицо"
 
-#: views/context.py:180
+#: views/context.py:182
 msgid "Subordinate officer"
 msgstr "Подчинённый"
