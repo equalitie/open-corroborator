@@ -260,6 +260,88 @@ The ansible deployment scripts won't do this
 (though maybe they should - and then we could remove the target files from the repository?) - they
 will simply deploy the pre-built, committed files.
 
+Field changes
+-------------
+Adding, changing or removing a field would need changes to the backend model (database), search index, api and frontend.
+For example, a change to an Actor field might need changes in the following places:
+
+Backend
+.......
+  * models.py  #Actor model -> database migration
+  * reports.py  #ActorModelReport
+
+API
+...
+  * api
+      * ActorApi.py
+  * multisave
+      * `__init__.py`
+
+Search
+......
+  * index_meta_prep
+      * actorPrepIndex.py
+  * search_indexes
+      * actor_index.py
+  * templates
+      * search
+         * indexes
+            * corroborator_app
+               * actor_text.txt
+
+Frontend
+........
+  * js
+     * lib
+        * CRUD
+           * templates
+              * display-templates
+                 * actors
+                    * actor.tpl
+                    * actor-display.tpl
+              * search-templates
+                 * actor
+                    * actor-result.tpl
+                    * actor.tpl
+                    * expanded-actor.tpl
+           * views
+              * actor-form.js
+              * display-views
+                 * actor-container.js ?
+                 * actor-display-container.js
+              * search-views
+                 * actor-result.js
+                 * actor-results.js ?
+                 * actor-search-fields.js
+
+           * SolrSearch
+              * data
+                 * actor-filter-collection.js
+              * templates
+                 * filters
+                    * actor-filters.tpl ?
+                 * results
+                    * actor.tpl
+                    * actor-results.tpl ?
+                 * sort
+                    * sort-actors.tpl
+              * views
+                 * filters
+                    * actor-filters.js
+                 * results
+                    * ActorResults.js
+        * Data
+             * actor.js
+        * data-entry
+           * templates
+              * actor-form.tpl
+              * actor-preview.tpl
+              * actor-list-item.tpl
+           * views
+              * actor-form.js
+
+Plus test code changes at the various levels.
+
 
 New Translations
 ----------------
@@ -299,7 +381,7 @@ The following changes needed to be made before uploading, and then reversed on d
 
   * remove the `"'root': {"` and closing `}`
   * remove trailing `"ar": true` (true is not a string)
-  * swap `"` and `'`
+  * swap `"` and `'`, e.g.
 
     * replace `"` with `
     * replace `'` with `"`
