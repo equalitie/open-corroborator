@@ -220,6 +220,7 @@ See the wiki (bundle, guard, compass (sass) etc), though this seemed to work:
 sudo apt-get install bundler
 
 bundle install
-```
 
 bundle exec guard
+```
+
