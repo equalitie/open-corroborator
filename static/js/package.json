@@ -14,7 +14,7 @@
     "buster-amd": "~0.3.0"
   },
   "devDependencies": {
-    "growl": "~1.7.0",
+    "growl": "~1.15.1",
     "grunt": "~0.4.0",
     "grunt-contrib-concat": "~0.1.1",
     "grunt-contrib-handlebars": "~0.5.9",
